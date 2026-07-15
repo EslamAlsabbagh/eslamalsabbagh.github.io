@@ -11542,7 +11542,7 @@ if($.aF==null)A.boo()
 $.aF.toString
 $.hp=new A.ce3($.hp)
 s=2
-return A.e(A.bjz("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyaWl6ZWNqcXdpbHBjZ3h6dW1jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMxMTQ3MDAsImV4cCI6MjA1ODY5MDcwMH0.EacP2K8xfIyNEsYa-_dGEMcHXqNNv83i449t5E4SQSw",B.asF,"https://friizecjqwilpcgxzumc.supabase.co"),$async$ce0)
+return A.e(A.bjz("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ua3pkZmJpZnlnbW9iYXV1cWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NTMwNzcsImV4cCI6MjA3NzMyOTA3N30.61hmVL3vo4furDssA99FrCt8ZH8djScv8KAKPXsiysM",B.asF,"https://onkzdfbifygmobauuqhe.supabase.co"),$async$ce0)
 case 2:if($.aF==null)A.boo()
 q=$.aF
 q.toString
