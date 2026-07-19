@@ -95,19 +95,28 @@
        <div data-edit-from-btn='editN1' class="boc-img-button" title="…">,
        and normally the label only appears as a hover tooltip. We surface the
        title permanently with a CSS ::after, scoped to our button only. */
-    .boc-edit-form-instruments .boc-img-button[data-edit-from-btn='editN1'] {
+    .boc-edit-form-instruments .boc-img-button[data-edit-from-btn='editN1'],
+    .boc-edit-form-instruments .boc-img-button[data-edit-from-btn='editEmployee'] {
       position: relative; /* anchor the ::after label to THIS button */
       overflow: visible;
-      margin-bottom: 22px; /* reserve room for the label below the 48px button */
+      /* Horizontal margin keeps the two buttons' centered labels from colliding
+         side-by-side; bottom margin reserves room for a wrapped 2-line label. */
+      margin: 0 20px 36px;
     }
-    .boc-edit-form-instruments .boc-img-button[data-edit-from-btn='editN1']::after {
+    .boc-edit-form-instruments .boc-img-button[data-edit-from-btn='editN1']::after,
+    .boc-edit-form-instruments .boc-img-button[data-edit-from-btn='editEmployee']::after {
       content: attr(title);
       position: absolute;
-      top: 54px;
+      top: 52px;
       left: 50%;
       transform: translateX(-50%);
-      white-space: nowrap;
-      font: 600 12px "Segoe UI", sans-serif;
+      /* Fixed, wrapping width so a long label (e.g. "Edit Manager (N+1)") stacks
+         onto two lines instead of spilling horizontally into the other button. */
+      width: 84px;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.2;
+      font: 600 11px "Segoe UI", sans-serif;
       color: #039be5;
       pointer-events: none;
     }
@@ -263,6 +272,13 @@
               text: "Edit Manager (N+1)",
               hideIfDetailsMode: false
             },
+            // Opens the full Flutter edit-employee page as a dialog. Like editN1
+            // this only posts a message; the Flutter host gates + shows the dialog.
+            editEmployee: {
+              icon: (OrgChart.icon.details || OrgChart.icon.edit)(24, 24, '#ffffff'),
+              text: "Edit Employee",
+              hideIfDetailsMode: false
+            },
             saveEdits: {
               icon: (OrgChart.icon.save || OrgChart.icon.edit)(24, 24, '#ffffff'),
               text: "Save",
@@ -289,6 +305,18 @@
               id: node.id,
               name: node.name,
               currentN1: node.pid
+            }), '*');
+          }
+          return false; // suppress default button behaviour
+        }
+        if (args.name === 'editEmployee') {
+          var node = chart.get(args.nodeId);
+          if (node) {
+            window.parent.postMessage(JSON.stringify({
+              type: 'editEmployee',
+              instanceId: window.__cmInstanceId,
+              id: node.id,
+              name: node.name
             }), '*');
           }
           return false; // suppress default button behaviour
