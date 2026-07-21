@@ -11644,7 +11644,7 @@ if($.aG==null)A.brg()
 $.aG.toString
 $.hw=new A.ciA($.hw)
 s=2
-return A.e(A.bmq("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyaWl6ZWNqcXdpbHBjZ3h6dW1jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMxMTQ3MDAsImV4cCI6MjA1ODY5MDcwMH0.EacP2K8xfIyNEsYa-_dGEMcHXqNNv83i449t5E4SQSw",B.atl,"https://friizecjqwilpcgxzumc.supabase.co"),$async$cix)
+return A.e(A.bmq("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ua3pkZmJpZnlnbW9iYXV1cWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NTMwNzcsImV4cCI6MjA3NzMyOTA3N30.61hmVL3vo4furDssA99FrCt8ZH8djScv8KAKPXsiysM",B.atl,"https://onkzdfbifygmobauuqhe.supabase.co"),$async$cix)
 case 2:if($.aG==null)A.brg()
 q=$.aG
 q.toString
@@ -77523,7 +77523,7 @@ case 2:return"Administrative Affairs"
 case 3:return"Events Department"
 case 4:return"Marketing Department"
 case 5:return"Leasing Department"
-case 6:return"License Department"
+case 6:return"Regulatory affairs & Licensing solutions"
 case 7:return"Internal Security"
 case 8:return"Maintenance Department"
 case 9:return"Projects Department"
@@ -89542,7 +89542,7 @@ gaRt(){return"Please enter a valid N+2 manager code"},
 gal5(){return"Please select shift hours"},
 gal6(){return"Please select working days"},
 gal3(){return"Please select leaves eligibility"},
-gaOT(){return"Licensing Department"},
+gaOT(){return"Regulatory affairs & Licensing solutions"},
 gaNS(){return"Internal Security"},
 gaM2(){return"Filter by Date Range"},
 gaJJ(){return"Effective Date"},
