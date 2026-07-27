@@ -11821,7 +11821,7 @@ if($.aG==null)A.brp()
 $.aG.toString
 $.hA=new A.cj1($.hA)
 s=2
-return A.e(A.bmy("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ua3pkZmJpZnlnbW9iYXV1cWhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NTMwNzcsImV4cCI6MjA3NzMyOTA3N30.61hmVL3vo4furDssA99FrCt8ZH8djScv8KAKPXsiysM",B.atE,"https://onkzdfbifygmobauuqhe.supabase.co"),$async$ciZ)
+return A.e(A.bmy("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyaWl6ZWNqcXdpbHBjZ3h6dW1jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMxMTQ3MDAsImV4cCI6MjA1ODY5MDcwMH0.EacP2K8xfIyNEsYa-_dGEMcHXqNNv83i449t5E4SQSw",B.atE,"https://friizecjqwilpcgxzumc.supabase.co"),$async$ciZ)
 case 2:if($.aG==null)A.brp()
 q=$.aG
 q.toString
