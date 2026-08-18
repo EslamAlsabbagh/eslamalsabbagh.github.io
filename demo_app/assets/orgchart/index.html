@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Org Chart</title>
+<!--
+  Self-contained org chart for the demo build.
+
+  The production app renders this chart with a commercial third-party library
+  loaded from a CDN. The demo must make zero network requests, so this is a
+  dependency-free replacement: same postMessage contract, same node shape
+  ({id, pid, name, post}), rendered with plain SVG + DOM.
+
+  Contract with Flutter (org_chart_web.dart):
+    inbound   { type: 'render', data: '<json array>', instanceId: '<view id>' }
+    outbound  { type: 'editN1', id: <code>, instanceId: '<view id>' }
+-->
+<style>
+  :root {
+    --bg: #f5f6fa; --card: #ffffff; --line: #c7ccd8; --text: #16181d;
+    --muted: #5b6472; --accent: #1f6feb; --shadow: rgba(16,20,30,.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12141a; --card: #1b1f27; --line: #39404e; --text: #e8eaee;
+      --muted: #99a2b2; --accent: #58a6ff; --shadow: rgba(0,0,0,.45);
+    }
+  }
+  html, body { height: 100%; margin: 0; background: var(--bg); overflow: hidden;
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif; color: var(--text); }
+  #viewport { width: 100%; height: 100%; overflow: hidden; cursor: grab; position: relative; }
+  #viewport.dragging { cursor: grabbing; }
+  #canvas { transform-origin: 0 0; position: absolute; top: 0; left: 0; }
+
+  .node {
+    position: absolute; box-sizing: border-box;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    box-shadow: 0 1px 3px var(--shadow); padding: 10px 12px;
+    display: flex; flex-direction: column; justify-content: center;
+    transition: border-color .12s, box-shadow .12s;
+  }
+  .node:hover { border-color: var(--accent); box-shadow: 0 3px 10px var(--shadow); }
+  .node .name { font-weight: 620; font-size: 13px; line-height: 1.25;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .node .post { font-size: 11.5px; color: var(--muted); margin-top: 3px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .node .code { font-size: 10.5px; color: var(--muted); opacity: .75; margin-top: 4px;
+    font-family: ui-monospace, Consolas, monospace; }
+  .node.root { border-color: var(--accent); border-width: 2px; }
+
+  .edit-btn {
+    position: absolute; top: 6px; right: 6px; border: 0; background: transparent;
+    color: var(--muted); cursor: pointer; font-size: 13px; line-height: 1;
+    padding: 3px 5px; border-radius: 5px; opacity: 0;
+  }
+  .node:hover .edit-btn { opacity: 1; }
+  .edit-btn:hover { background: var(--accent); color: #fff; }
+
+  #controls { position: absolute; right: 14px; bottom: 14px; display: flex; gap: 6px; z-index: 5; }
+  #controls button {
+    width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--line);
+    background: var(--card); color: var(--text); cursor: pointer; font-size: 15px;
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  #controls button:hover { border-color: var(--accent); color: var(--accent); }
+
+  #empty { position: absolute; inset: 0; display: none; align-items: center;
+    justify-content: center; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div id="viewport">
+  <div id="canvas">
+    <svg id="edges" style="position:absolute;top:0;left:0;overflow:visible;pointer-events:none"></svg>
+  </div>
+  <div id="empty">No organisation data to display.</div>
+</div>
+<div id="controls">
+  <button id="zoom-in"  title="Zoom in">+</button>
+  <button id="zoom-out" title="Zoom out">&minus;</button>
+  <button id="fit"      title="Fit to screen">⤢</button>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var NODE_W = 190, NODE_H = 74, H_GAP = 26, V_GAP = 58;
+
+  var viewport = document.getElementById('viewport');
+  var canvas   = document.getElementById('canvas');
+  var edges    = document.getElementById('edges');
+  var empty    = document.getElementById('empty');
+
+  var scale = 1, tx = 0, ty = 0;
+  var instanceId = null;
+
+  function applyTransform() {
+    canvas.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+  }
+
+  // ── Layout: classic tidy tree. Leaves are packed left to right; each parent
+  //    is centred over the block its children occupy. ────────────────────────
+  function layout(nodes) {
+    var byId = {}, children = {}, roots = [];
+    nodes.forEach(function (n) { byId[n.id] = n; children[n.id] = []; });
+    nodes.forEach(function (n) {
+      var p = n.pid;
+      if (p !== null && p !== undefined && byId[p] && p !== n.id) children[p].push(n);
+      else roots.push(n);
+    });
+
+    var cursor = 0, positions = {};
+
+    function walk(node, depth) {
+      var kids = children[node.id];
+      var y = depth * (NODE_H + V_GAP);
+      if (!kids.length) {
+        positions[node.id] = { x: cursor, y: y };
+        cursor += NODE_W + H_GAP;
+        return positions[node.id];
+      }
+      var first = null, last = null;
+      kids.forEach(function (k) {
+        var p = walk(k, depth + 1);
+        if (first === null) first = p.x;
+        last = p.x;
+      });
+      positions[node.id] = { x: (first + last) / 2, y: y };
+      return positions[node.id];
+    }
+
+    roots.forEach(function (r) {
+      walk(r, 0);
+      cursor += NODE_W; // gap between separate trees
+    });
+
+    return { positions: positions, children: children, byId: byId, roots: roots };
+  }
+
+  function render(nodes) {
+    // clear previous nodes (keep the <svg>)
+    Array.prototype.slice.call(canvas.querySelectorAll('.node')).forEach(function (el) {
+      el.parentNode.removeChild(el);
+    });
+    edges.innerHTML = '';
+
+    if (!nodes || !nodes.length) { empty.style.display = 'flex'; return; }
+    empty.style.display = 'none';
+
+    var L = layout(nodes);
+    var maxX = 0, maxY = 0;
+
+    nodes.forEach(function (n) {
+      var p = L.positions[n.id];
+      if (!p) return;
+      maxX = Math.max(maxX, p.x + NODE_W);
+      maxY = Math.max(maxY, p.y + NODE_H);
+
+      var el = document.createElement('div');
+      el.className = 'node' + (L.roots.indexOf(n) >= 0 ? ' root' : '');
+      el.style.left = p.x + 'px';
+      el.style.top = p.y + 'px';
+      el.style.width = NODE_W + 'px';
+      el.style.height = NODE_H + 'px';
+
+      var name = document.createElement('div');
+      name.className = 'name';
+      name.textContent = n.name || ('#' + n.id);
+      el.appendChild(name);
+
+      var post = document.createElement('div');
+      post.className = 'post';
+      post.textContent = n.post || '';
+      el.appendChild(post);
+
+      var code = document.createElement('div');
+      code.className = 'code';
+      code.textContent = n.id;
+      el.appendChild(code);
+
+      var btn = document.createElement('button');
+      btn.className = 'edit-btn';
+      btn.title = 'Edit manager (N+1)';
+      btn.textContent = '✎';
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        parent.postMessage({ type: 'editN1', id: n.id, instanceId: instanceId }, '*');
+      });
+      el.appendChild(btn);
+
+      canvas.appendChild(el);
+    });
+
+    // elbow connectors
+    var ns = 'http://www.w3.org/2000/svg';
+    nodes.forEach(function (n) {
+      var kids = L.children[n.id] || [];
+      var p = L.positions[n.id];
+      if (!p || !kids.length) return;
+      kids.forEach(function (k) {
+        var c = L.positions[k.id];
+        if (!c) return;
+        var x1 = p.x + NODE_W / 2, y1 = p.y + NODE_H;
+        var x2 = c.x + NODE_W / 2, y2 = c.y;
+        var mid = y1 + V_GAP / 2;
+        var path = document.createElementNS(ns, 'path');
+        path.setAttribute('d', 'M' + x1 + ',' + y1 + ' V' + mid + ' H' + x2 + ' V' + y2);
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', getComputedStyle(document.documentElement).getPropertyValue('--line').trim() || '#c7ccd8');
+        path.setAttribute('stroke-width', '1.5');
+        edges.appendChild(path);
+      });
+    });
+
+    edges.setAttribute('width', maxX);
+    edges.setAttribute('height', maxY);
+    fit(maxX, maxY);
+  }
+
+  var lastSize = { w: 0, h: 0 };
+  function fit(w, h) {
+    if (w) lastSize = { w: w, h: h };
+    var W = lastSize.w, H = lastSize.h;
+    if (!W || !H) return;
+    var vw = viewport.clientWidth - 48, vh = viewport.clientHeight - 48;
+    scale = Math.min(1, Math.min(vw / W, vh / H));
+    tx = (viewport.clientWidth - W * scale) / 2;
+    ty = 24;
+    applyTransform();
+  }
+
+  // ── Interaction ──────────────────────────────────────────────────────────
+  var dragging = false, sx = 0, sy = 0;
+  viewport.addEventListener('mousedown', function (e) {
+    dragging = true; sx = e.clientX - tx; sy = e.clientY - ty;
+    viewport.classList.add('dragging');
+  });
+  window.addEventListener('mouseup', function () {
+    dragging = false; viewport.classList.remove('dragging');
+  });
+  window.addEventListener('mousemove', function (e) {
+    if (!dragging) return;
+    tx = e.clientX - sx; ty = e.clientY - sy; applyTransform();
+  });
+  viewport.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    var factor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
+    var next = Math.max(0.15, Math.min(2.5, scale * factor));
+    var rect = viewport.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    tx = mx - (mx - tx) * (next / scale);
+    ty = my - (my - ty) * (next / scale);
+    scale = next; applyTransform();
+  }, { passive: false });
+
+  document.getElementById('zoom-in').addEventListener('click', function () {
+    scale = Math.min(2.5, scale * 1.2); applyTransform();
+  });
+  document.getElementById('zoom-out').addEventListener('click', function () {
+    scale = Math.max(0.15, scale / 1.2); applyTransform();
+  });
+  document.getElementById('fit').addEventListener('click', function () { fit(); });
+  window.addEventListener('resize', function () { fit(); });
+
+  // ── Flutter bridge ───────────────────────────────────────────────────────
+  window.addEventListener('message', function (e) {
+    var msg = e.data;
+    if (!msg || msg.type !== 'render') return;
+    instanceId = msg.instanceId || null;
+    var data = msg.data;
+    try { if (typeof data === 'string') data = JSON.parse(data); } catch (err) { data = []; }
+    render(Array.isArray(data) ? data : []);
+  });
+
+  render([]);
+})();
+</script>
+</body>
+</html>

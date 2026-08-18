@@ -44,7 +44,10 @@ jobs:
         if: steps.demo.outputs.present == 'true'
         uses: subosito/flutter-action@v2
         with:
-          flutter-version-file: demo_app/pubspec.yaml
+          # Pinned rather than read from pubspec: demo_app declares only a Dart
+          # SDK constraint, so flutter-version-file has nothing to resolve.
+          flutter-version: 3.44.5
+          channel: stable
           cache: true
 
       - name: Build demo
@@ -62,22 +65,39 @@ jobs:
 
       # ---- NDA / leakage gate ---------------------------------------------
       # Fails the deploy rather than publishing anything client-identifying.
+      #
+      # The deny-list lives in the NDA_DENYLIST repository secret, not in this
+      # file: this repo is public, so writing the client's name here would leak
+      # exactly what the gate exists to catch. Set it to a comma-separated list
+      # of terms. If the secret is unset the gate still runs, using the terms
+      # that are safe to name in the open.
       - name: NDA gate
+        env:
+          DENYLIST: ${{ secrets.NDA_DENYLIST }}
         run: |
           set +e
+          TERMS="${DENYLIST:-}"
+          if [ -z "$TERMS" ]; then
+            echo "::warning::NDA_DENYLIST secret is not set - running with default terms only."
+            TERMS="supabase"
+          fi
           FOUND=0
-          for term in counsel counselmasters cm_system CM_EIS MAMSHA; do
+          IFS=','
+          for term in $TERMS; do
+            term=$(echo "$term" | tr -d '[:space:]')
+            [ -z "$term" ] && continue
             hits=$(grep -ril -- "$term" _site/ 2>/dev/null)
             if [ -n "$hits" ]; then
-              echo "::error::NDA gate: found '$term' in the build output:"
+              echo "::error::NDA gate: a denied term appears in the build output:"
               echo "$hits" | head -20
               FOUND=1
             fi
           done
+          unset IFS
           if [ -d _site/demo ]; then
             hits=$(grep -ril -- "supabase" _site/demo/ 2>/dev/null)
             if [ -n "$hits" ]; then
-              echo "::error::NDA gate: demo references supabase - it must make no network calls:"
+              echo "::error::NDA gate: the demo references a backend - it must make no network calls:"
               echo "$hits" | head -20
               FOUND=1
             fi

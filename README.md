@@ -29,9 +29,9 @@ GitHub Actions (`.github/workflows/deploy.yml`), triggered on push to `master`. 
 assembles `site/` into `_site/`, builds `demo_app` into `_site/demo/` when that directory
 exists, runs an NDA gate over the output, and publishes to Pages.
 
-The **NDA gate** fails the deploy if any client identifier (`counsel`, `cm_system`,
-`CM_EIS`, `MAMSHA`) appears in the built output, or if the demo references `supabase` —
-the demo must make zero network calls.
+The **NDA gate** fails the deploy if any denied term reaches the built output, or if the demo references a backend — it must make no network calls.
+
+The deny-list is held in the `NDA_DENYLIST` repository secret (comma-separated) rather than in the workflow file, because this repository is public and naming the client here would leak precisely what the gate exists to prevent.
 
 ## Crawl control
 
