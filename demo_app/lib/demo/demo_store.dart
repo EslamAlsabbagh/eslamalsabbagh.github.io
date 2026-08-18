@@ -32,6 +32,14 @@ class DemoStore extends ChangeNotifier {
 
   int _nextRequestId = 5000;
 
+  /// requestId -> the approver codes that have acted on it.
+  ///
+  /// Production derives the Processed tab from approval columns on the row.
+  /// The demo's models carry no such column, so the store remembers it: without
+  /// this, a request you just approved would vanish from every tab instead of
+  /// moving to Processed.
+  final Map<int, Set<int>> _actedOn = <int, Set<int>>{};
+
   // ── Accessors ────────────────────────────────────────────────────────────
   List<UserModel> get users => List.unmodifiable(_users);
   List<LeaveRequestModel> get leaveRequests => List.unmodifiable(_leave);
@@ -43,6 +51,15 @@ class DemoStore extends ChangeNotifier {
   UserModel get currentUser => userByCode(_currentUserCode)!;
 
   int get nextRequestId => _nextRequestId++;
+
+  /// Records that [approverCode] acted on [requestId].
+  void recordAction(int requestId, int approverCode) {
+    _actedOn.putIfAbsent(requestId, () => <int>{}).add(approverCode);
+    notifyListeners();
+  }
+
+  bool hasActedOn(int requestId, int approverCode) =>
+      _actedOn[requestId]?.contains(approverCode) ?? false;
 
   UserModel? userByCode(int? code) {
     if (code == null) return null;
@@ -138,10 +155,26 @@ class DemoStore extends ChangeNotifier {
     _users = DemoSeed.employees();
     _currentUserCode = DemoSeed.defaultUserCode;
     _nextRequestId = 5000;
+    _actedOn.clear();
     _leave = _seedLeave();
     _overtime = [];
     _missingPunch = [];
+    _seedProcessedHistory();
     notifyListeners();
+  }
+
+  /// Marks the already-settled seed rows as acted on by the approver in their
+  /// chain, so the Processed tab has content before the visitor does anything.
+  void _seedProcessedHistory() {
+    for (final r in _leave) {
+      final st = (r.status ?? '').toLowerCase();
+      if (st == 'approved' || st == 'declined') {
+        final approver = r.n1Code;
+        if (r.id != null && approver != null) {
+          _actedOn.putIfAbsent(r.id!, () => <int>{}).add(approver);
+        }
+      }
+    }
   }
 
   /// Leave requests seeded across every workflow state, so no screen in the
@@ -199,15 +232,15 @@ class DemoStore extends ChangeNotifier {
 
     return [
       // Pending on the current user's manager — the "needs your approval" case.
-      make(id: 4001, userId: 10000032, from: 6, to: 8, type: 'Annual', status: 'pending', approver: 'N+1'),
-      make(id: 4002, userId: 10000033, from: 10, to: 10, type: 'Emergency', status: 'pending', approver: 'N+1'),
-      make(id: 4003, userId: 10000037, from: 14, to: 18, type: 'Annual', status: 'pending', approver: 'N+1'),
+      make(id: 4001, userId: 10000032, from: 6, to: 8, type: 'Annual', status: 'pending', approver: 'n1'),
+      make(id: 4002, userId: 10000033, from: 10, to: 10, type: 'Emergency', status: 'pending', approver: 'n1'),
+      make(id: 4003, userId: 10000037, from: 14, to: 18, type: 'Annual', status: 'pending', approver: 'n1'),
       // Escalated one level up.
-      make(id: 4004, userId: 10000034, from: 3, to: 4, type: 'Annual', status: 'pending', approver: 'N+2'),
-      make(id: 4005, userId: 10000041, from: 21, to: 25, type: 'Annual', status: 'pending', approver: 'N+2'),
+      make(id: 4004, userId: 10000034, from: 3, to: 4, type: 'Annual', status: 'pending', approver: 'n2'),
+      make(id: 4005, userId: 10000041, from: 21, to: 25, type: 'Annual', status: 'pending', approver: 'n2'),
       // Sitting with HR.
-      make(id: 4006, userId: 10000042, from: -2, to: 1, type: 'Sick', status: 'pending', approver: 'HR'),
-      make(id: 4007, userId: 10000072, from: 30, to: 34, type: 'Annual', status: 'pending', approver: 'HR'),
+      make(id: 4006, userId: 10000042, from: -2, to: 1, type: 'Sick', status: 'pending', approver: 'hr'),
+      make(id: 4007, userId: 10000072, from: 30, to: 34, type: 'Annual', status: 'pending', approver: 'hr'),
       // Settled.
       make(id: 4008, userId: 10000032, from: -20, to: -18, type: 'Annual', status: 'approved'),
       make(id: 4009, userId: 10000035, from: -30, to: -30, type: 'Emergency', status: 'approved'),
@@ -215,7 +248,7 @@ class DemoStore extends ChangeNotifier {
       make(id: 4011, userId: 10000036, from: -40, to: -36, type: 'Annual', status: 'declined',
           decline: 'Coverage unavailable for the requested week.'),
       make(id: 4012, userId: 10000073, from: -8, to: -7, type: 'Sick', status: 'approved'),
-      make(id: 4013, userId: 10000061, from: 40, to: 44, type: 'Annual', status: 'pending', approver: 'N+1'),
+      make(id: 4013, userId: 10000061, from: 40, to: 44, type: 'Annual', status: 'pending', approver: 'n1'),
       make(id: 4014, userId: 10000064, from: -5, to: -5, type: 'Emergency', status: 'approved'),
     ];
   }

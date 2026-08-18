@@ -5,3 +5,4 @@ demo_app/.dart_tool/
 demo_app/.fvm/
 demo_app/.fvmrc
 demo_app/pubspec.lock
+demo_app/.flutter-plugins-dependencies
