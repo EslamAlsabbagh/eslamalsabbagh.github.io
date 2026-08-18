@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# /demo/ is intentionally NOT disallowed here. It carries a <meta name="robots"
+# content="noindex,nofollow"> tag instead, and a crawler must be able to fetch the
+# page in order to read that tag. Disallowing it would leave the URL eligible for
+# bare-URL indexing while hiding the noindex instruction.
+
+Sitemap: https://eslamalsabbagh.github.io/sitemap.xml

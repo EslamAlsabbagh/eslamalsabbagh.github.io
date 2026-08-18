@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eslam Alsabbagh — Flutter &amp; Supabase Developer</title>
+<meta name="description" content="Computer engineer building production HR and workforce management systems with Flutter, Dart and Supabase — BLoC clients, PostgreSQL schema design and Row Level Security.">
+<link rel="canonical" href="https://eslamalsabbagh.github.io/">
+<meta name="author" content="Eslam Alsabbagh">
+<meta name="theme-color" content="#1f6feb">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Eslam Alsabbagh">
+<meta property="og:title" content="Eslam Alsabbagh — Flutter &amp; Supabase Developer">
+<meta property="og:description" content="Computer engineer building production HR and workforce management systems with Flutter, Dart and Supabase.">
+<meta property="og:url" content="https://eslamalsabbagh.github.io/">
+<meta property="og:image" content="https://eslamalsabbagh.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eslam Alsabbagh — Flutter &amp; Supabase Developer">
+<meta name="twitter:description" content="Computer engineer building production HR and workforce management systems with Flutter, Dart and Supabase.">
+<meta name="twitter:image" content="https://eslamalsabbagh.github.io/assets/img/og.png">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://eslamalsabbagh.github.io/#person",
+      "name": "Eslam Alsabbagh",
+      "jobTitle": "Software Engineer",
+      "description": "Computer engineer building production mobile and web systems on Flutter and Supabase.",
+      "url": "https://eslamalsabbagh.github.io/",
+      "email": "mailto:eslam.mo.alsabbagh@gmail.com",
+      "address": { "@type": "PostalAddress", "addressRegion": "Qalyubia", "addressCountry": "EG" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Benha University, Faculty of Engineering at Shoubra" },
+      "knowsAbout": ["Flutter", "Dart", "BLoC", "Supabase", "PostgreSQL", "Row Level Security", "Deno Edge Functions", "HRIS", "Workforce Management"],
+      "sameAs": ["https://github.com/EslamAlsabbagh", "https://www.linkedin.com/in/eslamalsabbagh"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://eslamalsabbagh.github.io/#website",
+      "url": "https://eslamalsabbagh.github.io/",
+      "name": "Eslam Alsabbagh",
+      "publisher": { "@id": "https://eslamalsabbagh.github.io/#person" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Eslam Alsabbagh</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/projects/">Work</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Flutter · Supabase · PostgreSQL</p>
+      <h1>I build production HR and workforce systems.</h1>
+      <p class="lede">
+        Computer engineer working across the full product lifecycle — PostgreSQL schema and
+        Row Level Security design, Deno Edge Function backends, and BLoC-based Flutter clients
+        for web and mobile.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/projects/hr-workforce-platform/">Read the case study</a>
+        <a class="btn btn-ghost" href="/contact/">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section id="what-i-do">
+      <h2>What I do</h2>
+      <div class="prose">
+        <p>
+          Since February 2025 I have been the engineer on a production ERP for HR and employee
+          management, built on Flutter and Supabase and used daily by staff across several
+          departments. It is a real system with real constraints: role-based access that has to
+          hold up under audit, approval chains that route through several levels of management,
+          and a bilingual interface that has to read correctly in both English and Arabic.
+        </p>
+        <p>
+          Most of my work sits where the data model meets the interface. I design PostgreSQL
+          schemas and enforce access through Row Level Security rather than application code, so
+          that a mistake in the client cannot expose another employee's record. I write backend
+          logic as Deno Edge Functions, including an OAuth 2.0 flow against the Gmail API that
+          sends templated HTML approval mail at each step of a request. On the client side I use
+          BLoC and a clean-architecture split that keeps the data layer swappable — which is what
+          made the interactive demo on this site possible at all.
+        </p>
+        <p>
+          I take modules end to end, from requirements and fit-gap analysis through workflow
+          modelling to delivery. The parts of the job I find most interesting are the unglamorous
+          ones: migrating a legacy authentication system onto Supabase Auth without disrupting
+          active accounts, or tracing a partial-update defect down to a database trigger that was
+          silently overriding client writes.
+        </p>
+      </div>
+      <ul class="tags">
+        <li>Flutter</li><li>Dart</li><li>BLoC</li><li>Supabase</li><li>PostgreSQL</li>
+        <li>Row Level Security</li><li>Deno</li><li>Edge Functions</li><li>Clean Architecture</li>
+      </ul>
+    </section>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <div class="grid grid-2">
+        <a class="card card-link" href="/projects/hr-workforce-platform/">
+          <h3>HR &amp; Workforce Management Platform</h3>
+          <p class="small">Flutter · Supabase · PostgreSQL · Deno</p>
+          <p>
+            A 35-screen bilingual ERP covering employee administration, multi-level approvals,
+            shift scheduling and reporting. Built and maintained in production.
+          </p>
+          <p class="more">Read the case study →</p>
+        </a>
+        <div class="card">
+          <h3>Retail Property Management Platform</h3>
+          <p class="small">In progress · Flutter · Supabase</p>
+          <p>
+            Extending the core ERP with Finance, Legal and RDD modules plus a standalone
+            tenant-facing application — two apps on one Supabase project, isolated entirely
+            through Row Level Security.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-cta">
+      <h2>Open to work</h2>
+      <div class="prose">
+        <p>
+          I am available for roles and freelance engagements involving Flutter, Supabase or
+          PostgreSQL-backed product work. The fastest way to reach me is email.
+        </p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:eslam.mo.alsabbagh@gmail.com">eslam.mo.alsabbagh@gmail.com</a>
+        <a class="btn btn-ghost" href="https://github.com/EslamAlsabbagh" rel="me noopener">GitHub</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Eslam Alsabbagh · Qalyubia, Egypt</p>
+    <p class="footer-links">
+      <a href="https://github.com/EslamAlsabbagh" rel="me noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/eslamalsabbagh" rel="me noopener">LinkedIn</a>
+      <a href="mailto:eslam.mo.alsabbagh@gmail.com">Email</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

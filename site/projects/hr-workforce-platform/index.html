@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HR &amp; Workforce Platform — Case Study | Eslam Alsabbagh</title>
+<meta name="description" content="Case study: a 35-screen bilingual HR and workforce ERP built with Flutter, Supabase and PostgreSQL — multi-level approvals and Row Level Security.">
+<link rel="canonical" href="https://eslamalsabbagh.github.io/projects/hr-workforce-platform/">
+<meta name="author" content="Eslam Alsabbagh">
+<meta name="theme-color" content="#1f6feb">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Eslam Alsabbagh">
+<meta property="og:title" content="HR &amp; Workforce Management Platform — Case Study">
+<meta property="og:description" content="A 35-screen bilingual HR ERP built with Flutter, Supabase and PostgreSQL.">
+<meta property="og:url" content="https://eslamalsabbagh.github.io/projects/hr-workforce-platform/">
+<meta property="og:image" content="https://eslamalsabbagh.github.io/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HR &amp; Workforce Management Platform — Case Study">
+<meta name="twitter:description" content="A 35-screen bilingual HR ERP built with Flutter, Supabase and PostgreSQL.">
+<meta name="twitter:image" content="https://eslamalsabbagh.github.io/assets/img/og.png">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "HR and Workforce Management Platform",
+      "headline": "HR and Workforce Management Platform",
+      "description": "A 35-screen bilingual HR and workforce management ERP built with Flutter, Supabase and PostgreSQL, covering employee administration, multi-level approval workflows, shift scheduling and reporting.",
+      "url": "https://eslamalsabbagh.github.io/projects/hr-workforce-platform/",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "name": "Eslam Alsabbagh", "url": "https://eslamalsabbagh.github.io/" },
+      "keywords": "Flutter, Dart, Supabase, PostgreSQL, Row Level Security, Deno, HRIS, workforce management"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://eslamalsabbagh.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://eslamalsabbagh.github.io/projects/" },
+        { "@type": "ListItem", "position": 3, "name": "HR & Workforce Platform", "item": "https://eslamalsabbagh.github.io/projects/hr-workforce-platform/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Eslam Alsabbagh</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/projects/" aria-current="page">Work</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Case study</p>
+      <h1>HR &amp; Workforce Management Platform</h1>
+      <p class="lede">
+        A bilingual ERP for HR and employee management — 35 screens covering employee
+        administration, multi-level approval workflows, shift scheduling and reporting.
+        In production and in daily use.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/demo/">Open the interactive demo</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="notice">
+      <p>
+        <strong>Client identity withheld under NDA.</strong> This case study describes the
+        system in general terms only. The linked demo is a rebranded build running entirely
+        on fictional, generated data — it makes no network calls and is connected to no
+        production system.
+      </p>
+    </div>
+
+    <dl class="facts">
+      <div><dt>Role</dt><dd>Software Engineer — sole developer on the platform</dd></div>
+      <div><dt>Timeline</dt><dd>February 2025 – present</dd></div>
+      <div><dt>Client</dt><dd>Professional-services firm (under NDA)</dd></div>
+      <div><dt>Stack</dt><dd>Flutter, Dart, BLoC, Supabase, PostgreSQL, Deno Edge Functions</dd></div>
+      <div><dt>Scale</dt><dd>35 screens, ~360 Dart source files, EN/AR with RTL</dd></div>
+    </dl>
+
+    <section id="problem">
+      <h2>The problem</h2>
+      <div class="prose">
+        <p>
+          The client was running HR administration across spreadsheets and email. Leave requests,
+          overtime claims, missing-punch corrections and business-trip approvals all travelled as
+          mail threads, which meant no reliable audit trail, no visibility into where a request
+          was stuck, and monthly reconciliation done by hand against fingerprint-terminal exports.
+        </p>
+        <p>
+          The requirement was a single system that could model the organisation's real approval
+          hierarchy, enforce it reliably, and remain usable by staff in both English and Arabic.
+        </p>
+      </div>
+    </section>
+
+    <section id="approach">
+      <h2>Approach</h2>
+      <div class="prose">
+        <p>
+          I modelled and diagrammed the approval workflows with stakeholders before writing any
+          code, so that state transitions and escalation paths were agreed while they were still
+          cheap to change. That produced the core abstraction the system is built around: a
+          request is a state machine, and every request type — leave, overtime, missing punch,
+          business trip — moves through the same engine with a different policy attached.
+        </p>
+
+        <h3>Multi-level approval engine</h3>
+        <p>
+          Requests escalate from the direct manager (N+1) to their manager (N+2) and on to HR,
+          with timed reminders at each stage. Because the escalation path is derived from the
+          organisation structure rather than hard-coded, a reporting-line change takes effect
+          without a deployment.
+        </p>
+
+        <h3>Access control in the database, not the client</h3>
+        <p>
+          Every table is protected by PostgreSQL Row Level Security. The client application holds
+          no authority of its own: an employee querying the employee table receives their own row
+          and their reports' rows because the policy says so, not because the UI filtered the
+          list. This was a deliberate choice — it means a bug in a Flutter screen cannot become a
+          data breach.
+        </p>
+
+        <h3>Notification layer</h3>
+        <p>
+          Approval mail is sent from Supabase Edge Functions running on Deno, authenticating to
+          the Gmail API through OAuth 2.0 implemented inside the function. Each stage of a request
+          produces a templated HTML email with the context the approver needs to decide without
+          opening the app.
+        </p>
+
+        <h3>Bilingual by construction</h3>
+        <p>
+          The interface is fully localised in English and Arabic, including right-to-left layout.
+          Handling RTL as a first-class case from the start — rather than retrofitting it — is
+          what kept the scheduling and org-chart screens workable in both directions.
+        </p>
+      </div>
+    </section>
+
+    <section id="hard-parts">
+      <h2>The hard parts</h2>
+      <div class="prose">
+        <p>
+          <strong>Migrating authentication with no downtime.</strong> The system originally used a
+          custom authentication scheme. Moving it onto Supabase Auth meant verifying JWTs inside
+          Edge Functions and migrating existing users on the fly, at first login, so that active
+          accounts kept working throughout the transition.
+        </p>
+        <p>
+          <strong>A trigger that silently ate writes.</strong> Certain updates were being applied
+          partially, with no error surfaced anywhere. The cause was a database trigger overriding
+          client-supplied columns during an update. Finding it changed how I test this system:
+          RLS policies and triggers are now exercised directly against the database, not inferred
+          from application behaviour.
+        </p>
+        <p>
+          <strong>Keeping the data layer swappable.</strong> Every repository in the app is defined
+          as an abstract interface with a Supabase implementation behind it, wired through a single
+          dependency-injection point. That discipline was originally about testability — but it is
+          also what made the demo on this site achievable, since substituting in-memory
+          implementations swapped out the entire backend without touching a single screen.
+        </p>
+      </div>
+    </section>
+
+    <section id="demo">
+      <h2>Try it</h2>
+      <div class="prose">
+        <p>
+          The demo is the real application with its data layer replaced by seeded, fictional
+          records. You can switch between employee, manager and HR roles to see the same request
+          from each side of an approval chain.
+        </p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="/demo/">Open the interactive demo</a>
+        <a class="btn btn-ghost" href="/contact/">Discuss this project</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Eslam Alsabbagh · Qalyubia, Egypt</p>
+    <p class="footer-links">
+      <a href="https://github.com/EslamAlsabbagh" rel="me noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/eslamalsabbagh" rel="me noopener">LinkedIn</a>
+      <a href="mailto:eslam.mo.alsabbagh@gmail.com">Email</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

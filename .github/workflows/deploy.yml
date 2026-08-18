@@ -1,0 +1,103 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # ---- static site ----------------------------------------------------
+      - name: Assemble static site
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          # Stop Jekyll from swallowing files and dirs that begin with an underscore
+          # (Flutter emits several). Harmless for the static pages.
+          touch _site/.nojekyll
+
+      # ---- Flutter demo (optional until Phase 2 lands) ---------------------
+      - name: Check for demo app
+        id: demo
+        run: |
+          if [ -f demo_app/pubspec.yaml ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::demo_app not present yet - deploying static site only."
+          fi
+
+      - name: Set up Flutter
+        if: steps.demo.outputs.present == 'true'
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: demo_app/pubspec.yaml
+          cache: true
+
+      - name: Build demo
+        if: steps.demo.outputs.present == 'true'
+        working-directory: demo_app
+        run: |
+          flutter pub get
+          flutter build web --release --base-href /demo/
+
+      - name: Add demo to site
+        if: steps.demo.outputs.present == 'true'
+        run: |
+          mkdir -p _site/demo
+          cp -r demo_app/build/web/. _site/demo/
+
+      # ---- NDA / leakage gate ---------------------------------------------
+      # Fails the deploy rather than publishing anything client-identifying.
+      - name: NDA gate
+        run: |
+          set +e
+          FOUND=0
+          for term in counsel counselmasters cm_system CM_EIS MAMSHA; do
+            hits=$(grep -ril -- "$term" _site/ 2>/dev/null)
+            if [ -n "$hits" ]; then
+              echo "::error::NDA gate: found '$term' in the build output:"
+              echo "$hits" | head -20
+              FOUND=1
+            fi
+          done
+          if [ -d _site/demo ]; then
+            hits=$(grep -ril -- "supabase" _site/demo/ 2>/dev/null)
+            if [ -n "$hits" ]; then
+              echo "::error::NDA gate: demo references supabase - it must make no network calls:"
+              echo "$hits" | head -20
+              FOUND=1
+            fi
+          fi
+          if [ "$FOUND" -ne 0 ]; then
+            echo "Deployment blocked."
+            exit 1
+          fi
+          echo "NDA gate passed."
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
