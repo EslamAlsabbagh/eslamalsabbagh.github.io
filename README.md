@@ -12,7 +12,7 @@ site/                     hand-written static HTML/CSS — the indexable surface
   demo/                             -> placeholder, replaced by the Flutter build
   404.html robots.txt sitemap.xml
   assets/css/main.css               single stylesheet
-  assets/img/og.png                 1200x630 social card
+  assets/img/og.jpg                 1200x630 social card
 demo_app/                 (Phase 2) scrubbed Flutter build of the HR platform
 .github/workflows/deploy.yml
 ```

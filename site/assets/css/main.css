@@ -111,6 +111,94 @@ small, .small { font-size: .875rem; color: var(--fg-muted); }
 .hero h1 { max-width: 20ch; }
 .hero .lede { margin-top: 1rem; }
 
+/* ---------- home identity card ----------
+   Forced dark surface in both colour schemes: it is the brand card from the
+   social image, so it should look the same everywhere. */
+.hero-intro { padding: clamp(1.5rem, 1rem + 2vw, 2.5rem) 0 .5rem; }
+
+.identity {
+  --id-bg:     #0a0e14;
+  --id-fg:     #f3f5f9;
+  --id-muted:  #a8b1c0;
+  --id-accent: #58a6ff;
+  --id-hair:   rgba(255, 255, 255, .14);
+
+  position: relative; isolation: isolate; overflow: hidden;
+  color: var(--id-fg);
+  background: var(--id-bg);
+  background-image: linear-gradient(158deg, #141a24 0%, #0a0e14 58%);
+  border: 1px solid rgba(88, 166, 255, .20); border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(9, 12, 17, .5);
+  padding: clamp(1.6rem, 1rem + 3.4vw, 3.25rem);
+  display: grid; gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+}
+
+/* the ring motif, echoing the share image */
+.identity::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  width: 46rem; height: 46rem; top: -21rem; right: -17rem; border-radius: 50%;
+  background:
+    radial-gradient(closest-side,
+      transparent 55%, rgba(88, 166, 255, .40) 57%,
+      rgba(88, 166, 255, .10) 72%, transparent 74%),
+    radial-gradient(closest-side, rgba(31, 111, 235, .16), transparent 72%);
+}
+
+@media (min-width: 54rem) {
+  .identity { grid-template-columns: minmax(0, 1fr) 16.5rem; align-items: center; }
+}
+
+.identity-name {
+  margin: 0 0 .85rem; font-size: .8rem; font-weight: 700;
+  letter-spacing: .13em; text-transform: uppercase; color: var(--id-accent);
+}
+.identity h1 {
+  margin: 0 0 1rem; max-width: 17ch; color: var(--id-fg);
+  font-size: clamp(1.95rem, 1.2rem + 3.1vw, 3.05rem);
+}
+.identity .lede { margin: 0; color: var(--id-muted); max-width: 33rem; }
+.identity-stack {
+  margin: 1.5rem 0 0; max-width: 33rem;
+  font-family: var(--font-mono); font-size: .78rem; letter-spacing: .03em;
+  color: var(--id-muted);
+}
+.identity-stack::before {
+  content: ""; display: block; width: 3.25rem; height: 2px;
+  background: var(--id-accent); margin-bottom: .9rem;
+}
+.identity .actions { margin-top: 1.65rem; }
+.identity .btn-primary { background: var(--id-accent); color: #0b1220; }
+.identity .btn-ghost { border-color: var(--id-hair); color: var(--id-fg); }
+.identity .btn-ghost:hover { background: rgba(255, 255, 255, .08); }
+.identity .btn:focus-visible { outline-color: var(--id-accent); }
+
+/* portrait */
+.identity-photo { position: relative; width: 100%; max-width: 16.5rem; justify-self: center; }
+.identity-photo img {
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5;
+  object-fit: cover; object-position: 50% 12%;
+  border-radius: 14px; border: 1px solid var(--id-hair);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .5);
+}
+/* soft fade that ties the photo into the card surface */
+.identity-photo::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  border-radius: 14px;
+  background: linear-gradient(to bottom, rgba(10, 14, 20, 0) 58%, rgba(10, 14, 20, .5) 100%);
+}
+/* offset accent frame behind the portrait */
+.identity-photo::after {
+  content: ""; position: absolute; z-index: -1; inset: 0;
+  transform: translate(.7rem, .7rem);
+  border: 1px solid rgba(88, 166, 255, .45); border-radius: 14px;
+}
+
+@media (max-width: 53.99rem) {
+  .identity { gap: 1.35rem; }
+  .identity-photo { order: -1; justify-self: start; max-width: 8.5rem; }
+  .identity-photo::after { transform: translate(.5rem, .5rem); }
+}
+
 .actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: 1.75rem; }
 .btn {
   display: inline-flex; align-items: center; gap: .45rem;
