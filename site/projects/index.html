@@ -21,6 +21,8 @@
 <meta name="twitter:image" content="https://eslamalsabbagh.github.io/assets/img/og.jpg">
 
 <link rel="stylesheet" href="/assets/css/main.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/assets/js/site.js" defer></script>
 
 <script type="application/ld+json">
 {
@@ -54,26 +56,64 @@
       <p class="eyebrow">Work</p>
       <h1>Selected work</h1>
       <p class="lede">
-        Production systems built on Flutter and Supabase. Client identities are withheld where
+        Systems built on Flutter, Supabase and PostgreSQL. Three of them have an interactive demo: the real application running on fictional data, with no network calls. Client identities are withheld where
         an NDA applies, and the technical detail below is described in general terms only.
       </p>
     </div>
   </section>
 
   <div class="wrap">
-    <section>
-      <div class="grid grid-2">
-        <a class="card card-link" href="/projects/hr-workforce-platform/">
-          <h3>HR &amp; Workforce Management Platform</h3>
-          <p class="small">2025 – present · Flutter · Supabase · PostgreSQL · Deno</p>
+    <section data-reveal>
+      <div class="grid grid-3" data-stagger>
+        <article class="card project-card pc-hr">
+          <div class="pc-head">
+            <span class="pc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.5 14.6a4.5 4.5 0 0 1 5 4.4"/></svg></span>
+            <h3>HR &amp; Workforce Management Platform</h3>
+          </div>
+          <ul class="badges"><li class="badge">In production</li><li class="badge badge-live">Live demo</li></ul>
+          <p class="small">Flutter · Supabase · PostgreSQL · Deno</p>
           <p>
-            A 35-screen bilingual ERP covering employee administration, a multi-level approval
-            engine, shift scheduling with swap requests, an organisation structure builder and a
-            statistical dashboard. Access control is enforced end to end through PostgreSQL Row
-            Level Security.
+            A 35-screen bilingual ERP covering employee administration, multi-level approvals,
+            shift scheduling and reporting. Built and maintained in production.
           </p>
-          <p class="more">Read the case study →</p>
-        </a>
+          <p class="card-actions">
+            <a href="/projects/hr-workforce-platform/">Case study <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="/demo/">Live demo <span class="arrow" aria-hidden="true">→</span></a>
+          </p>
+        </article>
+        <article class="card project-card pc-ticket">
+          <div class="pc-head">
+            <span class="pc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5V6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v2a2.5 2.5 0 0 0 0 5v2a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 15.5v-2a2.5 2.5 0 0 0 0-5Z"/><path d="M14.5 5v2M14.5 10.5v3M14.5 17v2"/></svg></span>
+            <h3>Ticketing &amp; Cashier System</h3>
+          </div>
+          <ul class="badges"><li class="badge">Pre-launch</li><li class="badge badge-live">Live demo</li></ul>
+          <p class="small">Flutter desktop · Supabase · PostgreSQL · Python</p>
+          <p>
+            QR ticketing for a venue with turnstile gates: cashier counters that keep selling
+            offline, thermal-printed Arabic tickets, blind cash counts and a live occupancy dashboard.
+          </p>
+          <p class="card-actions">
+            <a href="/projects/ticketing-cashier-system/">Case study <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="/demos/ticketing/">Live demo <span class="arrow" aria-hidden="true">→</span></a>
+          </p>
+        </article>
+        <article class="card project-card pc-legal">
+          <div class="pc-head">
+            <span class="pc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v17M7.5 20.5h9M5 6.5h14"/><path d="M5 6.5 2.5 12.5a2.5 2.5 0 0 0 5 0L5 6.5ZM19 6.5l-2.5 6a2.5 2.5 0 0 0 5 0L19 6.5Z"/></svg></span>
+            <h3>Legal Task Manager</h3>
+          </div>
+          <ul class="badges"><li class="badge">In production</li><li class="badge badge-live">Live demo</li></ul>
+          <p class="small">Flutter web (PWA) · Supabase · PostgreSQL</p>
+          <p>
+            An Arabic-first task manager and contracts register for a legal team: today's work at a
+            glance, live updates, an audit trail on every change, and Excel register exports.
+          </p>
+          <p class="card-actions">
+            <a href="/projects/legal-task-manager/">Case study <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="/demos/legal-tasks/">Live demo <span class="arrow" aria-hidden="true">→</span></a>
+          </p>
+        </article>
+
 
         <div class="card">
           <h3>Retail Property Management Platform</h3>
