@@ -1,0 +1,36 @@
+{
+    "name": "Legal Task Manager (Demo)",
+    "short_name": "Legal Demo",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#F3F4F1",
+    "theme_color": "#16201C",
+    "description": "Interactive demo of an Arabic-first legal task manager. Fictional data only.",
+    "lang": "en",
+    "dir": "ltr",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

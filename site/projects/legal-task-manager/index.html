@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal Task Manager: Case Study | Eslam Alsabbagh</title>
+<meta name="description" content="Case study: an Arabic-first legal task manager and contracts register built with Flutter web and self-hosted Supabase, with rules held in PostgreSQL Row Level Security and triggers.">
+<link rel="canonical" href="https://eslamalsabbagh.github.io/projects/legal-task-manager/">
+<meta name="author" content="Eslam Alsabbagh">
+<meta name="theme-color" content="#1f6feb">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Eslam Alsabbagh">
+<meta property="og:title" content="Legal Task Manager: Case Study">
+<meta property="og:description" content="An Arabic-first task manager and contracts register, built with Flutter web and self-hosted Supabase.">
+<meta property="og:url" content="https://eslamalsabbagh.github.io/projects/legal-task-manager/">
+<meta property="og:image" content="https://eslamalsabbagh.github.io/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Legal Task Manager: Case Study">
+<meta name="twitter:description" content="An Arabic-first task manager and contracts register, built with Flutter web and self-hosted Supabase.">
+<meta name="twitter:image" content="https://eslamalsabbagh.github.io/assets/img/og.jpg">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/assets/js/site.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Legal Task Manager",
+      "headline": "Legal Task Manager",
+      "description": "Case study: an Arabic-first legal task manager and contracts register built with Flutter web and self-hosted Supabase, with rules held in PostgreSQL Row Level Security and triggers.",
+      "url": "https://eslamalsabbagh.github.io/projects/legal-task-manager/",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "name": "Eslam Alsabbagh", "url": "https://eslamalsabbagh.github.io/" },
+      "keywords": "Flutter web, PWA, Dart, BLoC, Supabase, PostgreSQL, Row Level Security, RTL, Arabic, task management, contracts register"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://eslamalsabbagh.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://eslamalsabbagh.github.io/projects/" },
+        { "@type": "ListItem", "position": 3, "name": "Legal Task Manager", "item": "https://eslamalsabbagh.github.io/projects/legal-task-manager/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Eslam Alsabbagh</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/projects/" aria-current="page">Work</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Case study</p>
+      <h1>Legal Task Manager</h1>
+      <p class="lede">
+        An Arabic-first task manager and contracts register for a legal team that looks after
+        leases across several shopping centres: who owns each piece of work, what is due today,
+        and which contract is still missing a signature. Self-hosted on the client's own server,
+        in production since October 2026.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/demos/legal-tasks/">Open the interactive demo</a>
+        <a class="btn btn-ghost" href="/demos/legal-tasks/?lang=ar">Open it in Arabic</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="notice" data-reveal>
+      <p>
+        <strong>Client identity withheld under NDA.</strong> This case study describes the
+        system in general terms only. The linked demo is the real application with its data
+        layer replaced by an in-memory store of fictional people, malls and contracts. It makes
+        no network calls and is connected to no production system.
+      </p>
+    </div>
+
+    <dl class="facts" data-stagger>
+      <div><dt>Role</dt><dd>Software Engineer, sole developer: design, database, app and deployment</dd></div>
+      <div><dt>Timeline</dt><dd>October 2026 to present</dd></div>
+      <div><dt>Client</dt><dd>Withheld under NDA</dd></div>
+      <div><dt>Stack</dt><dd>Flutter web (PWA), Dart, BLoC, self-hosted Supabase, PostgreSQL, Nginx</dd></div>
+      <div><dt>Scale</dt><dd>~190 Dart source files, 550+ strings in Arabic and English, 13 decision records</dd></div>
+    </dl>
+
+    <section id="problem" data-reveal>
+      <h2>The problem</h2>
+      <div class="prose">
+        <p>
+          The team's work lived in email threads and a shared spreadsheet. Nobody could answer
+          three simple questions without asking around: what is still open, who is responsible
+          for it, and what has to be done today. The contract register was a separate workbook,
+          so a lease missing a stamp or a tenant document was found only when someone went
+          looking.
+        </p>
+        <p>
+          An earlier plan had been a shared document system with in-browser editing. After
+          walking through the team's real requirements, it was dropped: they needed a task
+          manager they would actually open every morning, in Arabic, and a register that
+          matched the workbook they already trusted.
+        </p>
+      </div>
+    </section>
+
+    <section id="approach" data-reveal>
+      <h2>Approach</h2>
+      <div class="prose">
+        <h3>One screen that answers "what now?"</h3>
+        <p>
+          The home view sorts every open task into <em>urgent: due today</em> (overdue first,
+          then due today or flagged by hand), <em>upcoming</em> and a collapsed
+          <em>completed</em> list, with counters in the header and one chip per file. Work is
+          organised the way the team already thought about it: file (a mall), then topic (a
+          tenant brand), then task. Other views group the same tasks by topic or by person.
+        </p>
+
+        <h3>Rules in the database, not the widgets</h3>
+        <p>
+          Lawyers see only the files they are members of, create tasks only for themselves and
+          edit only their own; managers assign and review; admins manage accounts. All of it is
+          enforced by PostgreSQL Row Level Security and triggers, so it holds even if the API is
+          called directly. "Urgent" and "overdue" are computed in the database on the local
+          date, so every screen and every export agrees on what today means.
+        </p>
+
+        <h3>An audit trail nobody has to remember to write</h3>
+        <p>
+          Every change to a task writes its own history row from a trigger, and the same
+          triggers write the notifications: assigned to you, status or due date changed,
+          someone posted an update. Realtime is used only as a signal to re-read, so a missed
+          message can never leave a screen showing stale data.
+        </p>
+
+        <h3>A contracts register that matches the workbook</h3>
+        <p>
+          Leases, annexes and storage contracts hang together, and each contract shows its
+          values <em>after</em> its active annexes, with a note saying which annex changed
+          what. A checklist tracks missing signatures and stamps per contract and documents per
+          tenant. Whatever the filtered list shows exports to an Excel register laid out like
+          the team's own workbook, or prints on A3. Both are generated entirely in the browser.
+        </p>
+
+        <h3>Arabic first</h3>
+        <p>
+          The interface is right-to-left with Arabic-Indic digits by default. Each stored text
+          field detects its own direction, so a title typed in English sits correctly inside an
+          Arabic layout. Search normalises Arabic spelling (أ/ا, ة/ه, ى/ي and diacritics) and
+          uses trigram matching in PostgreSQL.
+        </p>
+      </div>
+    </section>
+
+    <section id="hard-parts" data-reveal>
+      <h2>The hard parts</h2>
+      <div class="prose">
+        <p>
+          <strong>Self-hosting on a LAN with no public endpoint.</strong> Client data stays
+          on-premises: the system runs in an Ubuntu VM on the client's Windows Server, with
+          Supabase in Docker behind Nginx on a single origin. Every database port is bound to
+          localhost and only the API paths are proxied. Until the internal domain was ready,
+          HTTPS used a private certificate authority constrained to one address. Every setup
+          step is written into a runbook so the server can be rebuilt from scratch.
+        </p>
+        <p>
+          <strong>An export that broke only in production.</strong> The register export worked
+          locally and returned 502 on the server. The query echoed hundreds of contract ids in
+          a response header that outgrew Nginx's proxy buffer. The fix was twofold: send ids in
+          small chunks and size the buffers deliberately, then check the export again against
+          production.
+        </p>
+        <p>
+          <strong>"Effective" values without drift.</strong> An annex can extend a lease, move
+          its area or transfer it to another tenant. Computing the effective values in one
+          database view, rather than in the app, keeps the list, the drawer and the Excel export
+          from ever disagreeing.
+        </p>
+      </div>
+    </section>
+
+    <section id="demo" data-reveal>
+      <h2>Try it</h2>
+      <div class="prose">
+        <p>
+          The demo is the real application. Only its data layer is swapped for an in-memory
+          store that re-states the database rules. Use the bar at the bottom to switch between
+          the manager, a lawyer and the admin. Create a task for a lawyer as the manager, then
+          switch to the lawyer to see it arrive in the notification bell. Open
+          <em>Contracts</em> to see annexes, the missing-items checklist and the Excel export.
+          The language toggle flips the whole app to Arabic and right-to-left.
+        </p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="/demos/legal-tasks/">Open the interactive demo</a>
+        <a class="btn btn-ghost" href="/contact/">Discuss this project</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Eslam Alsabbagh · Qalyubia, Egypt</p>
+    <p class="footer-links">
+      <a href="https://github.com/EslamAlsabbagh" rel="me noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/eslamalsabbagh" rel="me noopener">LinkedIn</a>
+      <a href="mailto:eslam.mo.alsabbagh@gmail.com">Email</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

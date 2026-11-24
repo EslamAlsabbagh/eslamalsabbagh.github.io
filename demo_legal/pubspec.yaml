@@ -1,0 +1,59 @@
+name: legal_tasks_demo
+description: "Interactive demo of an Arabic-first legal task manager. Fictional data only."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  # Zips the contracts register's .xlsx (chosen 2026-11-16, ADR-0013).
+  archive: 4.7.1
+  equatable: ^3.0.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_localizations:
+    sdk: flutter
+  # Version is pinned by flutter_localizations.
+  intl: ^0.20.2
+  # The register's download and print frame; already pulled in by Flutter.
+  web: 1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  # Bundled so the app works with no internet (see CLAUDE.md).
+  fonts:
+    - family: IBM Plex Sans Arabic
+      fonts:
+        - asset: assets/fonts/ibm_plex_sans_arabic/IBMPlexSansArabic-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/ibm_plex_sans_arabic/IBMPlexSansArabic-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/ibm_plex_sans_arabic/IBMPlexSansArabic-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/ibm_plex_sans_arabic/IBMPlexSansArabic-Bold.ttf
+          weight: 700
+    # Not used by the theme. The web engine downloads Roboto from
+    # fonts.gstatic.com unless a family named "Roboto" is bundled, and uses it
+    # as its global fallback font. Aliasing it to Plex Arabic keeps the app
+    # offline and makes the fallback cover Arabic too.
+    # See docs/notes/flutter-app-foundation.md.
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/ibm_plex_sans_arabic/IBMPlexSansArabic-Regular.ttf
+    - family: Readex Pro
+      fonts:
+        - asset: assets/fonts/readex_pro/ReadexPro-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/readex_pro/ReadexPro-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/readex_pro/ReadexPro-Bold.ttf
+          weight: 700

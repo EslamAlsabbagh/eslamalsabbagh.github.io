@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive demo of an Arabic-first legal task manager and contracts register. Fictional data only.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#16201C">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <title>Legal Task Manager: Demo</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #F3F4F1; }
+    #loading {
+      position: fixed; inset: 0; display: grid; place-items: center;
+      font: 500 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #5B6470;
+      transition: opacity .3s ease;
+    }
+    #loading .box { display: grid; justify-items: center; gap: 14px; }
+    #loading .ring {
+      width: 34px; height: 34px; border-radius: 50%;
+      border: 3px solid #D8DCD5; border-top-color: #16201C; animation: spin .9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { #loading .ring { animation-duration: 3s; } }
+  </style>
+</head>
+<body>
+  <div id="loading" role="status" aria-live="polite">
+    <div class="box"><div class="ring"></div><div>Loading the demo…</div></div>
+  </div>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

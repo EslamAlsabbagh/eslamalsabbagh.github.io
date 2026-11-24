@@ -1,0 +1,2950 @@
+{
+  "@@locale": "ar",
+  "appTitle": "نظام الإدارة القانونية",
+  "@appTitle": {
+    "description": "App name, shown in the header and the browser tab."
+  },
+  "statusTodo": "لم تبدأ",
+  "@statusTodo": {
+    "description": "Task status: not started (enum todo)."
+  },
+  "statusDoing": "جارية",
+  "@statusDoing": {
+    "description": "Task status: in progress (enum doing)."
+  },
+  "statusWaiting": "بانتظار رد",
+  "@statusWaiting": {
+    "description": "Task status: waiting for a reply (enum waiting)."
+  },
+  "statusDone": "مكتملة",
+  "@statusDone": {
+    "description": "Task status: completed (enum done)."
+  },
+  "loginTitle": "تسجيل الدخول",
+  "@loginTitle": {
+    "description": "Login card heading."
+  },
+  "loginEmailLabel": "البريد الإلكتروني",
+  "@loginEmailLabel": {
+    "description": "Login form: email field label."
+  },
+  "loginPasswordLabel": "كلمة المرور",
+  "@loginPasswordLabel": {
+    "description": "Login form: password field label."
+  },
+  "loginErrorInvalidEmail": "أدخل بريدًا إلكترونيًا صحيحًا.",
+  "@loginErrorInvalidEmail": {
+    "description": "Shown under the email field when its format is invalid (checked on submit, then while typing)."
+  },
+  "loginSubmit": "دخول",
+  "@loginSubmit": {
+    "description": "Login form: submit button."
+  },
+  "loginShowPassword": "إظهار كلمة المرور",
+  "@loginShowPassword": {
+    "description": "Tooltip on the eye icon in the password field."
+  },
+  "loginHidePassword": "إخفاء كلمة المرور",
+  "@loginHidePassword": {
+    "description": "Tooltip on the eye icon when the password is shown."
+  },
+  "loginForgotHelp": "نسيت كلمة المرور؟ تواصل مع مسؤول النظام.",
+  "@loginForgotHelp": {
+    "description": "Muted help line under the login button. There is no self-service reset."
+  },
+  "loginErrorInvalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+  "@loginErrorInvalidCredentials": {
+    "description": "Login error: wrong email or password."
+  },
+  "loginErrorRateLimited": "محاولات كثيرة. حاول مرة أخرى بعد قليل.",
+  "@loginErrorRateLimited": {
+    "description": "Login error: rate limited by the server."
+  },
+  "loginErrorNetwork": "تعذّر الاتصال بالخادم. تحقق من الشبكة وحاول مرة أخرى.",
+  "@loginErrorNetwork": {
+    "description": "Login error: no response from the server."
+  },
+  "loginErrorUnknown": "حدث خطأ غير متوقع. حاول مرة أخرى.",
+  "@loginErrorUnknown": {
+    "description": "Login error: anything else."
+  },
+  "authAccountDisabled": "هذا الحساب معطّل. تواصل مع مسؤول النظام.",
+  "@authAccountDisabled": {
+    "description": "Shown on the login screen after a deactivated user signs in."
+  },
+  "signOut": "تسجيل الخروج",
+  "@signOut": {
+    "description": "Header button that signs the user out."
+  },
+  "statusCancelled": "ملغاة",
+  "@statusCancelled": {
+    "description": "Task status: cancelled (enum cancelled). Shown as a pill in the closed list."
+  },
+  "counterUrgent": "عاجلة",
+  "@counterUrgent": {
+    "description": "Header counter label: open tasks that are urgent now (overdue included)."
+  },
+  "counterOverdue": "متأخرة",
+  "@counterOverdue": {
+    "description": "Header counter label: open tasks past their due date."
+  },
+  "counterOpen": "مفتوحة",
+  "@counterOpen": {
+    "description": "Header counter label: all open tasks."
+  },
+  "allFiles": "كل الملفات",
+  "@allFiles": {
+    "description": "First file filter chip: no file filter."
+  },
+  "fileFilterLabel": "تصفية حسب الملف",
+  "@fileFilterLabel": {
+    "description": "Accessibility label of the file filter chip row."
+  },
+  "sectionUrgentTitle": "عاجلة — تُنجز اليوم",
+  "@sectionUrgentTitle": {
+    "description": "Tasks view: urgent section title."
+  },
+  "sectionUrgentCaption": "المتأخرة أولًا، ثم ما موعده اليوم أو عُلّم عاجلًا",
+  "@sectionUrgentCaption": {
+    "description": "Tasks view: caption next to the urgent section title."
+  },
+  "sectionUpcomingTitle": "القادمة",
+  "@sectionUpcomingTitle": {
+    "description": "Tasks view: upcoming section title."
+  },
+  "sectionUpcomingCaption": "مرتبة حسب أقرب موعد تسليم",
+  "@sectionUpcomingCaption": {
+    "description": "Tasks view: caption next to the upcoming section title."
+  },
+  "sectionClosedTitle": "المكتملة",
+  "@sectionClosedTitle": {
+    "description": "Tasks view: closed (done and cancelled) section title."
+  },
+  "emptyUrgent": "لا توجد مهام عاجلة اليوم",
+  "@emptyUrgent": {
+    "description": "Tasks view: shown when the urgent section is empty."
+  },
+  "emptyUpcoming": "لا توجد مهام قادمة",
+  "@emptyUpcoming": {
+    "description": "Tasks view: shown when the upcoming section is empty."
+  },
+  "showClosed": "عرض المكتملة ({count})",
+  "@showClosed": {
+    "description": "Button that expands the closed section. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "hideClosed": "إخفاء المكتملة ({count})",
+  "@hideClosed": {
+    "description": "Button that collapses the closed section. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "flagOverdue": "متأخرة",
+  "@flagOverdue": {
+    "description": "Flag on a task row that is past its due date."
+  },
+  "flagUrgent": "عاجلة",
+  "@flagUrgent": {
+    "description": "Flag on a task row that is urgent (due today or marked urgent)."
+  },
+  "dueToday": "اليوم",
+  "@dueToday": {
+    "description": "Due label: due today."
+  },
+  "dueTomorrow": "غدًا",
+  "@dueTomorrow": {
+    "description": "Due label: due tomorrow."
+  },
+  "dueOverdueSince": "متأخرة منذ {days}",
+  "@dueOverdueSince": {
+    "description": "Due label for an overdue task. days is a day phrase (dayOne, dayTwo, daysFew or daysMany).",
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "dueIn": "بعد {days}",
+  "@dueIn": {
+    "description": "Due label for a task due in 2 to 6 days. days is a day phrase.",
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "dayOne": "يوم",
+  "@dayOne": {
+    "description": "Day phrase for 1 day."
+  },
+  "dayTwo": "يومين",
+  "@dayTwo": {
+    "description": "Day phrase for 2 days."
+  },
+  "daysFew": "{count} أيام",
+  "@daysFew": {
+    "description": "Day phrase for 3 to 10 days. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "daysMany": "{count} يومًا",
+  "@daysMany": {
+    "description": "Day phrase for 11 days or more. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "updatesCount": "عدد التحديثات: {count}",
+  "@updatesCount": {
+    "description": "Accessibility label of the comment icon and count on a task row.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "formerEmployee": "موظف سابق",
+  "@formerEmployee": {
+    "description": "Shown instead of the assignee's name when their profile can't be read."
+  },
+  "tasksLoadError": "تعذّر تحميل المهام.",
+  "@tasksLoadError": {
+    "description": "Tasks view: the task list could not be loaded."
+  },
+  "retry": "إعادة المحاولة",
+  "@retry": {
+    "description": "Button that retries a failed load."
+  },
+  "drawerClose": "إغلاق",
+  "@drawerClose": {
+    "description": "Close button of the task drawer, and the drawer's scrim label."
+  },
+  "drawerStatusLabel": "الحالة",
+  "@drawerStatusLabel": {
+    "description": "Task drawer: label above the status buttons."
+  },
+  "drawerAssigneeLabel": "الموظف المسؤول",
+  "@drawerAssigneeLabel": {
+    "description": "Task drawer: assignee field label."
+  },
+  "drawerDueLabel": "موعد التسليم",
+  "@drawerDueLabel": {
+    "description": "Task drawer: due date field label."
+  },
+  "drawerContractLabel": "العقد",
+  "@drawerContractLabel": {
+    "description": "Task drawer: the label over a follow-up task's contract, a link to the contract drawer."
+  },
+  "drawerPickDue": "اختيار موعد التسليم",
+  "@drawerPickDue": {
+    "description": "Accessibility label of the due date field, which opens a date picker."
+  },
+  "drawerManualUrgent": "تعليم كعاجلة يدويًا",
+  "@drawerManualUrgent": {
+    "description": "Task drawer: checkbox that flags the task urgent by hand."
+  },
+  "urgentNoteDone": "المهمة مكتملة.",
+  "@urgentNoteDone": {
+    "description": "Task drawer urgent box note: the task is done."
+  },
+  "urgentNoteCancelled": "المهمة ملغاة.",
+  "@urgentNoteCancelled": {
+    "description": "Task drawer urgent box note: the task is cancelled (not in the canvas)."
+  },
+  "urgentNoteOverdue": "عاجلة تلقائيًا لأن موعد التسليم فات.",
+  "@urgentNoteOverdue": {
+    "description": "Task drawer urgent box note: open and past its due date."
+  },
+  "urgentNoteToday": "عاجلة تلقائيًا لأن موعد التسليم اليوم.",
+  "@urgentNoteToday": {
+    "description": "Task drawer urgent box note: open and due today."
+  },
+  "urgentNoteManual": "عُلّمت عاجلة يدويًا وتظهر في أعلى القائمة.",
+  "@urgentNoteManual": {
+    "description": "Task drawer urgent box note: flagged urgent by hand."
+  },
+  "urgentNoteLater": "ستصبح عاجلة تلقائيًا يوم موعد التسليم.",
+  "@urgentNoteLater": {
+    "description": "Task drawer urgent box note: not urgent yet."
+  },
+  "drawerDescriptionLabel": "الوصف",
+  "@drawerDescriptionLabel": {
+    "description": "Task drawer: description heading."
+  },
+  "drawerUpdatesLabel": "التحديثات — إلى أين وصلنا",
+  "@drawerUpdatesLabel": {
+    "description": "Task drawer: updates heading."
+  },
+  "drawerNoUpdates": "لا توجد تحديثات بعد",
+  "@drawerNoUpdates": {
+    "description": "Task drawer: the task has no updates."
+  },
+  "updateFieldLabel": "أضف تحديثًا",
+  "@updateFieldLabel": {
+    "description": "Task drawer: the update box's label for screen readers (hidden on screen, as in the canvas)."
+  },
+  "updateHint": "اكتب آخر ما وصلت إليه في المهمة…",
+  "@updateHint": {
+    "description": "Task drawer: the update box's placeholder."
+  },
+  "updateAdd": "إضافة تحديث",
+  "@updateAdd": {
+    "description": "Task drawer: posts the typed update."
+  },
+  "updateErrorNotAllowed": "لا تملك صلاحية إضافة تحديث على هذه المهمة.",
+  "@updateErrorNotAllowed": {
+    "description": "Task drawer: the server refused the update (RLS)."
+  },
+  "updateErrorUnknown": "تعذّر إضافة التحديث. حاول مرة أخرى.",
+  "@updateErrorUnknown": {
+    "description": "Task drawer: any other failure to post an update. The network case reuses loginErrorNetwork."
+  },
+  "drawerLoadError": "تعذّر تحميل المهمة.",
+  "@drawerLoadError": {
+    "description": "Task drawer: the task's details could not be loaded."
+  },
+  "saveErrorNotAllowed": "لا تملك صلاحية تعديل هذه المهمة.",
+  "@saveErrorNotAllowed": {
+    "description": "Task drawer: the server refused the change (RLS)."
+  },
+  "saveErrorAssignee": "لا يمكن إسناد المهمة لهذا الموظف.",
+  "@saveErrorAssignee": {
+    "description": "Task drawer: the assignee is inactive or not a member of the task's file."
+  },
+  "saveErrorUnknown": "تعذّر حفظ التغيير. حاول مرة أخرى.",
+  "@saveErrorUnknown": {
+    "description": "Task drawer: any other save failure. The network case reuses loginErrorNetwork."
+  },
+  "cancelTask": "إلغاء المهمة",
+  "@cancelTask": {
+    "description": "Task drawer: button that cancels the task, and the confirm button of its dialog."
+  },
+  "cancelTaskTitle": "إلغاء المهمة؟",
+  "@cancelTaskTitle": {
+    "description": "Cancel-task confirm dialog title."
+  },
+  "cancelTaskBody": "تنتقل المهمة إلى المكتملة بحالة ملغاة، ويمكن إعادة فتحها لاحقًا.",
+  "@cancelTaskBody": {
+    "description": "Cancel-task confirm dialog body."
+  },
+  "cancelTaskBack": "رجوع",
+  "@cancelTaskBack": {
+    "description": "Cancel-task confirm dialog: keep the task open."
+  },
+  "editTask": "تعديل",
+  "@editTask": {
+    "description": "Task drawer: button beside the title that turns the title and description into an edit form."
+  },
+  "editTitleLabel": "عنوان المهمة",
+  "@editTitleLabel": {
+    "description": "Task drawer edit form: title field label (same as the new-task modal)."
+  },
+  "editSave": "حفظ",
+  "@editSave": {
+    "description": "Task drawer edit form: save the title and description."
+  },
+  "editCancel": "إلغاء",
+  "@editCancel": {
+    "description": "Task drawer edit form: drop the changes and show the text again."
+  },
+  "discardEditTitle": "تجاهل التعديلات؟",
+  "@discardEditTitle": {
+    "description": "Confirm dialog title when closing the drawer (or pressing Esc) with unsaved title or description changes."
+  },
+  "discardEditBody": "لن تُحفظ التعديلات على العنوان والوصف.",
+  "@discardEditBody": {
+    "description": "Discard-changes confirm dialog body."
+  },
+  "discardEditBack": "متابعة التعديل",
+  "@discardEditBack": {
+    "description": "Discard-changes confirm dialog: go back to the form."
+  },
+  "discardEditConfirm": "تجاهل",
+  "@discardEditConfirm": {
+    "description": "Discard-changes confirm dialog: drop the changes."
+  },
+  "discardUpdateTitle": "تجاهل التحديث؟",
+  "@discardUpdateTitle": {
+    "description": "Confirm dialog title when closing the drawer with an update typed but not added."
+  },
+  "discardUpdateBody": "لن يُحفظ التحديث الذي كتبته.",
+  "@discardUpdateBody": {
+    "description": "Discard-update confirm dialog body. The confirm button reuses discardEditConfirm."
+  },
+  "discardUpdateBack": "متابعة الكتابة",
+  "@discardUpdateBack": {
+    "description": "Discard-update confirm dialog (and the combined one): go back to the drawer."
+  },
+  "discardAllTitle": "تجاهل ما كتبته؟",
+  "@discardAllTitle": {
+    "description": "Confirm dialog title when closing the drawer with both an unsaved title/description edit and an unsent update."
+  },
+  "discardAllBody": "لن تُحفظ التعديلات على العنوان والوصف ولا التحديث الذي كتبته.",
+  "@discardAllBody": {
+    "description": "The combined discard dialog body."
+  },
+  "timeNow": "الآن",
+  "@timeNow": {
+    "description": "Relative time: less than a minute ago."
+  },
+  "timeAgo": "منذ {time}",
+  "@timeAgo": {
+    "description": "Relative time in the past. time is a minute, hour or day phrase.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "timeYesterday": "أمس",
+  "@timeYesterday": {
+    "description": "Relative time: the previous calendar day."
+  },
+  "minuteOne": "دقيقة",
+  "@minuteOne": {
+    "description": "Minute phrase for 1 minute."
+  },
+  "minuteTwo": "دقيقتين",
+  "@minuteTwo": {
+    "description": "Minute phrase for 2 minutes."
+  },
+  "minutesFew": "{count} دقائق",
+  "@minutesFew": {
+    "description": "Minute phrase for 3 to 10 minutes. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "minutesMany": "{count} دقيقة",
+  "@minutesMany": {
+    "description": "Minute phrase for 11 minutes or more. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "hourOne": "ساعة",
+  "@hourOne": {
+    "description": "Hour phrase for 1 hour."
+  },
+  "hourTwo": "ساعتين",
+  "@hourTwo": {
+    "description": "Hour phrase for 2 hours."
+  },
+  "hoursFew": "{count} ساعات",
+  "@hoursFew": {
+    "description": "Hour phrase for 3 to 10 hours. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "hoursMany": "{count} ساعة",
+  "@hoursMany": {
+    "description": "Hour phrase for 11 hours or more. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "searchHint": "ابحث في المهام…",
+  "@searchHint": {
+    "description": "Tasks view: placeholder of the search field."
+  },
+  "searchLabel": "البحث في المهام",
+  "@searchLabel": {
+    "description": "Accessibility label of the search field."
+  },
+  "searchClear": "مسح البحث",
+  "@searchClear": {
+    "description": "Tooltip of the × button that clears the search."
+  },
+  "searchResultOne": "نتيجة واحدة لـ \"{term}\"",
+  "@searchResultOne": {
+    "description": "Search result line for 1 match. term is what was searched.",
+    "placeholders": {
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "searchResultTwo": "نتيجتان لـ \"{term}\"",
+  "@searchResultTwo": {
+    "description": "Search result line for 2 matches.",
+    "placeholders": {
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "searchResultsFew": "{count} نتائج لـ \"{term}\"",
+  "@searchResultsFew": {
+    "description": "Search result line for 3 to 10 matches. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      },
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "searchResultsMany": "{count} نتيجة لـ \"{term}\"",
+  "@searchResultsMany": {
+    "description": "Search result line for 11 matches or more. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      },
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "searchNoResults": "لا توجد مهام تطابق \"{term}\"",
+  "@searchNoResults": {
+    "description": "Tasks view: empty box when a search has no matches.",
+    "placeholders": {
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "searchError": "تعذّر البحث. حاول مرة أخرى.",
+  "@searchError": {
+    "description": "Tasks view: the search request failed."
+  },
+  "viewTabsLabel": "طريقة العرض",
+  "@viewTabsLabel": {
+    "description": "Accessibility label of the view tabs (segmented control)."
+  },
+  "tabTasks": "المهام والأولوية",
+  "@tabTasks": {
+    "description": "View tab: the tasks view (View 1)."
+  },
+  "tabTopics": "المواضيع",
+  "@tabTopics": {
+    "description": "View tab: the topics view (View 2)."
+  },
+  "tabPeople": "الموظفون",
+  "@tabPeople": {
+    "description": "View tab: the people view (View 3)."
+  },
+  "topicBrandLabel": "عقد براند",
+  "@topicBrandLabel": {
+    "description": "Topics view: small label above a topic card's name."
+  },
+  "topicCountZero": "لا مواضيع",
+  "@topicCountZero": {
+    "description": "Topics view file summary: a file with no topics."
+  },
+  "topicCountOne": "موضوع واحد",
+  "@topicCountOne": {
+    "description": "Topics view file summary: one topic."
+  },
+  "topicCountTwo": "موضوعان",
+  "@topicCountTwo": {
+    "description": "Topics view file summary: two topics."
+  },
+  "topicCountFew": "{count} مواضيع",
+  "@topicCountFew": {
+    "description": "Topics view file summary: 3 to 10 topics. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "topicCountMany": "{count} موضوعًا",
+  "@topicCountMany": {
+    "description": "Topics view file summary: 11 or more topics. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "openTaskCountZero": "لا مهام مفتوحة",
+  "@openTaskCountZero": {
+    "description": "Topics view file summary: no open tasks."
+  },
+  "openTaskCountOne": "مهمة مفتوحة واحدة",
+  "@openTaskCountOne": {
+    "description": "Topics view file summary: one open task."
+  },
+  "openTaskCountTwo": "مهمتان مفتوحتان",
+  "@openTaskCountTwo": {
+    "description": "Topics view file summary: two open tasks."
+  },
+  "openTaskCountFew": "{count} مهام مفتوحة",
+  "@openTaskCountFew": {
+    "description": "Topics view file summary: 3 to 10 open tasks. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "openTaskCountMany": "{count} مهمة مفتوحة",
+  "@openTaskCountMany": {
+    "description": "Topics view file summary: 11 or more open tasks. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "urgentCountLabel": "{count} عاجلة",
+  "@urgentCountLabel": {
+    "description": "Topics view: urgent count in a file summary and on a topic card's badge, written like the header counter. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "topicProgress": "مكتملة: {done} من {total}",
+  "@topicProgress": {
+    "description": "Topics view: under a topic's progress bar. Cancelled tasks are not counted. Both numbers are already formatted with locale digits.",
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "topicNoTasks": "لا مهام بعد",
+  "@topicNoTasks": {
+    "description": "Topics view: under the empty progress bar of a topic with no tasks."
+  },
+  "topicNoOpenTasks": "لا توجد مهام مفتوحة",
+  "@topicNoOpenTasks": {
+    "description": "Topics and people views: a topic or person card with no open tasks."
+  },
+  "fileNoTopics": "لا توجد مواضيع في هذا الملف",
+  "@fileNoTopics": {
+    "description": "Topics view: a file section with no topics."
+  },
+  "peopleEmptyFile": "لا يوجد موظفون في هذا الملف",
+  "@peopleEmptyFile": {
+    "description": "People view: a file chip is selected and nobody is a member of it or has open tasks in it."
+  },
+  "peopleEmpty": "لا يوجد موظفون بعد",
+  "@peopleEmpty": {
+    "description": "People view: no file chip is selected and there is nobody to show."
+  },
+  "newFileButton": "ملف جديد",
+  "@newFileButton": {
+    "description": "Topics view (managers): the button that opens the new-file modal; shown with a + icon."
+  },
+  "editName": "تعديل",
+  "@editName": {
+    "description": "Topics view (managers): the button beside a file's title that opens the rename modal."
+  },
+  "editFileSemantics": "تعديل اسم الملف {name}",
+  "@editFileSemantics": {
+    "description": "Topics view: screen-reader label of a file's «تعديل» button.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "editTopicTooltip": "تعديل اسم الموضوع",
+  "@editTopicTooltip": {
+    "description": "Topics view: mouse tooltip of a topic card's pencil button."
+  },
+  "editTopicSemantics": "تعديل اسم الموضوع {name}",
+  "@editTopicSemantics": {
+    "description": "Topics view: screen-reader label of a topic card's pencil button.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "newTopicCard": "موضوع جديد",
+  "@newTopicCard": {
+    "description": "Topics view: the dashed card at the end of a file's grid; also the last entry of the new-task modal's topic select."
+  },
+  "newTopicSemantics": "إضافة موضوع إلى {file}",
+  "@newTopicSemantics": {
+    "description": "Screen-reader label of the dashed new-topic card and of the new-task modal's new-topic entry.",
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "nameModalNewFile": "ملف جديد",
+  "@nameModalNewFile": {
+    "description": "Name modal title: creating a file."
+  },
+  "nameModalRenameFile": "تعديل اسم الملف",
+  "@nameModalRenameFile": {
+    "description": "Name modal title: renaming a file."
+  },
+  "nameModalNewTopic": "موضوع جديد",
+  "@nameModalNewTopic": {
+    "description": "Name modal title: creating a topic."
+  },
+  "nameModalRenameTopic": "تعديل اسم الموضوع",
+  "@nameModalRenameTopic": {
+    "description": "Name modal title: renaming a topic."
+  },
+  "nameModalFileLine": "الملف: {file}",
+  "@nameModalFileLine": {
+    "description": "Name modal: the fixed line naming a topic's file.",
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "fileNameLabel": "اسم الملف",
+  "@fileNameLabel": {
+    "description": "Name modal: the field label for a file."
+  },
+  "topicNameLabel": "اسم الموضوع (البراند)",
+  "@topicNameLabel": {
+    "description": "Name modal: the field label for a topic."
+  },
+  "fileNameHint": "مثال: سيتي سنتر",
+  "@fileNameHint": {
+    "description": "Name modal: placeholder for a file name (fake example)."
+  },
+  "topicNameHint": "مثال: كافيه ليمونة",
+  "@topicNameHint": {
+    "description": "Name modal: placeholder for a topic name (fake example)."
+  },
+  "nameErrorDuplicateFile": "يوجد ملف بهذا الاسم.",
+  "@nameErrorDuplicateFile": {
+    "description": "Name modal: the file name is taken (compared after Arabic normalization)."
+  },
+  "nameErrorDuplicateTopic": "يوجد موضوع بهذا الاسم في هذا الملف.",
+  "@nameErrorDuplicateTopic": {
+    "description": "Name modal: the topic name is taken in its file."
+  },
+  "nameErrorNotAllowed": "لا تملك صلاحية تعديل الملفات والمواضيع.",
+  "@nameErrorNotAllowed": {
+    "description": "Name modal: the server refused the save. The network case reuses loginErrorNetwork."
+  },
+  "nameErrorUnknown": "تعذّر الحفظ. حاول مرة أخرى.",
+  "@nameErrorUnknown": {
+    "description": "Name modal: any other save failure."
+  },
+  "deleteFile": "حذف الملف",
+  "@deleteFile": {
+    "description": "Rename-file modal: the delete button, shown only for a file with no topics."
+  },
+  "deleteTopic": "حذف الموضوع",
+  "@deleteTopic": {
+    "description": "Rename-topic modal: the delete button, shown only for a topic with no tasks."
+  },
+  "deleteFileSemantics": "حذف الملف {name}",
+  "@deleteFileSemantics": {
+    "description": "Rename-file modal: screen-reader label of the delete button.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteTopicSemantics": "حذف الموضوع {name}",
+  "@deleteTopicSemantics": {
+    "description": "Rename-topic modal: screen-reader label of the delete button.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteFileTitle": "حذف الملف {name}؟",
+  "@deleteFileTitle": {
+    "description": "Delete-file confirm dialog: title.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteTopicTitle": "حذف الموضوع {name}؟",
+  "@deleteTopicTitle": {
+    "description": "Delete-topic confirm dialog: title.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteNameBody": "يُحذف نهائيًا، ولا يمكن التراجع عن ذلك.",
+  "@deleteNameBody": {
+    "description": "Delete-file and delete-topic confirm dialogs: body."
+  },
+  "deleteNameConfirm": "حذف",
+  "@deleteNameConfirm": {
+    "description": "Delete-file and delete-topic confirm dialogs: the confirm button."
+  },
+  "nameErrorFileNotEmpty": "أُضيفت مواضيع إلى هذا الملف، فلم يعد حذفه ممكنًا.",
+  "@nameErrorFileNotEmpty": {
+    "description": "Rename-file modal: the delete was refused because someone added a topic after the modal opened."
+  },
+  "nameErrorTopicNotEmpty": "أُضيفت مهام إلى هذا الموضوع، فلم يعد حذفه ممكنًا.",
+  "@nameErrorTopicNotEmpty": {
+    "description": "Rename-topic modal: the delete was refused because someone added a task after the modal opened."
+  },
+  "headerUsers": "المستخدمون",
+  "@headerUsers": {
+    "description": "Header: admins only; opens the users page."
+  },
+  "usersTitle": "المستخدمون",
+  "@usersTitle": {
+    "description": "Users page: the heading."
+  },
+  "usersBack": "رجوع",
+  "@usersBack": {
+    "description": "Users page: back to the tasks."
+  },
+  "usersNew": "مستخدم جديد",
+  "@usersNew": {
+    "description": "Users page: the button that opens the new-user modal (after a + icon)."
+  },
+  "usersLoadFailed": "تعذّر تحميل المستخدمين.",
+  "@usersLoadFailed": {
+    "description": "Users page: the list failed to load. Followed by retry."
+  },
+  "roleLawyer": "محامٍ",
+  "@roleLawyer": {
+    "description": "Role label for the lawyer enum value."
+  },
+  "roleManager": "مدير",
+  "@roleManager": {
+    "description": "Role label for the manager enum value."
+  },
+  "roleAdmin": "مسؤول النظام",
+  "@roleAdmin": {
+    "description": "Role label for the admin enum value (as in the login help line)."
+  },
+  "userInactive": "معطّل",
+  "@userInactive": {
+    "description": "Users page: pill on a deactivated account."
+  },
+  "userFileCountZero": "لا ملفات",
+  "@userFileCountZero": {
+    "description": "Users page: a lawyer who is a member of no file."
+  },
+  "userFileCountOne": "ملف واحد",
+  "@userFileCountOne": {
+    "description": "Users page: a lawyer on one file."
+  },
+  "userFileCountTwo": "ملفان",
+  "@userFileCountTwo": {
+    "description": "Users page: a lawyer on two files."
+  },
+  "userFileCountFew": "{count} ملفات",
+  "@userFileCountFew": {
+    "description": "Users page: 3 to 10 files. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "userFileCountMany": "{count} ملفًا",
+  "@userFileCountMany": {
+    "description": "Users page: 11 or more files. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "userModalNew": "مستخدم جديد",
+  "@userModalNew": {
+    "description": "User modal: title when creating."
+  },
+  "userModalEdit": "تعديل المستخدم",
+  "@userModalEdit": {
+    "description": "User modal: title when editing."
+  },
+  "userNameLabel": "الاسم",
+  "@userNameLabel": {
+    "description": "User modal: the display name field label."
+  },
+  "userNameHint": "مثال: نور حسن",
+  "@userNameHint": {
+    "description": "User modal: placeholder for the name (fake example)."
+  },
+  "userPasswordHint": "٨ أحرف على الأقل",
+  "@userPasswordHint": {
+    "description": "User and password modals: placeholder for the password."
+  },
+  "userRoleLabel": "الدور",
+  "@userRoleLabel": {
+    "description": "User modal: the role choice label."
+  },
+  "userFilesLabel": "الملفات",
+  "@userFilesLabel": {
+    "description": "User modal: the file membership checkboxes label (lawyers only)."
+  },
+  "userFilesAll": "المدير ومسؤول النظام يريان كل الملفات.",
+  "@userFilesAll": {
+    "description": "User modal: shown instead of the file checkboxes for a manager or admin."
+  },
+  "userFilesNone": "لا توجد ملفات بعد.",
+  "@userFilesNone": {
+    "description": "User modal: there are no files to tick."
+  },
+  "userSelfNote": "لا يمكنك تغيير دورك أو تعطيل حسابك.",
+  "@userSelfNote": {
+    "description": "User modal: an admin editing their own account."
+  },
+  "userAccountLabel": "الحساب",
+  "@userAccountLabel": {
+    "description": "User modal: heading of the password and deactivate buttons (edit only)."
+  },
+  "userSetPassword": "تعيين كلمة مرور جديدة",
+  "@userSetPassword": {
+    "description": "User modal: opens the password modal."
+  },
+  "userPasswordSet": "تم تعيين كلمة المرور الجديدة.",
+  "@userPasswordSet": {
+    "description": "User modal: after the password modal saved."
+  },
+  "userDeactivate": "تعطيل الحساب",
+  "@userDeactivate": {
+    "description": "User modal: the deactivate button, and the confirm button of its dialog."
+  },
+  "userReactivate": "إعادة تفعيل الحساب",
+  "@userReactivate": {
+    "description": "User modal: the reactivate button."
+  },
+  "userIsInactive": "هذا الحساب معطّل ولا يمكنه تسجيل الدخول.",
+  "@userIsInactive": {
+    "description": "User modal: line in the account section of a deactivated account."
+  },
+  "userDeactivateTitle": "تعطيل حساب {name}؟",
+  "@userDeactivateTitle": {
+    "description": "Deactivate confirm dialog: title.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userDeactivateBody": "لن يتمكن هذا المستخدم من تسجيل الدخول حتى يُعاد تفعيل الحساب. تبقى المهام والتحديثات كما هي.",
+  "@userDeactivateBody": {
+    "description": "Deactivate confirm dialog: body."
+  },
+  "userDiscardBody": "لن تُحفظ التعديلات على هذا المستخدم.",
+  "@userDiscardBody": {
+    "description": "User modal: the discard dialog body (title and buttons reuse discardEdit*)."
+  },
+  "passwordModalTitle": "كلمة مرور جديدة",
+  "@passwordModalTitle": {
+    "description": "Password modal: title."
+  },
+  "passwordModalUserLine": "المستخدم: {name}",
+  "@passwordModalUserLine": {
+    "description": "Password modal: the fixed line naming the account.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "passwordModalLabel": "كلمة المرور الجديدة",
+  "@passwordModalLabel": {
+    "description": "Password modal: the field label."
+  },
+  "userErrorNotAllowed": "لا تملك صلاحية إدارة المستخدمين.",
+  "@userErrorNotAllowed": {
+    "description": "User and password modals: the server refused."
+  },
+  "userErrorOpenTasks": "لهذا المستخدم مهام مفتوحة. أعد إسنادها أولًا.",
+  "@userErrorOpenTasks": {
+    "description": "User modal: deactivating someone with open tasks."
+  },
+  "userErrorOpenTasksInFile": "لهذا المستخدم مهام مفتوحة في ملف أُلغي تحديده. أعد إسنادها أولًا.",
+  "@userErrorOpenTasksInFile": {
+    "description": "User modal: removing a lawyer from a file where they have open tasks."
+  },
+  "userErrorOpenTasksOutsideFiles": "لهذا المستخدم مهام مفتوحة في ملفات غير محددة. حدّدها أو أعد إسناد المهام أولًا.",
+  "@userErrorOpenTasksOutsideFiles": {
+    "description": "User modal: making someone a lawyer while they have open tasks in files not ticked."
+  },
+  "userErrorEmailTaken": "يوجد حساب بهذا البريد الإلكتروني.",
+  "@userErrorEmailTaken": {
+    "description": "User modal: the email is taken."
+  },
+  "userErrorWeakPassword": "كلمة المرور قصيرة. استخدم ٨ أحرف على الأقل.",
+  "@userErrorWeakPassword": {
+    "description": "User and password modals: the server refused the password."
+  },
+  "newTask": "مهمة جديدة",
+  "@newTask": {
+    "description": "Header button and the new-task modal's title."
+  },
+  "newTaskTitleHint": "مثال: مراجعة ملحق العقد",
+  "@newTaskTitleHint": {
+    "description": "New-task modal: the title placeholder."
+  },
+  "newTaskFileLabel": "الملف",
+  "@newTaskFileLabel": {
+    "description": "New-task modal: the file select's label."
+  },
+  "newTaskTopicLabel": "الموضوع (البراند)",
+  "@newTaskTopicLabel": {
+    "description": "New-task modal: the topic select's label."
+  },
+  "newTaskAssigneeHint": "اختر الموظف",
+  "@newTaskAssigneeHint": {
+    "description": "New-task modal: the assignee select before anyone is picked."
+  },
+  "newTaskUrgent": "عاجلة (تُنجز اليوم)",
+  "@newTaskUrgent": {
+    "description": "New-task modal: the manual urgent checkbox."
+  },
+  "newTaskUrgentHelp": "تصبح المهمة عاجلة تلقائيًا عندما يحين موعد تسليمها.",
+  "@newTaskUrgentHelp": {
+    "description": "New-task modal: the line under the urgent checkbox."
+  },
+  "newTaskSave": "حفظ المهمة",
+  "@newTaskSave": {
+    "description": "New-task modal: the save button."
+  },
+  "newTaskDiscardBody": "لن تُحفظ هذه المهمة.",
+  "@newTaskDiscardBody": {
+    "description": "New-task modal: the body of the ask-before-discard dialog."
+  },
+  "newTaskErrorNotAllowed": "لا تملك صلاحية إنشاء مهمة في هذا الملف.",
+  "@newTaskErrorNotAllowed": {
+    "description": "New-task modal: the server refused the insert."
+  },
+  "newTaskErrorUnknown": "تعذّر حفظ المهمة. حاول مرة أخرى.",
+  "@newTaskErrorUnknown": {
+    "description": "New-task modal: any other save error."
+  },
+  "showActivity": "عرض سجل التغييرات ({count})",
+  "@showActivity": {
+    "description": "Task drawer: button that expands the change history. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "hideActivity": "إخفاء سجل التغييرات ({count})",
+  "@hideActivity": {
+    "description": "Task drawer: button that collapses the change history. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "activitySystem": "النظام",
+  "@activitySystem": {
+    "description": "Change history: the actor of a change made by no user (seeds, scheduled jobs, email intake)."
+  },
+  "activityCreated": "أنشأ المهمة",
+  "@activityCreated": {
+    "description": "Change history, after the actor's name: the task was created. The verb is masculine for everyone (chosen 2026-10-18)."
+  },
+  "activityStatus": "غيّر الحالة من {from} إلى {to}",
+  "@activityStatus": {
+    "description": "Change history, after the actor's name: the status changed. from/to are status labels.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "activityAssignee": "غيّر المسؤول من {from} إلى {to}",
+  "@activityAssignee": {
+    "description": "Change history, after the actor's name: the assignee changed. from/to are people's names.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "activityDueDate": "غيّر موعد التسليم من {from} إلى {to}",
+  "@activityDueDate": {
+    "description": "Change history, after the actor's name: the due date changed. from/to are formatted dates.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "activityUrgentOn": "علّمها عاجلة",
+  "@activityUrgentOn": {
+    "description": "Change history, after the actor's name: the task was marked urgent by hand."
+  },
+  "activityUrgentOff": "ألغى تعليمها عاجلة",
+  "@activityUrgentOff": {
+    "description": "Change history, after the actor's name: the manual urgent mark was removed."
+  },
+  "activityTitle": "غيّر العنوان",
+  "@activityTitle": {
+    "description": "Change history, after the actor's name: the title changed. The old and new titles follow on their own lines."
+  },
+  "activityOldTitle": "العنوان السابق: {title}",
+  "@activityOldTitle": {
+    "description": "Change history, for screen readers: the struck-through old title.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "activityNewTitle": "العنوان الجديد: {title}",
+  "@activityNewTitle": {
+    "description": "Change history, for screen readers: the new title.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "activityDescription": "عدّل الوصف",
+  "@activityDescription": {
+    "description": "Change history, after the actor's name: the description changed (the text itself isn't shown)."
+  },
+  "activityTopic": "نقل المهمة إلى موضوع {to}",
+  "@activityTopic": {
+    "description": "Change history, after the actor's name: the task moved to another topic. to is the topic name.",
+    "placeholders": {
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "activityOtherTopic": "آخر",
+  "@activityOtherTopic": {
+    "description": "Change history: stands in for a topic name the viewer can't see («نقل المهمة إلى موضوع آخر»)."
+  },
+  "notificationsTitle": "الإشعارات",
+  "@notificationsTitle": {
+    "description": "Header bell's tooltip and the notifications panel's heading."
+  },
+  "notificationsBellUnread": "الإشعارات: {count}",
+  "@notificationsBellUnread": {
+    "description": "Header bell, for screen readers when something is unread. count is a phrase like «٣ إشعارات غير مقروءة».",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "notificationsUnreadOne": "إشعار واحد غير مقروء",
+  "@notificationsUnreadOne": {
+    "description": "Unread count phrase for 1 (Arabic plural rule, spec §1)."
+  },
+  "notificationsUnreadTwo": "إشعاران غير مقروءين",
+  "@notificationsUnreadTwo": {
+    "description": "Unread count phrase for 2."
+  },
+  "notificationsUnreadFew": "{count} إشعارات غير مقروءة",
+  "@notificationsUnreadFew": {
+    "description": "Unread count phrase for 3–10. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "notificationsUnreadMany": "{count} إشعارًا غير مقروء",
+  "@notificationsUnreadMany": {
+    "description": "Unread count phrase for 11 and more. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "notificationsBadgeMore": "{count}+",
+  "@notificationsBadgeMore": {
+    "description": "Header bell's badge above 9 unread («٩+»). count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "notificationsMarkAllRead": "تعليم الكل كمقروء",
+  "@notificationsMarkAllRead": {
+    "description": "Notifications panel: marks every unread notification read."
+  },
+  "notificationsEmpty": "لا توجد إشعارات",
+  "@notificationsEmpty": {
+    "description": "Notifications panel: nothing to show."
+  },
+  "notificationsLoadError": "تعذّر تحميل الإشعارات.",
+  "@notificationsLoadError": {
+    "description": "Notifications panel: the list could not be loaded."
+  },
+  "notificationAssigned": "أسند إليك مهمة",
+  "@notificationAssigned": {
+    "description": "Notification, after the actor's name: a task was created for the viewer or handed to them. The verb is masculine for everyone, like the change history."
+  },
+  "notificationUpdatePosted": "أضاف تحديثًا",
+  "@notificationUpdatePosted": {
+    "description": "Notification, after the actor's name: an update was posted on the viewer's task."
+  },
+  "notificationChanged": "عدّل المهمة",
+  "@notificationChanged": {
+    "description": "Notification, after the actor's name: a change whose details can't be read."
+  },
+  "notificationTaskGone": "لم تعد هذه المهمة متاحة",
+  "@notificationTaskGone": {
+    "description": "Notification: stands in for the task's title when the viewer can no longer see the task."
+  },
+  "notificationUnread": "غير مقروء",
+  "@notificationUnread": {
+    "description": "Notification: for screen readers, on an unread row's dot."
+  },
+  "tabContracts": "العقود",
+  "@tabContracts": {
+    "description": "View tab: the contracts view (View 4)."
+  },
+  "contractsSearchHint": "ابحث في العقود…",
+  "@contractsSearchHint": {
+    "description": "Contracts view: placeholder of the search field."
+  },
+  "contractsSearchLabel": "البحث في العقود",
+  "@contractsSearchLabel": {
+    "description": "Contracts view: accessibility label of the search field."
+  },
+  "contractFilterKindLabel": "النوع",
+  "@contractFilterKindLabel": {
+    "description": "Contracts filter row: screen-reader name of the type group."
+  },
+  "contractFilterStatusLabel": "الحالة",
+  "@contractFilterStatusLabel": {
+    "description": "Contracts filter row: screen-reader name of the status group."
+  },
+  "contractFilterSeasonLabel": "الموسم",
+  "@contractFilterSeasonLabel": {
+    "description": "Contracts filter row: screen-reader name of the season select."
+  },
+  "contractKindAll": "كل الأنواع",
+  "@contractKindAll": {
+    "description": "Contracts filter: every type."
+  },
+  "contractKindUnits": "وحدات",
+  "@contractKindUnits": {
+    "description": "Contracts filter: leases."
+  },
+  "contractKindStorage": "مخازن",
+  "@contractKindStorage": {
+    "description": "Contracts filter: storage contracts, and leases with storage contracts."
+  },
+  "contractKindServicesOther": "خدمات وأخرى",
+  "@contractKindServicesOther": {
+    "description": "Contracts filter: service and other contracts."
+  },
+  "contractStatusAll": "كل الحالات",
+  "@contractStatusAll": {
+    "description": "Contracts filter: every status."
+  },
+  "contractStatusInForce": "سارية",
+  "@contractStatusInForce": {
+    "description": "Contracts filter: in force, those ending within 90 days included."
+  },
+  "contractStatusEnding": "تنتهي خلال ٩٠ يومًا",
+  "@contractStatusEnding": {
+    "description": "Contracts filter: ending within 90 days."
+  },
+  "contractStatusExpired": "منتهية",
+  "@contractStatusExpired": {
+    "description": "Contracts filter: the end date has passed."
+  },
+  "contractMissingOnly": "بها نواقص",
+  "@contractMissingOnly": {
+    "description": "Contracts filter: only contracts with open checklist items."
+  },
+  "contractSeasonAll": "كل المواسم",
+  "@contractSeasonAll": {
+    "description": "Contracts filter: every season (signing year)."
+  },
+  "contractListActive": "سارية",
+  "@contractListActive": {
+    "description": "Contract list status pill: in force."
+  },
+  "contractListEnding": "تنتهي قريبًا",
+  "@contractListEnding": {
+    "description": "Contract list status pill: ends within 90 days."
+  },
+  "contractListExpired": "منتهية",
+  "@contractListExpired": {
+    "description": "Contract list status pill: the end date has passed."
+  },
+  "contractListTerminated": "ملغاة",
+  "@contractListTerminated": {
+    "description": "Contract list status pill: terminated."
+  },
+  "contractNoBrand": "بدون براند",
+  "@contractNoBrand": {
+    "description": "Contract row: in place of the brand when there is none."
+  },
+  "contractEndsOn": "حتى {date}",
+  "@contractEndsOn": {
+    "description": "Contract row: the end date. date is already formatted.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "contractMoreUnits": "+ {count}",
+  "@contractMoreUnits": {
+    "description": "Contract row: the number of unit codes not shown after the first. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "annexCountOne": "ملحق",
+  "@annexCountOne": {
+    "description": "Contract row badge: one annex."
+  },
+  "annexCountTwo": "ملحقان",
+  "@annexCountTwo": {
+    "description": "Contract row badge: two annexes."
+  },
+  "annexCountFew": "{count} ملاحق",
+  "@annexCountFew": {
+    "description": "Contract row badge: 3 to 10 annexes. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "annexCountMany": "{count} ملحقًا",
+  "@annexCountMany": {
+    "description": "Contract row badge: 11 or more annexes. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "storageCountOne": "مخزن",
+  "@storageCountOne": {
+    "description": "Contract row badge: one storage contract."
+  },
+  "storageCountTwo": "مخزنان",
+  "@storageCountTwo": {
+    "description": "Contract row badge: two storage contracts."
+  },
+  "storageCountFew": "{count} مخازن",
+  "@storageCountFew": {
+    "description": "Contract row badge: 3 to 10 storage contracts. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "storageCountMany": "{count} مخزنًا",
+  "@storageCountMany": {
+    "description": "Contract row badge: 11 or more storage contracts. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpCountOne": "متابعة",
+  "@followUpCountOne": {
+    "description": "Contract row badge: one open follow-up task."
+  },
+  "followUpCountTwo": "متابعتان",
+  "@followUpCountTwo": {
+    "description": "Contract row badge: two open follow-up tasks."
+  },
+  "followUpCountFew": "{count} متابعات",
+  "@followUpCountFew": {
+    "description": "Contract row badge: 3 to 10 open follow-up tasks. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "followUpCountMany": "{count} متابعة",
+  "@followUpCountMany": {
+    "description": "Contract row badge: 11 or more open follow-up tasks. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "missingCountOne": "نقص",
+  "@missingCountOne": {
+    "description": "Contract row badge: one open checklist item."
+  },
+  "missingCountTwo": "نقصان",
+  "@missingCountTwo": {
+    "description": "Contract row badge: two open checklist items."
+  },
+  "missingCountFew": "{count} نواقص",
+  "@missingCountFew": {
+    "description": "Contract row badge: 3 to 10 open checklist items. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "missingCountMany": "{count} نقصًا",
+  "@missingCountMany": {
+    "description": "Contract row badge: 11 or more open checklist items. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "contractCountOne": "عقد واحد",
+  "@contractCountOne": {
+    "description": "Contracts file summary: one contract."
+  },
+  "contractCountTwo": "عقدان",
+  "@contractCountTwo": {
+    "description": "Contracts file summary: two contracts."
+  },
+  "contractCountFew": "{count} عقود",
+  "@contractCountFew": {
+    "description": "Contracts file summary: 3 to 10 contracts. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "contractCountMany": "{count} عقدًا",
+  "@contractCountMany": {
+    "description": "Contracts file summary: 11 or more contracts. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "contractsEndingLabel": "{count} تنتهي خلال ٩٠ يومًا",
+  "@contractsEndingLabel": {
+    "description": "Contracts file summary: contracts ending within 90 days. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "contractsMissingLabel": "{count} بها نواقص",
+  "@contractsMissingLabel": {
+    "description": "Contracts file summary: contracts with open checklist items. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "showTerminated": "عرض الملغاة ({count})",
+  "@showTerminated": {
+    "description": "Contracts view: button that expands a file's terminated contracts. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "hideTerminated": "إخفاء الملغاة ({count})",
+  "@hideTerminated": {
+    "description": "Contracts view: button that collapses a file's terminated contracts. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "contractsEmptyFile": "لا توجد عقود في هذا الملف",
+  "@contractsEmptyFile": {
+    "description": "Contracts view: the selected file has no contracts."
+  },
+  "contractsEmpty": "لا توجد عقود بعد",
+  "@contractsEmpty": {
+    "description": "Contracts view: no file has contracts."
+  },
+  "contractsNoFilterMatches": "لا توجد عقود تطابق هذه الاختيارات",
+  "@contractsNoFilterMatches": {
+    "description": "Contracts view: the filters leave nothing."
+  },
+  "contractsClearFilters": "مسح الاختيارات",
+  "@contractsClearFilters": {
+    "description": "Contracts view: button that resets the filters."
+  },
+  "contractsNoSearchMatches": "لا توجد عقود تطابق \"{term}\"",
+  "@contractsNoSearchMatches": {
+    "description": "Contracts view: the search found nothing.",
+    "placeholders": {
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "contractsLoadError": "تعذّر تحميل العقود.",
+  "@contractsLoadError": {
+    "description": "Contracts view: the list failed to load."
+  },
+  "suggestAdd": "+ إضافة \"{text}\"",
+  "@suggestAdd": {
+    "description": "Suggest field: the last row, which adds the typed text as a new record.",
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "suggestAddUnits": "+ إضافة {count}: {codes}",
+  "@suggestAddUnits": {
+    "description": "Units field: the add row for several joined unit codes. count is a phrase such as «٢ وحدات»; codes are joined with « · ».",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      },
+      "codes": {
+        "type": "String"
+      }
+    }
+  },
+  "suggestPickOrAdd": "اختر من القائمة أو أضف جديدًا",
+  "@suggestPickOrAdd": {
+    "description": "Suggest field: error when the field is left with typed text and no pick."
+  },
+  "suggestCountOne": "اقتراح واحد",
+  "@suggestCountOne": {
+    "description": "Suggest field: read by screen readers, one suggestion."
+  },
+  "suggestCountTwo": "اقتراحان",
+  "@suggestCountTwo": {
+    "description": "Suggest field: read by screen readers, two suggestions."
+  },
+  "suggestCountFew": "{count} اقتراحات",
+  "@suggestCountFew": {
+    "description": "Suggest field: 3 to 10 suggestions. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "suggestCountMany": "{count} اقتراحًا",
+  "@suggestCountMany": {
+    "description": "Suggest field: 11 or more suggestions. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "suggestRemove": "إزالة {value}",
+  "@suggestRemove": {
+    "description": "Suggest field: the × on a pick, for screen readers.",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "suggestAddFailed": "تعذّرت الإضافة. حاول مرة أخرى.",
+  "@suggestAddFailed": {
+    "description": "Suggest field: creating the typed record failed."
+  },
+  "suggestAddNotAllowed": "لا تملك صلاحية الإضافة في هذا الملف.",
+  "@suggestAddNotAllowed": {
+    "description": "Suggest field: the server refused creating the record."
+  },
+  "similarPartyTitle": "يوجد مستأجر مشابه",
+  "@similarPartyTitle": {
+    "description": "Dialog title before adding a tenant close to an existing one."
+  },
+  "similarUnitTitle": "توجد وحدة مشابهة",
+  "@similarUnitTitle": {
+    "description": "Dialog title before adding a unit close to an existing one."
+  },
+  "similarUse": "استخدام هذا",
+  "@similarUse": {
+    "description": "Similar dialog: pick this existing record."
+  },
+  "similarAddAnyway": "إضافة جديد على أي حال",
+  "@similarAddAnyway": {
+    "description": "Similar dialog: add the typed record anyway."
+  },
+  "partyDuplicate": "يوجد مستأجر بهذا الاسم.",
+  "@partyDuplicate": {
+    "description": "Tenant field: the server refused a duplicate name."
+  },
+  "unitDuplicate": "توجد وحدة بهذا الرقم في هذا الملف.",
+  "@unitDuplicate": {
+    "description": "Units field: the server refused a duplicate code in the file."
+  },
+  "unitCountOne": "وحدة واحدة",
+  "@unitCountOne": {
+    "description": "One unit."
+  },
+  "unitCountTwo": "وحدتان",
+  "@unitCountTwo": {
+    "description": "Two units."
+  },
+  "unitCountFew": "{count} وحدات",
+  "@unitCountFew": {
+    "description": "3 to 10 units. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "unitCountMany": "{count} وحدة",
+  "@unitCountMany": {
+    "description": "11 or more units. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "unitVacant": "شاغرة",
+  "@unitVacant": {
+    "description": "Unit suggestion hint: no contract in force."
+  },
+  "unitKeyHint": "مفتاح {number}",
+  "@unitKeyHint": {
+    "description": "Storage unit hint: its key number.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "unitKindShop": "محل",
+  "@unitKindShop": {
+    "description": "Unit kind."
+  },
+  "unitKindKiosk": "كشك",
+  "@unitKindKiosk": {
+    "description": "Unit kind."
+  },
+  "unitKindStorage": "مخزن",
+  "@unitKindStorage": {
+    "description": "Unit kind."
+  },
+  "unitKindSpace": "مساحة",
+  "@unitKindSpace": {
+    "description": "Unit kind."
+  },
+  "unitKindSite": "موقع",
+  "@unitKindSite": {
+    "description": "Unit kind."
+  },
+  "unitNewLabel": "وحدة جديدة",
+  "@unitNewLabel": {
+    "description": "Units field: the inline row that adds a new unit."
+  },
+  "unitKindLabel": "نوع الوحدة",
+  "@unitKindLabel": {
+    "description": "Units field: the new unit kind select, for screen readers."
+  },
+  "unitKeyNumberLabel": "رقم المفتاح",
+  "@unitKeyNumberLabel": {
+    "description": "Units field: a new storage unit key number."
+  },
+  "unitAdd": "إضافة",
+  "@unitAdd": {
+    "description": "Units field: adds the new unit."
+  },
+  "contractNew": "عقد جديد",
+  "@contractNew": {
+    "description": "Contracts view: the new-contract button, and the form title."
+  },
+  "contractEditTitle": "تعديل العقد",
+  "@contractEditTitle": {
+    "description": "Contract form title when editing."
+  },
+  "contractKindLabel": "نوع العقد",
+  "@contractKindLabel": {
+    "description": "Contract form: the kind chips, for screen readers."
+  },
+  "contractFormKindLease": "إيجار وحدة / مساحة",
+  "@contractFormKindLease": {
+    "description": "Contract form kind chip."
+  },
+  "contractFormKindStorage": "مخزن",
+  "@contractFormKindStorage": {
+    "description": "Contract form kind chip."
+  },
+  "contractFormKindService": "خدمات",
+  "@contractFormKindService": {
+    "description": "Contract form kind chip."
+  },
+  "contractFormKindOther": "أخرى",
+  "@contractFormKindOther": {
+    "description": "Contract form kind chip."
+  },
+  "contractSubjectLease": "عقد ايجار وحدة",
+  "@contractSubjectLease": {
+    "description": "Default subject of a lease. Saved as typed."
+  },
+  "contractSubjectStorage": "عقد ايجار مخزن",
+  "@contractSubjectStorage": {
+    "description": "Default subject of a storage contract."
+  },
+  "contractFieldBrand": "البراند",
+  "@contractFieldBrand": {
+    "description": "Contract field label."
+  },
+  "contractFieldParty": "المستأجر",
+  "@contractFieldParty": {
+    "description": "Contract field label."
+  },
+  "contractFieldUnits": "الوحدات",
+  "@contractFieldUnits": {
+    "description": "Contract field label."
+  },
+  "contractFieldSubject": "موضوع العقد",
+  "@contractFieldSubject": {
+    "description": "Contract field label."
+  },
+  "contractFieldActivity": "النشاط",
+  "@contractFieldActivity": {
+    "description": "Contract field label."
+  },
+  "contractFieldSigned": "تاريخ العقد",
+  "@contractFieldSigned": {
+    "description": "Contract field label."
+  },
+  "contractFieldStarts": "تاريخ البداية",
+  "@contractFieldStarts": {
+    "description": "Contract field label."
+  },
+  "contractFieldEnds": "تاريخ النهاية",
+  "@contractFieldEnds": {
+    "description": "Contract field label."
+  },
+  "contractFieldAreaInner": "المساحة الداخلية",
+  "@contractFieldAreaInner": {
+    "description": "Contract field label."
+  },
+  "contractFieldAreaOuter": "المساحة الخارجية",
+  "@contractFieldAreaOuter": {
+    "description": "Contract field label."
+  },
+  "contractFieldArea": "المساحة",
+  "@contractFieldArea": {
+    "description": "Contract drawer: the area text when it is not a number."
+  },
+  "contractFieldNotes": "ملاحظات",
+  "@contractFieldNotes": {
+    "description": "Contract field label."
+  },
+  "contractFieldLinked": "مرتبط بعقد",
+  "@contractFieldLinked": {
+    "description": "Storage contract form: the lease it hangs under."
+  },
+  "contractFieldDuration": "المدة",
+  "@contractFieldDuration": {
+    "description": "Contract drawer label."
+  },
+  "contractFieldTerminated": "تاريخ الإنهاء",
+  "@contractFieldTerminated": {
+    "description": "Contract drawer and termination dialog label."
+  },
+  "contractFieldReason": "سبب الإنهاء",
+  "@contractFieldReason": {
+    "description": "Contract drawer and termination dialog label."
+  },
+  "contractLinkedHint": "اختياري",
+  "@contractLinkedHint": {
+    "description": "Storage contract form: hint of the linked-lease field."
+  },
+  "contractStartsHint": "مثل تاريخ العقد",
+  "@contractStartsHint": {
+    "description": "Contract form: empty start date."
+  },
+  "contractPickDate": "اختر التاريخ",
+  "@contractPickDate": {
+    "description": "Contract form: an empty date box."
+  },
+  "contractClearDate": "مسح {field}",
+  "@contractClearDate": {
+    "description": "Contract form: the × on a date box. field is its label.",
+    "placeholders": {
+      "field": {
+        "type": "String"
+      }
+    }
+  },
+  "contractNoEndDate": "لا يوجد تاريخ نهاية محدد",
+  "@contractNoEndDate": {
+    "description": "Contract form: turns the end date into text."
+  },
+  "contractUseEndDate": "إدخال تاريخ النهاية",
+  "@contractUseEndDate": {
+    "description": "Contract form: turns the end-date text back into a date."
+  },
+  "contractAreaAsText": "المساحة لا تُكتب كرقم",
+  "@contractAreaAsText": {
+    "description": "Contract form: turns the areas into text."
+  },
+  "contractAreaAsNumber": "إدخال المساحة كرقم",
+  "@contractAreaAsNumber": {
+    "description": "Contract form: turns the area text back into numbers."
+  },
+  "contractDateNoteHint": "مثل: نهاية موسم صيف 2028",
+  "@contractDateNoteHint": {
+    "description": "Contract form: the end-date text hint."
+  },
+  "contractAreaNoteHint": "مثل: السنة الأولى 165 / الثانية 331",
+  "@contractAreaNoteHint": {
+    "description": "Contract form: the area text hint."
+  },
+  "contractAreaUnit": "م²",
+  "@contractAreaUnit": {
+    "description": "Square metres, after an area."
+  },
+  "contractAreaInvalid": "اكتب رقمًا، مثل 35,3",
+  "@contractAreaInvalid": {
+    "description": "Contract form: an area that is not a number."
+  },
+  "contractDatesOrder": "تاريخ النهاية قبل تاريخ البداية.",
+  "@contractDatesOrder": {
+    "description": "Contract form: dates out of order."
+  },
+  "contractSave": "حفظ العقد",
+  "@contractSave": {
+    "description": "Contract form: save button."
+  },
+  "contractDiscardBody": "لن يُحفظ هذا العقد.",
+  "@contractDiscardBody": {
+    "description": "Contract form: leaving a new contract with changes."
+  },
+  "contractDiscardEditBody": "لن تُحفظ التعديلات على العقد.",
+  "@contractDiscardEditBody": {
+    "description": "Contract form: leaving an edit with changes."
+  },
+  "contractSaveNotAllowed": "لا تملك صلاحية حفظ عقد في هذا الملف.",
+  "@contractSaveNotAllowed": {
+    "description": "Contract form: the server refused the save."
+  },
+  "contractSaveRejected": "رفض الخادم هذه القيم. تحقق من البراند والوحدات والتواريخ.",
+  "@contractSaveRejected": {
+    "description": "Contract form: a database rule refused the save."
+  },
+  "contractSaveUnknown": "تعذّر حفظ العقد. حاول مرة أخرى.",
+  "@contractSaveUnknown": {
+    "description": "Contract form: any other failure."
+  },
+  "contractLoadError": "تعذّر تحميل العقد.",
+  "@contractLoadError": {
+    "description": "Contract drawer: loading failed."
+  },
+  "contractByAnnex": "(بموجب ملحق {number})",
+  "@contractByAnnex": {
+    "description": "Contract drawer: after a value an annex set.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "contractValueNone": "—",
+  "@contractValueNone": {
+    "description": "Contract drawer: an empty value."
+  },
+  "contractArea": "{area} م²",
+  "@contractArea": {
+    "description": "An area in square metres. area is formatted.",
+    "placeholders": {
+      "area": {
+        "type": "String"
+      }
+    }
+  },
+  "contractEndsToday": "تنتهي اليوم",
+  "@contractEndsToday": {
+    "description": "Contract drawer: under the end date."
+  },
+  "contractEndsIn": "تنتهي بعد {time}",
+  "@contractEndsIn": {
+    "description": "Contract drawer: under the end date. time is a phrase such as «٣ أشهر».",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "contractEndedAgo": "انتهت منذ {time}",
+  "@contractEndedAgo": {
+    "description": "Contract drawer: under a past end date.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "relDaysOne": "يوم واحد",
+  "@relDaysOne": {
+    "description": "After بعد / منذ: one day."
+  },
+  "relDaysTwo": "يومين",
+  "@relDaysTwo": {
+    "description": "After بعد / منذ: two days."
+  },
+  "relDaysFew": "{count} أيام",
+  "@relDaysFew": {
+    "description": "After بعد / منذ: 3 to 10 days. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "relDaysMany": "{count} يومًا",
+  "@relDaysMany": {
+    "description": "After بعد / منذ: 11 or more days. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "relMonthsOne": "شهر واحد",
+  "@relMonthsOne": {
+    "description": "After بعد / منذ: one month."
+  },
+  "relMonthsTwo": "شهرين",
+  "@relMonthsTwo": {
+    "description": "After بعد / منذ: two months."
+  },
+  "relMonthsFew": "{count} أشهر",
+  "@relMonthsFew": {
+    "description": "After بعد / منذ: 3 to 10 months. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "relMonthsMany": "{count} شهرًا",
+  "@relMonthsMany": {
+    "description": "After بعد / منذ: 11 or more months. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "relYearsOne": "سنة واحدة",
+  "@relYearsOne": {
+    "description": "After بعد / منذ: one year."
+  },
+  "relYearsTwo": "سنتين",
+  "@relYearsTwo": {
+    "description": "After بعد / منذ: two years."
+  },
+  "relYearsFew": "{count} سنوات",
+  "@relYearsFew": {
+    "description": "After بعد / منذ: 3 to 10 years. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "relYearsMany": "{count} سنة",
+  "@relYearsMany": {
+    "description": "After بعد / منذ: 11 or more years. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "durYearsOne": "سنة واحدة",
+  "@durYearsOne": {
+    "description": "Contract duration: one year."
+  },
+  "durYearsTwo": "سنتان",
+  "@durYearsTwo": {
+    "description": "Contract duration: two years."
+  },
+  "durYearsFew": "{count} سنوات",
+  "@durYearsFew": {
+    "description": "Contract duration: 3 to 10 years. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "durYearsMany": "{count} سنة",
+  "@durYearsMany": {
+    "description": "Contract duration: 11 or more years. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "durMonthsOne": "شهر واحد",
+  "@durMonthsOne": {
+    "description": "Contract duration: one month."
+  },
+  "durMonthsTwo": "شهران",
+  "@durMonthsTwo": {
+    "description": "Contract duration: two months."
+  },
+  "durMonthsFew": "{count} أشهر",
+  "@durMonthsFew": {
+    "description": "Contract duration: 3 to 10 months. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "durMonthsMany": "{count} شهرًا",
+  "@durMonthsMany": {
+    "description": "Contract duration: 11 or more months. count is already formatted with locale digits.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "durJoin": "{years} و{months}",
+  "@durJoin": {
+    "description": "Contract duration: years and months, both phrases.",
+    "placeholders": {
+      "years": {
+        "type": "String"
+      },
+      "months": {
+        "type": "String"
+      }
+    }
+  },
+  "contractDelete": "حذف العقد",
+  "@contractDelete": {
+    "description": "Contract drawer: deletes an active contract with nothing under it (one made by mistake)."
+  },
+  "contractDeleteTitle": "حذف العقد؟",
+  "@contractDeleteTitle": {
+    "description": "Contract drawer: delete confirmation title."
+  },
+  "contractDeleteBody": "يُحذف هذا العقد نهائيًا، ولا يمكن استرجاعه.",
+  "@contractDeleteBody": {
+    "description": "Contract drawer: delete confirmation body."
+  },
+  "contractTerminate": "إنهاء العقد",
+  "@contractTerminate": {
+    "description": "Contract drawer: terminates a contract; also its dialog title and button."
+  },
+  "contractTerminateBody": "ينتقل العقد إلى «الملغاة». يستطيع المدير إعادة تفعيله لاحقًا.",
+  "@contractTerminateBody": {
+    "description": "Termination dialog body."
+  },
+  "contractReasonHint": "مثل: فسخ رضائي",
+  "@contractReasonHint": {
+    "description": "Termination dialog: the reason hint."
+  },
+  "contractPickTerminated": "اختيار تاريخ الإنهاء",
+  "@contractPickTerminated": {
+    "description": "Termination dialog: the date box, for screen readers."
+  },
+  "contractReopen": "إعادة تفعيل",
+  "@contractReopen": {
+    "description": "Contract drawer: managers reopen a terminated contract."
+  },
+  "contractActionNotAllowed": "لا تملك صلاحية تعديل هذا العقد.",
+  "@contractActionNotAllowed": {
+    "description": "Contract drawer: the server refused an action."
+  },
+  "contractDeleteNotEmpty": "لا يمكن حذف العقد: أُضيف إليه شيء منذ فتحه.",
+  "@contractDeleteNotEmpty": {
+    "description": "Contract drawer: the delete was refused by the foreign keys."
+  },
+  "contractNoDate": "بدون تاريخ",
+  "@contractNoDate": {
+    "description": "Contract history: an empty date."
+  },
+  "contractNoArea": "بدون مساحة",
+  "@contractNoArea": {
+    "description": "Contract history: an empty area."
+  },
+  "contractNoParty": "بدون مستأجر",
+  "@contractNoParty": {
+    "description": "Contract history: an empty tenant."
+  },
+  "contractOtherParty": "مستأجر آخر",
+  "@contractOtherParty": {
+    "description": "Contract history: a tenant the viewer cannot see."
+  },
+  "contractHistCreated": "أنشأ العقد",
+  "@contractHistCreated": {
+    "description": "Contract history."
+  },
+  "contractHistAddedAnnex": "أضاف ملحق {number}",
+  "@contractHistAddedAnnex": {
+    "description": "Contract history.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistAddedStorage": "أضاف عقد مخزن",
+  "@contractHistAddedStorage": {
+    "description": "Contract history."
+  },
+  "contractHistDeletedAnnex": "حذف ملحق {number}",
+  "@contractHistDeletedAnnex": {
+    "description": "Contract history.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistDeletedStorage": "حذف عقد مخزن",
+  "@contractHistDeletedStorage": {
+    "description": "Contract history."
+  },
+  "contractHistActivated": "فعّل العقد",
+  "@contractHistActivated": {
+    "description": "Contract history."
+  },
+  "contractHistTerminated": "أنهى العقد: {reason}",
+  "@contractHistTerminated": {
+    "description": "Contract history.",
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistReopened": "أعاد تفعيل العقد",
+  "@contractHistReopened": {
+    "description": "Contract history."
+  },
+  "contractHistParty": "غيّر المستأجر من {from} إلى {to}",
+  "@contractHistParty": {
+    "description": "Contract history.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistBrand": "غيّر البراند من {from} إلى {to}",
+  "@contractHistBrand": {
+    "description": "Contract history.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistSigned": "غيّر تاريخ العقد من {from} إلى {to}",
+  "@contractHistSigned": {
+    "description": "Contract history.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistStarts": "غيّر تاريخ البداية من {from} إلى {to}",
+  "@contractHistStarts": {
+    "description": "Contract history.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistEnds": "غيّر تاريخ النهاية من {from} إلى {to}",
+  "@contractHistEnds": {
+    "description": "Contract history.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistDateNote": "عدّل ملاحظة التاريخ",
+  "@contractHistDateNote": {
+    "description": "Contract history."
+  },
+  "contractHistAreaInner": "غيّر المساحة الداخلية من {from} إلى {to}",
+  "@contractHistAreaInner": {
+    "description": "Contract history.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistAreaOuter": "غيّر المساحة الخارجية من {from} إلى {to}",
+  "@contractHistAreaOuter": {
+    "description": "Contract history.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistAreaNote": "عدّل ملاحظة المساحة",
+  "@contractHistAreaNote": {
+    "description": "Contract history."
+  },
+  "contractHistSubject": "عدّل موضوع العقد",
+  "@contractHistSubject": {
+    "description": "Contract history."
+  },
+  "contractHistActivity": "عدّل النشاط",
+  "@contractHistActivity": {
+    "description": "Contract history."
+  },
+  "contractHistNotes": "عدّل الملاحظات",
+  "@contractHistNotes": {
+    "description": "Contract history."
+  },
+  "contractHistUnitAdded": "أضاف الوحدة {code}",
+  "@contractHistUnitAdded": {
+    "description": "Contract history.",
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistUnitRemoved": "أزال الوحدة {code}",
+  "@contractHistUnitRemoved": {
+    "description": "Contract history.",
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistItemAdded": "أضاف نقصًا: {label}",
+  "@contractHistItemAdded": {
+    "description": "Contract history.",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistItemResolved": "استوفى: {label}",
+  "@contractHistItemResolved": {
+    "description": "Contract history.",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistItemReopened": "أعاد فتح: {label}",
+  "@contractHistItemReopened": {
+    "description": "Contract history.",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistItemDeleted": "حذف نقصًا: {label}",
+  "@contractHistItemDeleted": {
+    "description": "Contract history.",
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistItemOn": "{line} على {target}",
+  "@contractHistItemOn": {
+    "description": "Contract history: a checklist row about an item on an annex or storage contract. line is «أضاف نقصًا: …» and the like; target is «ملحق ٢» or «مخزن …», as in the checklist.",
+    "placeholders": {
+      "line": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistItemOnStorage": "عقد المخزن",
+  "@contractHistItemOnStorage": {
+    "description": "Contract history: the target of a checklist row on a storage contract that is no longer loaded."
+  },
+  "contractAnnexesTitle": "الملاحق ({count})",
+  "@contractAnnexesTitle": {
+    "description": "Contract drawer: the annexes section title.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "contractAddAnnex": "+ إضافة ملحق",
+  "@contractAddAnnex": {
+    "description": "Contract drawer: opens the annex form."
+  },
+  "contractStorageTitle": "المخازن ({count})",
+  "@contractStorageTitle": {
+    "description": "Contract drawer: the storage contracts section title.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "contractAddStorage": "+ إضافة عقد مخزن",
+  "@contractAddStorage": {
+    "description": "Contract drawer: opens the contract form as a storage contract under this lease."
+  },
+  "storageRenew": "تجديد للموسم التالي",
+  "@storageRenew": {
+    "description": "Contract drawer: a storage contract filled in one year on."
+  },
+  "annexRowTitle": "ملحق {number}",
+  "@annexRowTitle": {
+    "description": "Contract drawer: an annex row starts with its number.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "annexChangeEnds": "النهاية ← {date}",
+  "@annexChangeEnds": {
+    "description": "Contract drawer: what an annex changes.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "annexChangeAreaInner": "المساحة الداخلية ← {area}",
+  "@annexChangeAreaInner": {
+    "description": "Contract drawer: what an annex changes.",
+    "placeholders": {
+      "area": {
+        "type": "String"
+      }
+    }
+  },
+  "annexChangeAreaOuter": "المساحة الخارجية ← {area}",
+  "@annexChangeAreaOuter": {
+    "description": "Contract drawer: what an annex changes.",
+    "placeholders": {
+      "area": {
+        "type": "String"
+      }
+    }
+  },
+  "annexChangeParty": "المستأجر ←",
+  "@annexChangeParty": {
+    "description": "Contract drawer: what an annex changes; the tenant name follows in its own text."
+  },
+  "annexChangeUnits": "الوحدات ←",
+  "@annexChangeUnits": {
+    "description": "Contract drawer: what an annex changes; the unit codes follow in their own text."
+  },
+  "annexNewTitle": "ملحق جديد",
+  "@annexNewTitle": {
+    "description": "Annex form title."
+  },
+  "annexEditTitle": "تعديل ملحق",
+  "@annexEditTitle": {
+    "description": "Annex form title."
+  },
+  "annexFieldNo": "رقم الملحق",
+  "@annexFieldNo": {
+    "description": "Annex form field."
+  },
+  "annexFieldSubject": "موضوع الملحق",
+  "@annexFieldSubject": {
+    "description": "Annex form field."
+  },
+  "annexFieldSigned": "تاريخ الملحق",
+  "@annexFieldSigned": {
+    "description": "Annex form field."
+  },
+  "annexChangesLabel": "ما الذي يغيّره الملحق؟",
+  "@annexChangesLabel": {
+    "description": "Annex form: the toggles title."
+  },
+  "annexToggleParty": "المستأجر (تنازل)",
+  "@annexToggleParty": {
+    "description": "Annex form toggle: the annex moves the contract to another tenant."
+  },
+  "annexSave": "حفظ الملحق",
+  "@annexSave": {
+    "description": "Annex form button."
+  },
+  "annexNoInvalid": "اكتب رقمًا أكبر من صفر.",
+  "@annexNoInvalid": {
+    "description": "Annex form: the number is empty or zero."
+  },
+  "annexDuplicateNo": "يوجد ملحق بهذا الرقم.",
+  "@annexDuplicateNo": {
+    "description": "Annex form: the server refused a duplicate number."
+  },
+  "annexSaveRejected": "رفض الخادم هذه القيم. تحقق من الوحدات والتواريخ.",
+  "@annexSaveRejected": {
+    "description": "Annex form error."
+  },
+  "annexSaveUnknown": "تعذّر حفظ الملحق. حاول مرة أخرى.",
+  "@annexSaveUnknown": {
+    "description": "Annex form error."
+  },
+  "annexDiscardBody": "لن يُحفظ هذا الملحق.",
+  "@annexDiscardBody": {
+    "description": "Annex form: leaving a new annex with changes."
+  },
+  "annexDiscardEditBody": "لن تُحفظ التعديلات على الملحق.",
+  "@annexDiscardEditBody": {
+    "description": "Annex form: leaving an edit with changes."
+  },
+  "annexDelete": "حذف الملحق",
+  "@annexDelete": {
+    "description": "Annex form: an annex made by mistake, with nothing on it."
+  },
+  "annexDeleteTitle": "حذف الملحق؟",
+  "@annexDeleteTitle": {
+    "description": "Annex delete dialog."
+  },
+  "annexDeleteBody": "يُحذف هذا الملحق نهائيًا، ولا يمكن استرجاعه.",
+  "@annexDeleteBody": {
+    "description": "Annex delete dialog."
+  },
+  "annexDeleteNotEmpty": "لا يمكن حذف الملحق: أُضيف إليه شيء منذ فتحه.",
+  "@annexDeleteNotEmpty": {
+    "description": "Annex form: the foreign keys refused the delete."
+  },
+  "storageDelete": "حذف عقد المخزن",
+  "@storageDelete": {
+    "description": "Contract form: a storage contract under a lease made by mistake."
+  },
+  "storageDeleteTitle": "حذف عقد المخزن؟",
+  "@storageDeleteTitle": {
+    "description": "Storage delete dialog."
+  },
+  "storageDeleteBody": "يُحذف عقد المخزن هذا نهائيًا، ولا يمكن استرجاعه.",
+  "@storageDeleteBody": {
+    "description": "Storage delete dialog."
+  },
+  "storageDeleteNotEmpty": "لا يمكن حذف عقد المخزن: أُضيف إليه شيء منذ فتحه.",
+  "@storageDeleteNotEmpty": {
+    "description": "Contract form: the foreign keys refused the delete."
+  },
+  "contractHistOnAnnex": "ملحق {number}: {line}",
+  "@contractHistOnAnnex": {
+    "description": "Contract history: a change to an annex, with the change worded as for the contract.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      },
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistOnStorage": "عقد المخزن: {line}",
+  "@contractHistOnStorage": {
+    "description": "Contract history: a change to a storage contract.",
+    "placeholders": {
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistAddedAnnexSubject": "أضاف ملحق {number}: {subject}",
+  "@contractHistAddedAnnexSubject": {
+    "description": "Contract history: an annex was added.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistAnnexNo": "غيّر رقم الملحق من {from} إلى {to}",
+  "@contractHistAnnexNo": {
+    "description": "Contract history.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "contractHistAnnexSubject": "عدّل موضوع الملحق",
+  "@contractHistAnnexSubject": {
+    "description": "Contract history."
+  },
+  "contractChecklistTitle": "النواقص والمستندات ({count})",
+  "@contractChecklistTitle": {
+    "description": "Contract drawer: the checklist section title; count is the open items.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "checklistDocumentsTitle": "مستندات مطلوبة من المستأجر",
+  "@checklistDocumentsTitle": {
+    "description": "Contract drawer checklist: the documents group."
+  },
+  "checklistDocumentsNote": "تخص كل عقود هذا المستأجر",
+  "@checklistDocumentsNote": {
+    "description": "Contract drawer checklist: under the documents group title."
+  },
+  "checklistMissingTitle": "نواقص التوقيع والختم",
+  "@checklistMissingTitle": {
+    "description": "Contract drawer checklist: the missing signatures and stamps group."
+  },
+  "checklistAddDocument": "+ إضافة مستند",
+  "@checklistAddDocument": {
+    "description": "Contract drawer checklist: opens the inline row for a document."
+  },
+  "checklistAddMissing": "+ إضافة نقص",
+  "@checklistAddMissing": {
+    "description": "Contract drawer checklist: opens the inline row for a missing signature or stamp."
+  },
+  "checklistNoDocuments": "لا توجد مستندات مطلوبة",
+  "@checklistNoDocuments": {
+    "description": "Contract drawer checklist: the documents group is empty."
+  },
+  "checklistNoMissing": "لا توجد نواقص",
+  "@checklistNoMissing": {
+    "description": "Contract drawer checklist: the missing items group is empty."
+  },
+  "checklistShowResolved": "عرض المستوفاة ({count})",
+  "@checklistShowResolved": {
+    "description": "Contract drawer checklist: shows a group's resolved items.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "checklistHideResolved": "إخفاء المستوفاة ({count})",
+  "@checklistHideResolved": {
+    "description": "Contract drawer checklist: hides a group's resolved items.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "checklistSignature": "توقيع",
+  "@checklistSignature": {
+    "description": "Contract drawer checklist: a missing signature (pill and toggle chip)."
+  },
+  "checklistStamp": "ختم",
+  "@checklistStamp": {
+    "description": "Contract drawer checklist: a missing stamp (pill and toggle chip)."
+  },
+  "checklistOurSide": "من جانبنا",
+  "@checklistOurSide": {
+    "description": "Contract drawer checklist: the signature or stamp is missing on our side (pill and toggle chip)."
+  },
+  "checklistOn": "على {target}",
+  "@checklistOn": {
+    "description": "Contract drawer checklist: under an item on an annex or storage contract. target is «ملحق ٢» or «مخزن …».",
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "checklistOnLabel": "على",
+  "@checklistOnLabel": {
+    "description": "Contract drawer checklist: the select of where a missing item goes."
+  },
+  "checklistOnContract": "العقد",
+  "@checklistOnContract": {
+    "description": "Contract drawer checklist: the «على» choice for the contract itself."
+  },
+  "checklistOnStorage": "مخزن {codes}",
+  "@checklistOnStorage": {
+    "description": "Contract drawer checklist: a storage contract as a place for a missing item. codes are its unit codes.",
+    "placeholders": {
+      "codes": {
+        "type": "String"
+      }
+    }
+  },
+  "checklistOnStorageSeason": "مخزن {codes} · {year}",
+  "@checklistOnStorageSeason": {
+    "description": "Contract drawer checklist: a storage contract with its signing year, telling renewals apart.",
+    "placeholders": {
+      "codes": {
+        "type": "String"
+      },
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "checklistLabelField": "البند",
+  "@checklistLabelField": {
+    "description": "Contract drawer checklist: the label field, for screen readers."
+  },
+  "checklistDocumentHint": "مثل: سجل تجاري حديث",
+  "@checklistDocumentHint": {
+    "description": "Contract drawer checklist: the label field's hint for a document."
+  },
+  "checklistMissingHint": "مثل: محضر الاستلام",
+  "@checklistMissingHint": {
+    "description": "Contract drawer checklist: the label field's hint for a missing item."
+  },
+  "checklistDetailField": "التفاصيل",
+  "@checklistDetailField": {
+    "description": "Contract drawer checklist: the detail field, for screen readers."
+  },
+  "checklistDetailHint": "تفاصيل (اختياري)",
+  "@checklistDetailHint": {
+    "description": "Contract drawer checklist: the detail field's hint."
+  },
+  "checklistNeedsOne": "اختر التوقيع أو الختم.",
+  "@checklistNeedsOne": {
+    "description": "Contract drawer checklist: a missing item needs at least one."
+  },
+  "checklistAdd": "إضافة",
+  "@checklistAdd": {
+    "description": "Contract drawer checklist: saves the inline row."
+  },
+  "checklistDelete": "حذف البند",
+  "@checklistDelete": {
+    "description": "Contract drawer checklist: the × on an open item (tooltip)."
+  },
+  "checklistDeleteTitle": "حذف البند؟",
+  "@checklistDeleteTitle": {
+    "description": "Contract drawer checklist: the delete confirmation's title."
+  },
+  "checklistDeleteBody": "يُحذف هذا البند من القائمة نهائيًا. للبند المستوفى، علّمه بدلًا من حذفه.",
+  "@checklistDeleteBody": {
+    "description": "Contract drawer checklist: the delete confirmation's body."
+  },
+  "checklistDeleteConfirm": "حذف",
+  "@checklistDeleteConfirm": {
+    "description": "Contract drawer checklist: confirms the delete."
+  },
+  "contractFollowUpsTitle": "المتابعات ({count})",
+  "@contractFollowUpsTitle": {
+    "description": "Contract drawer: the follow-up tasks section title; count is the open ones.",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "contractAddFollowUp": "+ إضافة متابعة",
+  "@contractAddFollowUp": {
+    "description": "Contract drawer: opens the new-task modal for this contract."
+  },
+  "followUpDefaultTitle": "التواصل مع العميل لتوقيع وختم النواقص",
+  "@followUpDefaultTitle": {
+    "description": "New-task modal from a contract: the title it starts with while the client owes a signature or stamp."
+  },
+  "newTaskContractLabel": "العقد",
+  "@newTaskContractLabel": {
+    "description": "New-task modal from a contract: the fixed contract line's label."
+  },
+  "activityContractLinked": "ربط المهمة بعقد",
+  "@activityContractLinked": {
+    "description": "Change history, after the actor's name: the task was linked to a contract."
+  },
+  "activityContractUnlinked": "ألغى ربط المهمة بالعقد",
+  "@activityContractUnlinked": {
+    "description": "Change history, after the actor's name: the task's contract link was removed."
+  },
+  "contractExport": "تصدير",
+  "@contractExport": {
+    "description": "The «العقود» filter row's menu button: export or print the contracts the list shows."
+  },
+  "contractExportXlsx": "تنزيل ملف Excel",
+  "@contractExportXlsx": {
+    "description": "Export menu item: download the shown contracts as an Excel workbook."
+  },
+  "contractExportPrint": "طباعة",
+  "@contractExportPrint": {
+    "description": "Export menu item: print the shown contracts."
+  },
+  "contractExportError": "تعذّر تصدير العقود.",
+  "@contractExportError": {
+    "description": "Snackbar when the export or print failed."
+  },
+  "contractExportFileName": "عقود {file} {date}",
+  "@contractExportFileName": {
+    "description": "The downloaded workbook's name, without the extension. file is the file's name or «كل الملفات»; date is yyyy-mm-dd.",
+    "placeholders": {
+      "file": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "registerHeaderNumber": "م",
+  "@registerHeaderNumber": {
+    "description": "Exported register, column A header: the row number."
+  },
+  "registerHeaderTenant": "اسم المستأجر",
+  "@registerHeaderTenant": {
+    "description": "Exported register, column B header: the tenant."
+  },
+  "registerHeaderBrand": "الاسم التجاري",
+  "@registerHeaderBrand": {
+    "description": "Exported register, column C header: the brand."
+  },
+  "registerHeaderUnits": "رقم الوحدة/ الكشك",
+  "@registerHeaderUnits": {
+    "description": "Exported register, column D header: the unit codes."
+  },
+  "registerHeaderActivity": "النشاط",
+  "@registerHeaderActivity": {
+    "description": "Exported register, column E header: the activity."
+  },
+  "registerHeaderSubject": "موضوع العقد او الملحق",
+  "@registerHeaderSubject": {
+    "description": "Exported register, column F header: the contract's or annex's subject."
+  },
+  "registerHeaderSignedOn": "تاريخ العقد او الملحق",
+  "@registerHeaderSignedOn": {
+    "description": "Exported register, column G header: the signing date."
+  },
+  "registerHeaderEndsOn": "تاريخ انتهاء العقد",
+  "@registerHeaderEndsOn": {
+    "description": "Exported register, column H header: the end date."
+  },
+  "registerHeaderDuration": "مدة الإيجار في العقد",
+  "@registerHeaderDuration": {
+    "description": "Exported register, column I header: the duration."
+  },
+  "registerHeaderAreaInner": "مساحه داخليه\n(متر مربع)",
+  "@registerHeaderAreaInner": {
+    "description": "Exported register, column J header: the inner area. Worded as in the firm's workbook."
+  },
+  "registerHeaderAreaOuter": "مساحه خارجيه\n(متر مربع)",
+  "@registerHeaderAreaOuter": {
+    "description": "Exported register, column K header: the outer area. Worded as in the firm's workbook."
+  },
+  "registerHeaderDocuments": "(المستندات المطلوبة)",
+  "@registerHeaderDocuments": {
+    "description": "Exported register, column L header: the tenant's open required documents."
+  },
+  "registerHeaderMissing": "النواقص (توقيع وختم)",
+  "@registerHeaderMissing": {
+    "description": "Exported register, column M header: open missing signatures and stamps."
+  },
+  "registerHeaderNotes": "الملاحظات",
+  "@registerHeaderNotes": {
+    "description": "Exported register, column N header: the notes."
+  },
+  "registerHeaderFollowUps": "الاجراء المطلوب",
+  "@registerHeaderFollowUps": {
+    "description": "Exported register, column O header: open follow-up tasks. Worded as in the firm's workbook."
+  },
+  "registerBandTitle": "بيان بجميع العقود السارية بمشروع {file} لموسم {season}",
+  "@registerBandTitle": {
+    "description": "Exported register: a season band's title. season is a year in Western digits.",
+    "placeholders": {
+      "file": {
+        "type": "String"
+      },
+      "season": {
+        "type": "String"
+      }
+    }
+  },
+  "registerBandTitleUndated": "بيان بالعقود السارية غير المؤرخة بمشروع {file}",
+  "@registerBandTitleUndated": {
+    "description": "Exported register: the title of the band of contracts with no signing date.",
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "registerTerminatedBandTitle": "بيان بالعقود الملغاة بمشروع {file} لموسم {season}",
+  "@registerTerminatedBandTitle": {
+    "description": "Exported register, terminated sheet: a season band's title. season is a year in Western digits.",
+    "placeholders": {
+      "file": {
+        "type": "String"
+      },
+      "season": {
+        "type": "String"
+      }
+    }
+  },
+  "registerTerminatedBandTitleUndated": "بيان بالعقود الملغاة غير المؤرخة بمشروع {file}",
+  "@registerTerminatedBandTitleUndated": {
+    "description": "Exported register, terminated sheet: the undated band's title.",
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "registerTerminatedSheet": "{file} - الملغاة",
+  "@registerTerminatedSheet": {
+    "description": "Exported register: the terminated contracts' sheet name. file may be cut to fit Excel's 31 characters.",
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "registerAnnexSubject": "ملحق {number}: {subject}",
+  "@registerAnnexSubject": {
+    "description": "Exported register: an annex row's subject.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "registerAnnexOnly": "ملحق {number}",
+  "@registerAnnexOnly": {
+    "description": "Exported register: an annex row with no subject.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "registerAnnexUnnumbered": "ملحق",
+  "@registerAnnexUnnumbered": {
+    "description": "Exported register: an annex with no number and no subject."
+  },
+  "registerUnitKey": "{code} (مفتاح {key})",
+  "@registerUnitKey": {
+    "description": "Exported register: a storage unit with its key number.",
+    "placeholders": {
+      "code": {
+        "type": "String"
+      },
+      "key": {
+        "type": "String"
+      }
+    }
+  },
+  "registerNeedsBoth": "توقيع وختم",
+  "@registerNeedsBoth": {
+    "description": "Exported register: a missing item that needs both a signature and a stamp."
+  },
+  "registerTerminatedOn": "أُلغي في {date}",
+  "@registerTerminatedOn": {
+    "description": "Exported register, terminated sheet: the note's start. date is dd/mm/yyyy.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "registerTerminated": "ملغى",
+  "@registerTerminated": {
+    "description": "Exported register, terminated sheet: the note's start when there is no termination date."
+  },
+  "registerLegendTitle": "الألوان:",
+  "@registerLegendTitle": {
+    "description": "Exported register: the legend's title."
+  },
+  "registerLegendExpired": "منتهية",
+  "@registerLegendExpired": {
+    "description": "Exported register legend: an expired end date (red)."
+  },
+  "registerLegendEnding": "تنتهي خلال 90 يومًا",
+  "@registerLegendEnding": {
+    "description": "Exported register legend: an end date within 90 days (amber). Western digits, as in the register."
+  },
+  "registerLegendAnnex": "ملحق",
+  "@registerLegendAnnex": {
+    "description": "Exported register legend: an annex row's tint."
+  },
+  "registerLegendStorage": "عقد مخزن",
+  "@registerLegendStorage": {
+    "description": "Exported register legend: a storage contract row's tint."
+  }
+}
