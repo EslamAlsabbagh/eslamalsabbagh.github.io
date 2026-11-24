@@ -1,0 +1,4650 @@
+{
+  "@@locale": "ar",
+  "appTitle": "نظام التذاكر",
+  "@appTitle": {
+    "description": "App name: window title and the login screen heading."
+  },
+  "switchLanguage": "EN",
+  "@switchLanguage": {
+    "description": "Language switch button: short code of the OTHER language."
+  },
+  "switchLanguageHint": "Switch to English",
+  "@switchLanguageHint": {
+    "description": "Screen-reader name and tooltip of the language switch, in the OTHER language."
+  },
+  "pageNotFound": "الصفحة غير موجودة",
+  "@pageNotFound": {
+    "description": "Shown for an unknown route."
+  },
+  "backToHome": "الرجوع للرئيسية",
+  "@backToHome": {
+    "description": "Button on the not-found page."
+  },
+  "loginSubtitle": "سجّل دخولك لبدء الوردية",
+  "@loginSubtitle": {
+    "description": "Login screen line under the app name."
+  },
+  "usernameLabel": "اسم المستخدم",
+  "@usernameLabel": {
+    "description": "Login screen username field label."
+  },
+  "passwordLabel": "كلمة المرور",
+  "@passwordLabel": {
+    "description": "Login screen password field label."
+  },
+  "signIn": "دخول",
+  "@signIn": {
+    "description": "Login screen main button."
+  },
+  "forgotPasswordHint": "نسيت كلمة المرور؟ كلّم المشرف لإعادة تعيينها.",
+  "@forgotPasswordHint": {
+    "description": "Login screen footnote: passwords are reset by a supervisor, not by email."
+  },
+  "loginErrorMissingFields": "اكتب اسم المستخدم وكلمة المرور.",
+  "@loginErrorMissingFields": {
+    "description": "Login error: a field is empty."
+  },
+  "loginErrorInvalidCredentials": "اسم المستخدم أو كلمة المرور غير صحيحة.",
+  "@loginErrorInvalidCredentials": {
+    "description": "Login error: wrong username or password (never says which)."
+  },
+  "loginErrorAccountInactive": "هذا الحساب غير مفعّل. كلّم المشرف.",
+  "@loginErrorAccountInactive": {
+    "description": "Login error: the login has no active staff account."
+  },
+  "loginErrorServerUnreachable": "تعذّر الاتصال بالسيرفر. تأكد من الشبكة وحاول مرة أخرى.",
+  "@loginErrorServerUnreachable": {
+    "description": "Login error: the on-site server can't be reached."
+  },
+  "loginErrorSessionEnded": "انتهت جلستك. سجّل دخولك مرة أخرى.",
+  "@loginErrorSessionEnded": {
+    "description": "Login screen at startup: the server no longer accepts the saved session."
+  },
+  "loginErrorUnexpected": "حدث خطأ غير متوقع. حاول مرة أخرى.",
+  "@loginErrorUnexpected": {
+    "description": "Login error: anything else."
+  },
+  "signOut": "تسجيل الخروج",
+  "@signOut": {
+    "description": "Sign-out button."
+  },
+  "shiftAreaTitle": "شاشة الكاشير",
+  "@shiftAreaTitle": {
+    "description": "Cashier flow (open shift, sell): the link to it from the admin placeholder."
+  },
+  "adminAreaTitle": "لوحة الإدارة",
+  "@adminAreaTitle": {
+    "description": "Admin area: placeholder heading and the link to it from the cashier flow."
+  },
+  "shiftNumberLabel": "وردية رقم {number}",
+  "@shiftNumberLabel": {
+    "description": "Admin placeholder: the signed-in user's open shift number.",
+    "placeholders": {
+      "number": { "type": "int", "example": "12" }
+    }
+  },
+  "roleCashier": "كاشير",
+  "@roleCashier": {
+    "description": "Staff role name."
+  },
+  "roleSupervisor": "مشرف",
+  "@roleSupervisor": {
+    "description": "Staff role name."
+  },
+  "roleAdmin": "مدير النظام",
+  "@roleAdmin": {
+    "description": "Staff role name."
+  },
+  "staffWithRole": "{name} · {role}",
+  "@staffWithRole": {
+    "description": "Header: who is logged in and their role.",
+    "placeholders": {
+      "name": { "type": "String", "example": "محمد علي" },
+      "role": { "type": "String", "example": "كاشير" }
+    }
+  },
+  "errorServerUnreachable": "تعذّر الاتصال بالسيرفر. تأكد من الشبكة وحاول مرة أخرى.",
+  "@errorServerUnreachable": {
+    "description": "Any screen: the on-site server can't be reached."
+  },
+  "errorUnexpected": "حدث خطأ غير متوقع. حاول مرة أخرى.",
+  "@errorUnexpected": {
+    "description": "Any screen: anything else went wrong."
+  },
+  "retry": "حاول مرة أخرى",
+  "@retry": {
+    "description": "Button that repeats a failed load."
+  },
+  "openShiftTitle": "فتح الوردية",
+  "@openShiftTitle": {
+    "description": "Open shift screen: header title."
+  },
+  "lastShiftClosedToday": "آخر وردية على الجهاز ده اتقفلت النهارده الساعة {time}.",
+  "@lastShiftClosedToday": {
+    "description": "Open shift banner: this counter's last shift closed earlier today.",
+    "placeholders": {
+      "time": { "type": "String", "example": "15:30" }
+    }
+  },
+  "lastShiftClosedYesterday": "آخر وردية على الجهاز ده اتقفلت أمس الساعة {time}.",
+  "@lastShiftClosedYesterday": {
+    "description": "Open shift banner: this counter's last shift closed yesterday.",
+    "placeholders": {
+      "time": { "type": "String", "example": "23:05" }
+    }
+  },
+  "lastShiftClosedOn": "آخر وردية على الجهاز ده اتقفلت يوم {date} الساعة {time}.",
+  "@lastShiftClosedOn": {
+    "description": "Open shift banner: this counter's last shift closed before yesterday.",
+    "placeholders": {
+      "date": { "type": "String", "example": "26 أكتوبر" },
+      "time": { "type": "String", "example": "23:05" }
+    }
+  },
+  "openingFloatTitle": "عهدة بداية الوردية",
+  "@openingFloatTitle": {
+    "description": "Open shift: opening float card heading."
+  },
+  "openingFloatHint": "عدّ الفكة اللي في الدرج واكتب المبلغ. هيتقارن بالمبلغ اللي هتعدّه وقت قفل الوردية.",
+  "@openingFloatHint": {
+    "description": "Open shift: line under the opening float heading."
+  },
+  "openingFloatLabel": "المبلغ (ج.م)",
+  "@openingFloatLabel": {
+    "description": "Open shift: opening float field label (whole pounds)."
+  },
+  "printerLabel": "الطابعة · {address}",
+  "@printerLabel": {
+    "description": "Open shift: printer card title with its LAN address.",
+    "placeholders": {
+      "address": { "type": "String", "example": "10.20.0.21" }
+    }
+  },
+  "printerLabelNone": "الطابعة",
+  "@printerLabelNone": {
+    "description": "Open shift: printer card title when no printer is set."
+  },
+  "printerNotSet": "مفيش طابعة متسجلة للشباك ده. كلّم الأدمن.",
+  "@printerNotSet": {
+    "description": "Printer card: the counter has no printer address."
+  },
+  "printerChecking": "بنفحص الطابعة…",
+  "@printerChecking": {
+    "description": "Printer card: connection check running."
+  },
+  "printerReachable": "متصلة · اعمل طباعة تجريبية قبل البدء",
+  "@printerReachable": {
+    "description": "Printer card: printer answers."
+  },
+  "printerUnreachable": "الطابعة مش بترد. اتأكد إنها شغالة ومتوصلة.",
+  "@printerUnreachable": {
+    "description": "Printer card: printer doesn't answer."
+  },
+  "printerPrinting": "بنطبع ورقة تجريبية…",
+  "@printerPrinting": {
+    "description": "Printer card: test page being sent."
+  },
+  "printerPrinted": "اتطبعت ورقة تجريبية — الطابعة شغالة",
+  "@printerPrinted": {
+    "description": "Printer card: test page sent."
+  },
+  "printerPrintFailed": "الطباعة التجريبية فشلت. اتأكد من الطابعة وحاول تاني.",
+  "@printerPrintFailed": {
+    "description": "Printer card: test page couldn't be sent."
+  },
+  "testPrint": "طباعة تجريبية",
+  "@testPrint": {
+    "description": "Printer card: test print button."
+  },
+  "checkPrinterAgain": "افحص تاني",
+  "@checkPrinterAgain": {
+    "description": "Printer card: repeat the connection check."
+  },
+  "openShiftButton": "فتح الوردية وبدء البيع",
+  "@openShiftButton": {
+    "description": "Open shift: main button."
+  },
+  "openShiftNoCounter": "الجهاز ده مش متسجل على شباك. كلّم الأدمن يضبط إعدادات التطبيق.",
+  "@openShiftNoCounter": {
+    "description": "Open shift: the app config has no COUNTER_ID."
+  },
+  "openShiftCounterUnavailable": "الشباك ده مش موجود أو موقوف. كلّم الأدمن.",
+  "@openShiftCounterUnavailable": {
+    "description": "Open shift: counter_unavailable (unknown or inactive counter)."
+  },
+  "openShiftCounterNoHomeGate": "الشباك ده ملوش بوابة. كلّم الأدمن.",
+  "@openShiftCounterNoHomeGate": {
+    "description": "Open shift: counter_no_home_gate (ADR-0015, task 1.10a)."
+  },
+  "openShiftElsewhere": "عندك وردية مفتوحة على {counter}. اقفلها من هناك الأول.",
+  "@openShiftElsewhere": {
+    "description": "Open shift: the user's open shift is at another counter.",
+    "placeholders": {
+      "counter": { "type": "String", "example": "شباك 2" }
+    }
+  },
+  "openShiftErrorCounterBusy": "فيه وردية تانية مفتوحة على الشباك ده. لازم تتقفل الأول.",
+  "@openShiftErrorCounterBusy": {
+    "description": "Open shift: counter_busy (another cashier's shift is open here)."
+  },
+  "openShiftErrorInvalidCash": "اكتب مبلغ العهدة.",
+  "@openShiftErrorInvalidCash": {
+    "description": "Open shift: no opening float typed."
+  },
+  "moneyAmount": "{amount} ج.م",
+  "@moneyAmount": {
+    "description": "An amount in Egyptian pounds; amount is already formatted with Western digits.",
+    "placeholders": {
+      "amount": { "type": "String", "example": "1,250" }
+    }
+  },
+  "sellTitle": "بيع التذاكر",
+  "@sellTitle": {
+    "description": "Sell screen: header title."
+  },
+  "sellSubtitle": "{counter} · وردية #{number} · بدأت {time}",
+  "@sellSubtitle": {
+    "description": "Sell screen header: counter, open shift number, when it opened.",
+    "placeholders": {
+      "counter": { "type": "String", "example": "شباك 1" },
+      "number": { "type": "int", "example": "24" },
+      "time": { "type": "String", "example": "09:00" }
+    }
+  },
+  "sellHeading": "اختار نوع التذكرة والعدد",
+  "@sellHeading": {
+    "description": "Sell screen: heading above the ticket type cards."
+  },
+  "findTicket": "بحث عن تذكرة",
+  "@findTicket": {
+    "description": "Sell screen: opens ticket lookup (task 2.6)."
+  },
+  "lastOrder": "آخر طلب",
+  "@lastOrder": {
+    "description": "Sell screen: opens the last order's review (task 2.5)."
+  },
+  "closeShift": "قفل الوردية",
+  "@closeShift": {
+    "description": "Sell screen: opens close shift (task 2.7)."
+  },
+  "printerBadgeReady": "الطابعة جاهزة",
+  "@printerBadgeReady": {
+    "description": "Sell header badge: the printer answers."
+  },
+  "printerBadgeChecking": "بنفحص الطابعة…",
+  "@printerBadgeChecking": {
+    "description": "Sell header badge: printer check running."
+  },
+  "printerBadgeUnreachable": "الطابعة مش بترد",
+  "@printerBadgeUnreachable": {
+    "description": "Sell header badge: the printer doesn't answer."
+  },
+  "printerBadgeNotSet": "مفيش طابعة",
+  "@printerBadgeNotSet": {
+    "description": "Sell header badge: the counter has no printer address."
+  },
+  "printerBadgeHint": "اضغط لفحص الطابعة تاني",
+  "@printerBadgeHint": {
+    "description": "Sell header badge tooltip: tapping repeats the check."
+  },
+  "ticketRuleSingleEntry": "دخول مرة واحدة",
+  "@ticketRuleSingleEntry": {
+    "description": "Ticket type card: one entry per ticket."
+  },
+  "ticketRuleEntries": "{count, plural, =2{دخول حتى مرتين} few{دخول حتى {count} مرات} other{دخول حتى {count} مرة}}",
+  "@ticketRuleEntries": {
+    "description": "Ticket type card: a multi-entry ticket (count is at least 2).",
+    "placeholders": {
+      "count": { "type": "int", "example": "5" }
+    }
+  },
+  "ticketRuleValidToday": "صالحة اليوم",
+  "@ticketRuleValidToday": {
+    "description": "Ticket type card: valid until today's closing time (same_day)."
+  },
+  "ticketRuleValidHours": "{hours, plural, =1{صالحة ساعة واحدة} =2{صالحة ساعتين} few{صالحة {hours} ساعات} other{صالحة {hours} ساعة}}",
+  "@ticketRuleValidHours": {
+    "description": "Ticket type card: valid N hours from sale (hours_from_sale).",
+    "placeholders": {
+      "hours": { "type": "int", "example": "4" }
+    }
+  },
+  "increaseQuantity": "زيادة",
+  "@increaseQuantity": {
+    "description": "Ticket type card: + button, for screen readers."
+  },
+  "decreaseQuantity": "تقليل",
+  "@decreaseQuantity": {
+    "description": "Ticket type card: − button, for screen readers."
+  },
+  "noTicketTypes": "مفيش أنواع تذاكر متاحة للبيع. كلّم الأدمن.",
+  "@noTicketTypes": {
+    "description": "Sell screen: no active ticket types."
+  },
+  "footerShiftOrders": "طلبات الوردية:",
+  "@footerShiftOrders": {
+    "description": "Sell footer: paid orders in this shift (count only, no money)."
+  },
+  "footerTicketsSold": "التذاكر المباعة:",
+  "@footerTicketsSold": {
+    "description": "Sell footer: tickets sold in this shift (count only, no money)."
+  },
+  "footerLastOrder": "آخر طلب:",
+  "@footerLastOrder": {
+    "description": "Sell footer: the shift's newest order number."
+  },
+  "currentOrder": "الطلب الحالي",
+  "@currentOrder": {
+    "description": "Sell screen: order panel heading."
+  },
+  "clearOrder": "مسح الطلب",
+  "@clearOrder": {
+    "description": "Sell screen: empties the current order."
+  },
+  "orderEmpty": "اختار أنواع التذاكر من القائمة",
+  "@orderEmpty": {
+    "description": "Sell screen: the current order has no tickets yet."
+  },
+  "orderLineQuantity": "{quantity} × {price}",
+  "@orderLineQuantity": {
+    "description": "Order line: quantity times the unit price.",
+    "placeholders": {
+      "quantity": { "type": "int", "example": "2" },
+      "price": { "type": "String", "example": "100 ج.م" }
+    }
+  },
+  "paymentMethodLabel": "طريقة الدفع",
+  "@paymentMethodLabel": {
+    "description": "Sell screen: payment method buttons label."
+  },
+  "paymentCash": "نقدي",
+  "@paymentCash": {
+    "description": "Payment method: cash."
+  },
+  "paymentCard": "كارت",
+  "@paymentCard": {
+    "description": "Payment method: card."
+  },
+  "paymentWallet": "محفظة",
+  "@paymentWallet": {
+    "description": "Payment method: mobile wallet."
+  },
+  "orderTotal": "{count, plural, few{الإجمالي · {count} تذاكر} other{الإجمالي · {count} تذكرة}}",
+  "@orderTotal": {
+    "description": "Sell screen: label before the current order's total.",
+    "placeholders": {
+      "count": { "type": "int", "example": "4" }
+    }
+  },
+  "printAndCharge": "طباعة التذاكر والتحصيل",
+  "@printAndCharge": {
+    "description": "Sell screen main button: prints the tickets, then the payment screen (ADR-0007)."
+  },
+  "sellShortcutsHint": "F12 للطباعة والتحصيل · Esc لمسح الطلب",
+  "@sellShortcutsHint": {
+    "description": "Sell screen: keyboard shortcuts under the main button."
+  },
+  "ticketHeading": "تذكرة دخول",
+  "@ticketHeading": {
+    "description": "Printed ticket: under the venue name."
+  },
+  "ticketValidOnDay": "صالحة يوم {date} حتى {time}",
+  "@ticketValidOnDay": {
+    "description": "Printed ticket: valid from sale until a time on the same day (date dd/MM/yyyy, time HH:mm).",
+    "placeholders": {
+      "date": { "type": "String", "example": "28/10/2026" },
+      "time": { "type": "String", "example": "23:00" }
+    }
+  },
+  "ticketValidUntil": "صالحة حتى {date} {time}",
+  "@ticketValidUntil": {
+    "description": "Printed ticket: valid until a time on a later day.",
+    "placeholders": {
+      "date": { "type": "String", "example": "29/10/2026" },
+      "time": { "type": "String", "example": "01:30" }
+    }
+  },
+  "ticketHomeGate": "ادخل من: {gate}",
+  "@ticketHomeGate": {
+    "description": "Printed ticket: the ticket's home gate, the one that still opens while the server is down (ADR-0015).",
+    "placeholders": {
+      "gate": { "type": "String", "example": "بوابة 2" }
+    }
+  },
+  "ticketOrderLabel": "طلب",
+  "@ticketOrderLabel": {
+    "description": "Printed ticket: order row label."
+  },
+  "ticketOrderValue": "#{number} · {index} من {count}",
+  "@ticketOrderValue": {
+    "description": "Printed ticket: order number and this ticket's place in the order.",
+    "placeholders": {
+      "number": { "type": "String", "example": "1028" },
+      "index": { "type": "String", "example": "1" },
+      "count": { "type": "String", "example": "4" }
+    }
+  },
+  "ticketCounterLabel": "شباك",
+  "@ticketCounterLabel": {
+    "description": "Printed ticket: counter and cashier row label."
+  },
+  "ticketTimeLabel": "الوقت",
+  "@ticketTimeLabel": {
+    "description": "Printed ticket: sale time row label."
+  },
+  "ticketFooter": "امسح الكود على البوابة · احتفظ بالتذكرة",
+  "@ticketFooter": {
+    "description": "Printed ticket: last line."
+  },
+  "testPageTitle": "طباعة تجريبية",
+  "@testPageTitle": {
+    "description": "Printed test page: title."
+  },
+  "testPageNotATicket": "عينة — مش تذكرة",
+  "@testPageNotATicket": {
+    "description": "Printed test page: above the sample ticket, which no gate accepts."
+  },
+  "testPagePaper": "ورق {width} مم",
+  "@testPagePaper": {
+    "description": "Printed test page: the counter's paper width.",
+    "placeholders": {
+      "width": { "type": "String", "example": "80" }
+    }
+  },
+  "testPageSample": "أبجد هوز حطي كلمن · 0123456789",
+  "@testPageSample": {
+    "description": "Printed test page: a line to check the letters and digits print right."
+  },
+  "testPageSampleType": "عينة",
+  "@testPageSampleType": {
+    "description": "Printed test page: the sample ticket's type name."
+  },
+  "shiftSubtitle": "{counter} · وردية #{number}",
+  "@shiftSubtitle": {
+    "description": "Payment header: counter and shift.",
+    "placeholders": {
+      "counter": { "type": "String" },
+      "number": { "type": "int" }
+    }
+  },
+  "sellFailureCounterNoHomeGate": "الشباك ده مالوش بوابة. كلّم الأدمن.",
+  "@sellFailureCounterNoHomeGate": {
+    "description": "Sell: sell_tickets refused, the counter has no home gate."
+  },
+  "sellFailureTypeUnavailable": "نوع تذكرة في الطلب اتوقف بيعه. القائمة اتحدّثت، راجع الطلب.",
+  "@sellFailureTypeUnavailable": {
+    "description": "Sell: an admin switched off a type in the order."
+  },
+  "sellFailureAfterClosing": "عدّى ميعاد القفل: تذاكر النهارده بس مش بتتباع دلوقتي.",
+  "@sellFailureAfterClosing": {
+    "description": "Sell: same-day tickets after closing time."
+  },
+  "sellFailureCodesExhausted": "مفيش أكواد تذاكر فاضية. كلّم الأدمن.",
+  "@sellFailureCodesExhausted": {
+    "description": "Sell: gate_code_space_exhausted."
+  },
+  "orderCancelledNotice": "الطلب #{number} اتلغى. خد التذاكر المطبوعة من العميل.",
+  "@orderCancelledNotice": {
+    "description": "Sell: after cancelling an order.",
+    "placeholders": {
+      "number": { "type": "int" }
+    }
+  },
+  "paymentTitle": "التحصيل · {method}",
+  "@paymentTitle": {
+    "description": "Payment header title with the method.",
+    "placeholders": {
+      "method": { "type": "String" }
+    }
+  },
+  "printStatusPrinting": "بنطبع التذاكر…",
+  "@printStatusPrinting": {
+    "description": "Payment: tickets still printing."
+  },
+  "printStatusPrinted": "{count, plural, few{اتطبعت {count} تذاكر} other{اتطبعت {count} تذكرة}}",
+  "@printStatusPrinted": {
+    "description": "Payment: every ticket printed.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "printStatusFailed": "{count, plural, few{{count} تذاكر ما اتطبعتش} other{{count} تذكرة ما اتطبعتش}}",
+  "@printStatusFailed": {
+    "description": "Payment and review: some tickets failed to print.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "printStatusCount": "{done} من {count}",
+  "@printStatusCount": {
+    "description": "Payment: printed tickets out of the order's.",
+    "placeholders": {
+      "done": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+  "printStatusHint": "سلّم التذاكر بعد ما تستلم الفلوس. التذاكر مش هتفتح البوابة غير بعد تأكيد التحصيل.",
+  "@printStatusHint": {
+    "description": "Payment: under the print status."
+  },
+  "printStatusFailedHint": "اتأكد من الطابعة (الورق والكهربا) واضغط إعادة المحاولة.",
+  "@printStatusFailedHint": {
+    "description": "Payment: under a failed print status."
+  },
+  "orderSummary": "ملخص الطلب #{number}",
+  "@orderSummary": {
+    "description": "Payment: order summary heading.",
+    "placeholders": {
+      "number": { "type": "int" }
+    }
+  },
+  "soldLine": "{name} × {quantity}",
+  "@soldLine": {
+    "description": "Payment: one ticket type of the order.",
+    "placeholders": {
+      "name": { "type": "String" },
+      "quantity": { "type": "int" }
+    }
+  },
+  "amountDue": "{count, plural, few{المطلوب · {count} تذاكر} other{المطلوب · {count} تذكرة}}",
+  "@amountDue": {
+    "description": "Payment: label of the order's total.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "amountReceivedLabel": "المبلغ المستلم (ج.م) · اكتبه أو استخدم الأرقام",
+  "@amountReceivedLabel": {
+    "description": "Payment: amount received field label."
+  },
+  "exactAmount": "المبلغ بالظبط",
+  "@exactAmount": {
+    "description": "Payment: quick amount equal to the total."
+  },
+  "tipTitle": "إكرامية من العميل (اختياري)",
+  "@tipTitle": {
+    "description": "Payment: tip box heading."
+  },
+  "tipNone": "بدون",
+  "@tipNone": {
+    "description": "Payment: no tip."
+  },
+  "tipTypedHint": "مبلغ",
+  "@tipTypedHint": {
+    "description": "Payment: typed tip placeholder."
+  },
+  "tipTypedLabel": "مبلغ الإكرامية بالجنيه",
+  "@tipTypedLabel": {
+    "description": "Payment: typed tip field, for screen readers."
+  },
+  "tipTheChange": "العميل ساب الباقي كله إكرامية",
+  "@tipTheChange": {
+    "description": "Payment: tip = amount received − total."
+  },
+  "changeLabel": "الباقي للعميل",
+  "@changeLabel": {
+    "description": "Payment and review: change label."
+  },
+  "changeAfterTip": "الباقي للعميل بعد إكرامية {tip}",
+  "@changeAfterTip": {
+    "description": "Payment: change label with a tip.",
+    "placeholders": {
+      "tip": { "type": "String" }
+    }
+  },
+  "amountShort": "المبلغ ناقص",
+  "@amountShort": {
+    "description": "Payment: the cash received is less than total + tip."
+  },
+  "keypadClear": "مسح",
+  "@keypadClear": {
+    "description": "Payment keypad: clear, for screen readers."
+  },
+  "keypadBackspace": "حذف رقم",
+  "@keypadBackspace": {
+    "description": "Payment keypad: backspace, for screen readers."
+  },
+  "cardPaymentNote": "حصّل {amount} على ماكينة الكارت، وبعدين أكّد التحصيل.",
+  "@cardPaymentNote": {
+    "description": "Payment: card payment instructions.",
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "walletPaymentNote": "استلم {amount} على المحفظة، وبعدين أكّد التحصيل.",
+  "@walletPaymentNote": {
+    "description": "Payment: wallet payment instructions.",
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "cancelOrder": "إلغاء الطلب",
+  "@cancelOrder": {
+    "description": "Payment: cancel button title."
+  },
+  "cancelOrderHint": "العميل ما دفعش · التذاكر المطبوعة بتتلغي",
+  "@cancelOrderHint": {
+    "description": "Payment: cancel button subtitle."
+  },
+  "confirmPayment": "تأكيد التحصيل",
+  "@confirmPayment": {
+    "description": "Payment: confirm button."
+  },
+  "paymentShortcutsHint": "Enter أو F12 لتأكيد التحصيل",
+  "@paymentShortcutsHint": {
+    "description": "Payment: keyboard hint."
+  },
+  "cancelDialogTitle": "إلغاء الطلب #{number}؟",
+  "@cancelDialogTitle": {
+    "description": "Cancel dialog title.",
+    "placeholders": {
+      "number": { "type": "int" }
+    }
+  },
+  "cancelDialogBody": "التذاكر المطبوعة هتتلغي ومش هتفتح البوابة. خدها من العميل.",
+  "@cancelDialogBody": {
+    "description": "Cancel dialog text."
+  },
+  "cancelReasonNotPaid": "العميل ما دفعش",
+  "@cancelReasonNotPaid": {
+    "description": "Cancel reason."
+  },
+  "cancelReasonOther": "سبب تاني",
+  "@cancelReasonOther": {
+    "description": "Cancel reason: needs typed text."
+  },
+  "cancelReasonTextLabel": "اكتب السبب",
+  "@cancelReasonTextLabel": {
+    "description": "Cancel dialog: other reason text field."
+  },
+  "cancelReasonTextRequired": "لازم تكتب السبب",
+  "@cancelReasonTextRequired": {
+    "description": "Cancel dialog: other reason left blank."
+  },
+  "cancelDialogKeep": "رجوع",
+  "@cancelDialogKeep": {
+    "description": "Cancel dialog: keep the order."
+  },
+  "paymentFailureOrderCancelled": "الطلب ده اتلغى تلقائي لأنه فضل من غير تحصيل، والتذاكر اتلغت. خدها من العميل وبيع تاني.",
+  "@paymentFailureOrderCancelled": {
+    "description": "Payment: the unpaid-order job cancelled it first."
+  },
+  "paymentFailureOrderNotFound": "الطلب ده مش موجود في ورديتك. ارجع للبيع وبيع تاني.",
+  "@paymentFailureOrderNotFound": {
+    "description": "Payment: order_not_found."
+  },
+  "paymentFailureTipNotAllowed": "الإكرامية مش مسموحة للدفع ده. شيل الإكرامية وحاول تاني.",
+  "@paymentFailureTipNotAllowed": {
+    "description": "Payment: tips switched off, or not cash."
+  },
+  "paymentFailureAmount": "المبلغ المستلم أقل من المطلوب.",
+  "@paymentFailureAmount": {
+    "description": "Payment: invalid_amount_received."
+  },
+  "paymentFailureAlreadyPaid": "الطلب ده اتحصّل خلاص.",
+  "@paymentFailureAlreadyPaid": {
+    "description": "Payment: cancel refused, the order is paid."
+  },
+  "backToSell": "رجوع للبيع",
+  "@backToSell": {
+    "description": "Payment: leave an order the server cancelled, or one the server can't confirm (ADR-0039)."
+  },
+  "paymentServerUnreachable": "تعذّر الاتصال بالسيرفر، فلم يُؤكَّد الدفع. حاول مرة أخرى، أو ارجع للبيع وبِع بدون اتصال: استرجع التذاكر المطبوعة، فهي لا تفتح البوابة.",
+  "@paymentServerUnreachable": {
+    "description": "Payment: confirm got no answer and the counter is offline. Back to selling leaves the order unconfirmed; the server's job cancels it (ADR-0039)."
+  },
+  "reviewTitle": "مراجعة طلب #{number}",
+  "@reviewTitle": {
+    "description": "Review header title.",
+    "placeholders": {
+      "number": { "type": "int" }
+    }
+  },
+  "reviewSubtitle": "{counter} · وردية #{number} · {time}",
+  "@reviewSubtitle": {
+    "description": "Review header subtitle: counter, shift, sale time.",
+    "placeholders": {
+      "counter": { "type": "String" },
+      "number": { "type": "int" },
+      "time": { "type": "String" }
+    }
+  },
+  "reviewPaidTitle": "تم التحصيل · التذاكر شغالة",
+  "@reviewPaidTitle": {
+    "description": "Review banner: all printed."
+  },
+  "reviewPaidSubtitle": "{count, plural, few{{count} تذاكر اتطبعت · {total} · {method}} other{{count} تذكرة اتطبعت · {total} · {method}}}",
+  "@reviewPaidSubtitle": {
+    "description": "Review banner: count, this order's total and method.",
+    "placeholders": {
+      "count": { "type": "int" },
+      "total": { "type": "String" },
+      "method": { "type": "String" }
+    }
+  },
+  "reviewPrintingTitle": "تم التحصيل · بنطبع التذاكر…",
+  "@reviewPrintingTitle": {
+    "description": "Review banner: some tickets still printing."
+  },
+  "reviewFailedSubtitle": "التحصيل اتأكد. اتأكد من الطابعة واضغط إعادة المحاولة.",
+  "@reviewFailedSubtitle": {
+    "description": "Review banner: some tickets failed to print."
+  },
+  "reviewTickets": "التذاكر",
+  "@reviewTickets": {
+    "description": "Review: tickets list heading."
+  },
+  "ticketPrinted": "اتطبعت",
+  "@ticketPrinted": {
+    "description": "Review: ticket status chip."
+  },
+  "ticketPrintFailed": "فشلت الطباعة",
+  "@ticketPrintFailed": {
+    "description": "Review: ticket status chip."
+  },
+  "ticketPrinting": "بتتطبع…",
+  "@ticketPrinting": {
+    "description": "Review: ticket status chip."
+  },
+  "ticketWaiting": "مستنية الطباعة",
+  "@ticketWaiting": {
+    "description": "Review: ticket status chip."
+  },
+  "reviewReprintNote": "إعادة الطباعة بتتسجل باسمك والسبب، وبتظهر للإدارة في سجل الإجراءات.",
+  "@reviewReprintNote": {
+    "description": "Review: under the tickets list."
+  },
+  "reprint": "إعادة طباعة",
+  "@reprint": {
+    "description": "Review: reprint button (task 2.6)."
+  },
+  "newOrder": "طلب جديد",
+  "@newOrder": {
+    "description": "Review: back to selling."
+  },
+  "reviewShortcutsHint": "Enter لطلب جديد",
+  "@reviewShortcutsHint": {
+    "description": "Review: keyboard hint."
+  },
+  "back": "رجوع",
+  "@back": {
+    "description": "Header: back arrow label."
+  },
+  "close": "إغلاق",
+  "@close": {
+    "description": "Dialog close button label."
+  },
+  "todayAt": "اليوم {time}",
+  "@todayAt": {
+    "description": "A time today.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "lookupTitle": "البحث عن تذكرة",
+  "@lookupTitle": {
+    "description": "Lookup header title (task 2.6)."
+  },
+  "lookupCodeLabel": "امسح التذكرة بالقارئ أو اكتب الكود",
+  "@lookupCodeLabel": {
+    "description": "Lookup: code field label."
+  },
+  "lookupSearch": "بحث",
+  "@lookupSearch": {
+    "description": "Lookup: search button."
+  },
+  "lookupOrder": "الطلب",
+  "@lookupOrder": {
+    "description": "Lookup: detail label."
+  },
+  "lookupSold": "اتباعت",
+  "@lookupSold": {
+    "description": "Lookup: detail label (time · counter)."
+  },
+  "lookupCashier": "الكاشير",
+  "@lookupCashier": {
+    "description": "Lookup: detail label."
+  },
+  "lookupValidUntil": "صالحة لحد",
+  "@lookupValidUntil": {
+    "description": "Lookup: detail label."
+  },
+  "lookupEntriesLeft": "مرات الدخول المتبقية",
+  "@lookupEntriesLeft": {
+    "description": "Lookup: detail label."
+  },
+  "lookupEntriesValue": "{left} من {allowed}",
+  "@lookupEntriesValue": {
+    "description": "Lookup: entries left of allowed.",
+    "placeholders": {
+      "left": {
+        "type": "int"
+      },
+      "allowed": {
+        "type": "int"
+      }
+    }
+  },
+  "lookupPrintCount": "مرات الطباعة",
+  "@lookupPrintCount": {
+    "description": "Lookup: detail label."
+  },
+  "lookupHomeGate": "بوابة الدخول",
+  "@lookupHomeGate": {
+    "description": "Lookup: the ticket's home gate (ADR-0015)."
+  },
+  "lookupScansTitle": "سجل المسح على البوابات",
+  "@lookupScansTitle": {
+    "description": "Lookup: scan history heading."
+  },
+  "lookupNoScans": "التذكرة دي لسه ما اتمسحتش على أي بوابة.",
+  "@lookupNoScans": {
+    "description": "Lookup: no scans."
+  },
+  "lookupNoteReactivate": "{minutes, plural, =1{لو العميل عمل مسح ومعدّاش، تقدر ترجّع التذكرة صالحة لحد {until} (فاضل دقيقة).} =2{لو العميل عمل مسح ومعدّاش، تقدر ترجّع التذكرة صالحة لحد {until} (فاضل دقيقتين).} few{لو العميل عمل مسح ومعدّاش، تقدر ترجّع التذكرة صالحة لحد {until} (فاضل {minutes} دقايق).} other{لو العميل عمل مسح ومعدّاش، تقدر ترجّع التذكرة صالحة لحد {until} (فاضل {minutes} دقيقة).}}",
+  "@lookupNoteReactivate": {
+    "description": "Lookup note: the reactivation window is open.",
+    "placeholders": {
+      "until": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "lookupNoteVoided": "اتلغت {time} بواسطة {actor} · {counter} · السبب: {reason}.",
+  "@lookupNoteVoided": {
+    "description": "Lookup note: who voided it.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "actor": {
+        "type": "String"
+      },
+      "counter": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "lookupNoteVoidedAuto": "اتلغت {time} تلقائي، لأن الطلب فضل من غير تحصيل.",
+  "@lookupNoteVoidedAuto": {
+    "description": "Lookup note: cancelled by the unpaid-order job.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "lookupNoteVoidedPlain": "التذكرة دي ملغاة وما بتفتحش البوابة.",
+  "@lookupNoteVoidedPlain": {
+    "description": "Lookup note: voided, no action found."
+  },
+  "lookupNotePending": "الطلب لسه ما اتحصّلش. التذكرة مش هتفتح البوابة غير بعد تأكيد التحصيل.",
+  "@lookupNotePending": {
+    "description": "Lookup note: pending ticket."
+  },
+  "lookupNoteExpired": "صلاحية التذكرة خلصت {until}. ما ينفعش تتطبع تاني أو ترجع صالحة.",
+  "@lookupNoteExpired": {
+    "description": "Lookup note: expired ticket (ADR-0020).",
+    "placeholders": {
+      "until": {
+        "type": "String"
+      }
+    }
+  },
+  "statusActiveUnused": "سليمة · لسه ما دخلتش",
+  "@statusActiveUnused": {
+    "description": "Lookup status pill."
+  },
+  "statusActive": "سليمة",
+  "@statusActive": {
+    "description": "Lookup status pill: active, some entries used."
+  },
+  "statusUsed": "مستخدمة",
+  "@statusUsed": {
+    "description": "Lookup status pill."
+  },
+  "statusVoided": "ملغاة",
+  "@statusVoided": {
+    "description": "Lookup status pill."
+  },
+  "statusPending": "مش مدفوعة",
+  "@statusPending": {
+    "description": "Lookup status pill: pending."
+  },
+  "statusExpired": "منتهية",
+  "@statusExpired": {
+    "description": "Lookup status pill."
+  },
+  "scanAccepted": "اتقبلت",
+  "@scanAccepted": {
+    "description": "Lookup: accepted scan."
+  },
+  "scanRejected": "مرفوضة · {reason}",
+  "@scanRejected": {
+    "description": "Lookup: rejected scan.",
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "scanReasonNotPaid": "مش مدفوعة",
+  "@scanReasonNotPaid": {
+    "description": "Scan reject reason."
+  },
+  "scanReasonVoided": "ملغاة",
+  "@scanReasonVoided": {
+    "description": "Scan reject reason."
+  },
+  "scanReasonUsedUp": "مستخدمة قبل كده",
+  "@scanReasonUsedUp": {
+    "description": "Scan reject reason."
+  },
+  "scanReasonNotYetValid": "لسه مش صالحة",
+  "@scanReasonNotYetValid": {
+    "description": "Scan reject reason."
+  },
+  "scanReasonExpired": "منتهية",
+  "@scanReasonExpired": {
+    "description": "Scan reject reason."
+  },
+  "scanReasonGateDisabled": "البوابة مقفولة",
+  "@scanReasonGateDisabled": {
+    "description": "Scan reject reason."
+  },
+  "scanReasonNotFound": "كود مش معروف",
+  "@scanReasonNotFound": {
+    "description": "Scan reject reason."
+  },
+  "actionDialogTitle": "إجراء على التذكرة",
+  "@actionDialogTitle": {
+    "description": "Action dialog title."
+  },
+  "actionDialogTicket": "تذكرة {type}",
+  "@actionDialogTicket": {
+    "description": "Action dialog subtitle: the ticket type.",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "actionDialogOrder": "طلب #{number}",
+  "@actionDialogOrder": {
+    "description": "Action dialog subtitle: the order.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "actionLabel": "الإجراء",
+  "@actionLabel": {
+    "description": "Action dialog: action picker label."
+  },
+  "actionReactivate": "إعادة تفعيل",
+  "@actionReactivate": {
+    "description": "Ticket action name."
+  },
+  "actionReprint": "إعادة طباعة",
+  "@actionReprint": {
+    "description": "Ticket action name."
+  },
+  "actionVoidRefund": "إلغاء واسترداد",
+  "@actionVoidRefund": {
+    "description": "Ticket action name."
+  },
+  "actionHelpReactivate": "التذكرة ترجع صالحة لدخول واحد. استخدمها لو العميل عمل مسح ومعدّاش.",
+  "@actionHelpReactivate": {
+    "description": "Action dialog help."
+  },
+  "actionHelpReprint": "هتتطبع نسخة جديدة بنفس الكود. النسخة القديمة والجديدة نفس التذكرة، فدخول واحد بس.",
+  "@actionHelpReprint": {
+    "description": "Action dialog help."
+  },
+  "actionHelpVoidRefund": "التذكرة هتتلغي وهتترفض على البوابة، والمبلغ يتخصم من الوردية.",
+  "@actionHelpVoidRefund": {
+    "description": "Action dialog help."
+  },
+  "actionBlocked": "{action}: {reason}",
+  "@actionBlocked": {
+    "description": "Action dialog: why an action is blocked.",
+    "placeholders": {
+      "action": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "actionLimitReactivate": "{max, plural, =1{مسموحة مرة واحدة للتذكرة، وخلال {window} دقايق من آخر مسح عليها.} =2{مسموحة مرتين للتذكرة، وخلال {window} دقايق من آخر مسح عليها.} few{مسموحة {max} مرات للتذكرة، وخلال {window} دقايق من آخر مسح عليها.} other{مسموحة {max} مرة للتذكرة، وخلال {window} دقايق من آخر مسح عليها.}}",
+  "@actionLimitReactivate": {
+    "description": "Action dialog limit: settings.reactivation_max and reactivation_window_min.",
+    "placeholders": {
+      "max": {
+        "type": "int"
+      },
+      "window": {
+        "type": "int"
+      }
+    }
+  },
+  "actionLimitReprint": "عدد مرات الطباعة بيظهر على التذكرة وفي السجل.",
+  "@actionLimitReprint": {
+    "description": "Action dialog limit."
+  },
+  "actionLimitRefundBoth": "متاح بس لتذكرة ما اتمسحتش على أي بوابة، وفي نفس الوردية اللي اتباعت فيها.",
+  "@actionLimitRefundBoth": {
+    "description": "Action dialog limit: both refund settings on."
+  },
+  "actionLimitRefundBeforeScan": "متاح بس لتذكرة ما اتمسحتش على أي بوابة.",
+  "@actionLimitRefundBeforeScan": {
+    "description": "Action dialog limit: refund_before_scan_only."
+  },
+  "actionLimitRefundSameShift": "متاح بس في نفس الوردية اللي اتباعت فيها.",
+  "@actionLimitRefundSameShift": {
+    "description": "Action dialog limit: refund_same_shift_only."
+  },
+  "actionLimitRefundAny": "متاح لأي تذكرة مدفوعة.",
+  "@actionLimitRefundAny": {
+    "description": "Action dialog limit: both refund settings off."
+  },
+  "refundInCash": "رجّع للعميل نقدي",
+  "@refundInCash": {
+    "description": "Refund: cash-paid ticket."
+  },
+  "refundToCard": "رجّع للعميل على الكارت",
+  "@refundToCard": {
+    "description": "Refund: card-paid ticket."
+  },
+  "refundToWallet": "رجّع للعميل على المحفظة",
+  "@refundToWallet": {
+    "description": "Refund: wallet-paid ticket."
+  },
+  "actionReasonLabel": "السبب (إجباري)",
+  "@actionReasonLabel": {
+    "description": "Action dialog: reasons label."
+  },
+  "actionReasonNoteLabel": "ملاحظة (اختياري)",
+  "@actionReasonNoteLabel": {
+    "description": "Action dialog: note field."
+  },
+  "actionReasonTextRequiredLabel": "اكتب السبب (إجباري)",
+  "@actionReasonTextRequiredLabel": {
+    "description": "Action dialog: note field for \"other\"."
+  },
+  "actionReasonTextRequired": "لازم تكتب السبب",
+  "@actionReasonTextRequired": {
+    "description": "Action dialog: \"other\" without text."
+  },
+  "reasonScannedNotPassed": "عمل مسح ومعدّاش",
+  "@reasonScannedNotPassed": {
+    "description": "Reactivate reason."
+  },
+  "reasonGateDidNotOpen": "البوابة ما فتحتش",
+  "@reasonGateDidNotOpen": {
+    "description": "Reactivate reason."
+  },
+  "reasonPrintFailed": "الطباعة باظت",
+  "@reasonPrintFailed": {
+    "description": "Reprint reason."
+  },
+  "reasonTicketLost": "العميل ضيّع التذكرة",
+  "@reasonTicketLost": {
+    "description": "Reprint reason."
+  },
+  "reasonCustomerChangedMind": "العميل غيّر رأيه",
+  "@reasonCustomerChangedMind": {
+    "description": "Refund reason."
+  },
+  "reasonWrongTicketType": "نوع تذكرة غلط",
+  "@reasonWrongTicketType": {
+    "description": "Refund reason."
+  },
+  "reasonOther": "سبب آخر",
+  "@reasonOther": {
+    "description": "Any action: other reason."
+  },
+  "reasonUnpaidTimeout": "الطلب ما اتحصّلش في الوقت",
+  "@reasonUnpaidTimeout": {
+    "description": "Logged reason of the automatic cancel."
+  },
+  "actionConfirmReactivate": "إعادة التفعيل",
+  "@actionConfirmReactivate": {
+    "description": "Action dialog confirm."
+  },
+  "actionConfirmReprint": "إعادة الطباعة",
+  "@actionConfirmReprint": {
+    "description": "Action dialog confirm."
+  },
+  "actionConfirmVoidRefund": "إلغاء واسترداد {amount}",
+  "@actionConfirmVoidRefund": {
+    "description": "Action dialog confirm: the ticket price.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "actionFootnote": "الإجراء بيتسجل باسمك والشباك والسبب والوقت، وبيظهر للإدارة في سجل الإجراءات.",
+  "@actionFootnote": {
+    "description": "Action dialog: last line."
+  },
+  "actionCopyPrinting": "إعادة الطباعة اتسجلت · النسخة بتتطبع…",
+  "@actionCopyPrinting": {
+    "description": "Action dialog: reprint copy printing."
+  },
+  "actionCopyFailed": "إعادة الطباعة اتسجلت بس النسخة ما اتطبعتش. اتأكد من الطابعة واضغط إعادة المحاولة.",
+  "@actionCopyFailed": {
+    "description": "Action dialog: reprint copy failed."
+  },
+  "actionCloseCopy": "إغلاق من غير طباعة",
+  "@actionCloseCopy": {
+    "description": "Action dialog: give up the failed copy."
+  },
+  "outcomeReprinted": "النسخة اتطبعت، وإعادة الطباعة اتسجلت.",
+  "@outcomeReprinted": {
+    "description": "Notice after a reprint."
+  },
+  "outcomeReprintNotPrinted": "إعادة الطباعة اتسجلت بس النسخة ما اتطبعتش.",
+  "@outcomeReprintNotPrinted": {
+    "description": "Notice after a reprint whose copy failed."
+  },
+  "outcomeReactivated": "التذكرة رجعت صالحة لدخول واحد.",
+  "@outcomeReactivated": {
+    "description": "Notice after a reactivation."
+  },
+  "outcomeRefunded": "التذكرة اتلغت. {how}: {amount}",
+  "@outcomeRefunded": {
+    "description": "Notice after a refund: how and how much.",
+    "placeholders": {
+      "how": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "ticketFailureNotFound": "مفيش تذكرة بالكود ده.",
+  "@ticketFailureNotFound": {
+    "description": "ticket_not_found."
+  },
+  "ticketFailureNoOpenShift": "لازم وردية مفتوحة عشان تعمل إجراء.",
+  "@ticketFailureNoOpenShift": {
+    "description": "no_open_shift."
+  },
+  "ticketFailureVoided": "التذكرة ملغاة.",
+  "@ticketFailureVoided": {
+    "description": "ticket_voided."
+  },
+  "ticketFailureUsed": "التذكرة مستخدمة. رجّعها صالحة الأول.",
+  "@ticketFailureUsed": {
+    "description": "ticket_used."
+  },
+  "ticketFailureExpired": "صلاحية التذكرة خلصت.",
+  "@ticketFailureExpired": {
+    "description": "ticket_expired."
+  },
+  "ticketFailureNotScanned": "التذكرة ما دخلتش من أي بوابة.",
+  "@ticketFailureNotScanned": {
+    "description": "not_scanned."
+  },
+  "ticketFailureAlreadyReactivated": "آخر مسح عليها اترجع خلاص.",
+  "@ticketFailureAlreadyReactivated": {
+    "description": "already_reactivated."
+  },
+  "ticketFailureReactivationLimit": "التذكرة رجعت صالحة أقصى عدد مرات مسموح.",
+  "@ticketFailureReactivationLimit": {
+    "description": "reactivation_limit_reached."
+  },
+  "ticketFailureReactivationWindow": "الوقت المسموح بعد آخر مسح خلص.",
+  "@ticketFailureReactivationWindow": {
+    "description": "reactivation_window_passed."
+  },
+  "ticketFailureNotPaid": "الطلب لسه ما اتحصّلش. ألغِ الطلب بدل كده.",
+  "@ticketFailureNotPaid": {
+    "description": "ticket_not_paid."
+  },
+  "ticketFailureAlreadyScanned": "التذكرة اتمسحت ودخلت قبل كده.",
+  "@ticketFailureAlreadyScanned": {
+    "description": "ticket_already_scanned."
+  },
+  "ticketFailureNotSameShift": "التذكرة اتباعت في وردية تانية.",
+  "@ticketFailureNotSameShift": {
+    "description": "not_same_shift."
+  },
+  "ticketCopyLabel": "الطباعة",
+  "@ticketCopyLabel": {
+    "description": "Printed ticket: copy row label (a reprint)."
+  },
+  "ticketCopyValue": "نسخة {count}",
+  "@ticketCopyValue": {
+    "description": "Printed ticket: which print this is.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "ticketRefunded": "اتلغت واترجع مبلغها",
+  "@ticketRefunded": {
+    "description": "Review: ticket void-refunded from the review."
+  },
+  "ticketLeftUnprinted": "ما اتطبعتش · اتسجلت",
+  "@ticketLeftUnprinted": {
+    "description": "Review: ticket left unprinted (ADR-0024)."
+  },
+  "unprintedDialogTitle": "{count, plural, =1{تذكرة واحدة ما اتطبعتش} =2{تذكرتين ما اتطبعوش} few{{count} تذاكر ما اتطبعتش} other{{count} تذكرة ما اتطبعتش}}",
+  "@unprintedDialogTitle": {
+    "description": "Review: New order with failed prints.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "unprintedDialogBody": "لو غادرت الطلب، مفيش حاجة تقدر تطبعها تاني: الكود مش على ورق. اتأكد من الطابعة واضغط إعادة المحاولة، أو اختار السبب وغادر الطلب.",
+  "@unprintedDialogBody": {
+    "description": "Review: unprinted dialog body."
+  },
+  "unprintedDialogReason": "سبب مغادرة الطلب",
+  "@unprintedDialogReason": {
+    "description": "Review: unprinted dialog reasons label."
+  },
+  "leaveReasonPrintedAfterAll": "اتطبعت فعلاً والعميل استلمها",
+  "@leaveReasonPrintedAfterAll": {
+    "description": "Leave reason printed_after_all."
+  },
+  "leaveReasonCustomerLeft": "العميل مشي من غيرها",
+  "@leaveReasonCustomerLeft": {
+    "description": "Leave reason customer_left."
+  },
+  "unprintedDialogLogged": "ده بيتسجل باسمك والسبب، وبيظهر للإدارة للمراجعة.",
+  "@unprintedDialogLogged": {
+    "description": "Review: unprinted dialog footnote."
+  },
+  "unprintedLeave": "مغادرة الطلب",
+  "@unprintedLeave": {
+    "description": "Review: leave with unprinted tickets."
+  },
+  "reviewPaidShortTitle": "تم التحصيل",
+  "@reviewPaidShortTitle": {
+    "description": "Review banner: paid, but not every ticket is active and printed."
+  },
+  "reviewPartlyRefundedSubtitle": "{active, plural, =1{تذكرة واحدة شغالة · {refunded} اتلغت واترجع مبلغها} =2{تذكرتين شغالين · {refunded} اتلغت واترجع مبلغها} few{{active} تذاكر شغالة · {refunded} اتلغت واترجع مبلغها} other{{active} تذكرة شغالة · {refunded} اتلغت واترجع مبلغها}}",
+  "@reviewPartlyRefundedSubtitle": {
+    "description": "Review banner: some tickets refunded from the review.",
+    "placeholders": {
+      "active": {
+        "type": "int"
+      },
+      "refunded": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewAllRefundedTitle": "{count, plural, =1{التذكرة اتلغت} =2{التذكرتين اتلغوا} other{التذاكر كلها اتلغت}}",
+  "@reviewAllRefundedTitle": {
+    "description": "Review banner: every ticket refunded from the review.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewAllRefundedSubtitle": "{count, plural, =1{اترجع مبلغها للعميل} =2{اترجع مبلغهم للعميل} few{{count} تذاكر اتلغت واترجع مبلغها} other{{count} تذكرة اتلغت واترجع مبلغها}}",
+  "@reviewAllRefundedSubtitle": {
+    "description": "Review banner: every ticket refunded.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewLeftSubtitle": "{printed} اتطبعت · {left} ما اتطبعتش (اتسجلت)",
+  "@reviewLeftSubtitle": {
+    "description": "Review banner: some tickets left unprinted (ADR-0024).",
+    "placeholders": {
+      "printed": {
+        "type": "int"
+      },
+      "left": {
+        "type": "int"
+      }
+    }
+  },
+  "retryAllFailed": "{count, plural, =1{حاول تاني للتذكرة} =2{حاول تاني للتذكرتين} few{حاول تاني للـ{count} تذاكر} other{حاول تاني للـ{count} تذكرة}}",
+  "@retryAllFailed": {
+    "description": "Review bottom bar: print every failed ticket again (ADR-0023).",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "closeShiftTitle": "قفل الوردية #{number}",
+  "@closeShiftTitle": {
+    "description": "Close shift header title (task 2.7).",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "closeShiftSubtitle": "{counter} · من {from} لحد {to} · {cashier}",
+  "@closeShiftSubtitle": {
+    "description": "Close shift header subtitle: counter, opening time, now, cashier.",
+    "placeholders": {
+      "counter": {
+        "type": "String"
+      },
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      },
+      "cashier": {
+        "type": "String"
+      }
+    }
+  },
+  "countHeading": "عدّ كل الفلوس اللي في الدرج",
+  "@countHeading": {
+    "description": "Close shift: blind count heading (ADR-0008)."
+  },
+  "countHint": "اكتب عدد الورق من كل فئة، شامل العهدة والإكراميات. تقدر تكتب العدد مباشرة أو تستخدم + و −.",
+  "@countHint": {
+    "description": "Close shift: blind count hint."
+  },
+  "denominationLabel": "{amount} ج",
+  "@denominationLabel": {
+    "description": "Close shift: a denomination's label, e.g. 200 ج.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "denominationCountLabel": "عدد ورق فئة {amount} جنيه",
+  "@denominationCountLabel": {
+    "description": "Close shift: the count field's accessibility label.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "countedTotal": "إجمالي المعدود",
+  "@countedTotal": {
+    "description": "Close shift: the counted total."
+  },
+  "tipsHeading": "الإكراميات",
+  "@tipsHeading": {
+    "description": "Close shift: tips section heading."
+  },
+  "tipsHint": "اللي سجّلتها مع العملاء خلال الوردية. لو نسيت تسجّل إكرامية، ضيفها هنا قبل القفل.",
+  "@tipsHint": {
+    "description": "Close shift: tips section hint."
+  },
+  "tipsNone": "مفيش إكراميات متسجلة في الوردية دي.",
+  "@tipsNone": {
+    "description": "Close shift: no tips yet."
+  },
+  "tipWithOrder": "مع طلب #{number}",
+  "@tipWithOrder": {
+    "description": "Close shift: a tip recorded with an order.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "tipAddedAtClose": "اتضافت وقت القفل",
+  "@tipAddedAtClose": {
+    "description": "Close shift: a tip added without an order."
+  },
+  "addTipHeading": "إضافة إكرامية منسية",
+  "@addTipHeading": {
+    "description": "Close shift: add tip box heading."
+  },
+  "addTipTypedLabel": "أو اكتب المبلغ (ج.م)",
+  "@addTipTypedLabel": {
+    "description": "Close shift: typed tip label."
+  },
+  "addTipTypedHint": "مثلًا 35",
+  "@addTipTypedHint": {
+    "description": "Close shift: typed tip placeholder."
+  },
+  "addTipButton": "إضافة {amount}",
+  "@addTipButton": {
+    "description": "Close shift: add the picked tip.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "addTipButtonEmpty": "اختار مبلغ الإكرامية",
+  "@addTipButtonEmpty": {
+    "description": "Close shift: add tip button with no amount picked."
+  },
+  "addTipNote": "الإكرامية بعد ما تتضاف مش بتتشال.",
+  "@addTipNote": {
+    "description": "Close shift: under the add tip button."
+  },
+  "tipsTotal": "إجمالي الإكراميات · {count}",
+  "@tipsTotal": {
+    "description": "Close shift: tips total with their count.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tipsDisabledNote": "الإكراميات مقفولة في الإعدادات.",
+  "@tipsDisabledNote": {
+    "description": "Close shift: tips_enabled is off."
+  },
+  "tipFailureInvalid": "مبلغ الإكرامية لازم يكون أكبر من صفر.",
+  "@tipFailureInvalid": {
+    "description": "Close shift: add_tip refused invalid_tip."
+  },
+  "closeShiftButton": "قفل الوردية وطباعة الملخص",
+  "@closeShiftButton": {
+    "description": "Close shift: the main button."
+  },
+  "closeShiftNote": "بعد القفل مفيش تعديل على العدّ أو الإكراميات.",
+  "@closeShiftNote": {
+    "description": "Close shift: under the main button."
+  },
+  "closeAwaitingTitle": "{count, plural, =1{فيه طلب لسه مستني الدفع} =2{فيه طلبين لسه مستنيين الدفع} few{فيه {count} طلبات لسه مستنية الدفع} other{فيه {count} طلب لسه مستنيين الدفع}}",
+  "@closeAwaitingTitle": {
+    "description": "Close shift: orders awaiting payment block the close (ADR-0016).",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "closeAwaitingBody": "أكّد الدفع أو الغي الطلب قبل القفل. لو مش ظاهر قدامك (مثلًا التطبيق اتقفل وانت على شاشة الدفع)، النظام هيلغيه لوحده بعد {minutes} دقيقة من البيع، وبعدها تقدر تقفل.",
+  "@closeAwaitingBody": {
+    "description": "Close shift: what to do about an order awaiting payment.",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "closeCheckAgain": "شوف تاني",
+  "@closeCheckAgain": {
+    "description": "Close shift: read the awaiting-payment count again."
+  },
+  "closeFailureInvalidCount": "العدّ فيه رقم غلط. راجع الأعداد وحاول تاني.",
+  "@closeFailureInvalidCount": {
+    "description": "Close shift: close_shift refused invalid_cash_count."
+  },
+  "closeFailureNoOpenShift": "الوردية دي اتقفلت خلاص. الملخص مش هيتطبع من هنا؛ المشرف يقدر يشوفها في صفحة الورديات.",
+  "@closeFailureNoOpenShift": {
+    "description": "Close shift: the shift was closed meanwhile (or the close's answer was lost)."
+  },
+  "closeConfirmTitle": "قفل الوردية #{number}؟",
+  "@closeConfirmTitle": {
+    "description": "Close shift: confirm dialog title.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "closeConfirmBody": "النقدية المعدودة: {amount}. بعد القفل مفيش تعديل على العدّ أو الإكراميات.",
+  "@closeConfirmBody": {
+    "description": "Close shift: confirm dialog body.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "closeConfirmZero": "إنت ما عدّتش أي فلوس. اتأكد إن الدرج فاضي فعلًا.",
+  "@closeConfirmZero": {
+    "description": "Close shift: confirm dialog, nothing counted."
+  },
+  "closeConfirmButton": "اقفل الوردية",
+  "@closeConfirmButton": {
+    "description": "Close shift: confirm dialog's close button."
+  },
+  "closedTitle": "الوردية #{number} اتقفلت",
+  "@closedTitle": {
+    "description": "After close: title.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "receiptPrinting": "بنطبع الملخص…",
+  "@receiptPrinting": {
+    "description": "After close: receipt printing."
+  },
+  "receiptPrinted": "الملخص اتطبع. وقّع عليه وسلّمه مع الدرج للمشرف.",
+  "@receiptPrinted": {
+    "description": "After close: receipt printed."
+  },
+  "receiptPrintFailed": "الملخص ما اتطبعش. اتأكد من الطابعة (الورق، الكهربا) ودوس حاول تاني.",
+  "@receiptPrintFailed": {
+    "description": "After close: receipt print failed."
+  },
+  "receiptNoPrinter": "مفيش طابعة متسجلة للشباك ده، فالملخص ما اتطبعش. المشرف يقدر يشوف الوردية في صفحة الورديات.",
+  "@receiptNoPrinter": {
+    "description": "After close: no printer set."
+  },
+  "receiptOnlyHere": "الملخص بيتطبع من هنا بس: بعد الخروج مش هتقدر تطبعه تاني.",
+  "@receiptOnlyHere": {
+    "description": "After close: why to print before leaving."
+  },
+  "closedDone": "تمام، خروج",
+  "@closedDone": {
+    "description": "After close: sign out."
+  },
+  "closedLeaveTitle": "تخرج من غير الملخص المطبوع؟",
+  "@closedLeaveTitle": {
+    "description": "After close: leaving with the receipt not printed."
+  },
+  "closedLeaveBody": "مش هتقدر تطبعه بعد كده. المشرف يقدر يشوف الوردية في صفحة الورديات.",
+  "@closedLeaveBody": {
+    "description": "After close: leaving with the receipt not printed."
+  },
+  "closedLeave": "خروج",
+  "@closedLeave": {
+    "description": "After close: leave without the receipt."
+  },
+  "receiptTitle": "إقرار قفل الوردية",
+  "@receiptTitle": {
+    "description": "Printed receipt: title."
+  },
+  "receiptShift": "الوردية",
+  "@receiptShift": {
+    "description": "Printed receipt: shift row label."
+  },
+  "receiptShiftValue": "#{number} · {counter}",
+  "@receiptShiftValue": {
+    "description": "Printed receipt: shift number and counter.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "counter": {
+        "type": "String"
+      }
+    }
+  },
+  "receiptCashier": "الكاشير",
+  "@receiptCashier": {
+    "description": "Printed receipt: cashier row label."
+  },
+  "receiptFrom": "من",
+  "@receiptFrom": {
+    "description": "Printed receipt: opened at."
+  },
+  "receiptTo": "لحد",
+  "@receiptTo": {
+    "description": "Printed receipt: closed at."
+  },
+  "receiptTicketsSold": "التذاكر المباعة",
+  "@receiptTicketsSold": {
+    "description": "Printed receipt: tickets heading."
+  },
+  "receiptTicketsTotal": "الإجمالي · {orders} طلب",
+  "@receiptTicketsTotal": {
+    "description": "Printed receipt: tickets total with the paid orders count.",
+    "placeholders": {
+      "orders": {
+        "type": "int"
+      }
+    }
+  },
+  "receiptStatement": "إقرار الكاشير",
+  "@receiptStatement": {
+    "description": "Printed receipt: statement heading."
+  },
+  "receiptCounted": "النقدية المعدودة",
+  "@receiptCounted": {
+    "description": "Printed receipt: counted cash."
+  },
+  "receiptTips": "منها إكراميات ({count})",
+  "@receiptTips": {
+    "description": "Printed receipt: tips total with their count.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "receiptTipsAtClose": "إكراميات اتضافت وقت القفل",
+  "@receiptTipsAtClose": {
+    "description": "Printed receipt: tips added at close."
+  },
+  "receiptReprints": "إعادة طباعة",
+  "@receiptReprints": {
+    "description": "Printed receipt: action count."
+  },
+  "receiptReactivations": "إعادة تفعيل",
+  "@receiptReactivations": {
+    "description": "Printed receipt: action count."
+  },
+  "receiptRefunds": "إلغاء واسترداد",
+  "@receiptRefunds": {
+    "description": "Printed receipt: action count."
+  },
+  "receiptCancelledOrders": "طلبات اتلغت",
+  "@receiptCancelledOrders": {
+    "description": "Printed receipt: cancelled orders count."
+  },
+  "receiptLeftUnprinted": "تذاكر ما اتطبعتش",
+  "@receiptLeftUnprinted": {
+    "description": "Printed receipt: left_unprinted count (ADR-0024)."
+  },
+  "receiptFooter": "المطابقة مع المتوقع بيعملها المشرف في النظام",
+  "@receiptFooter": {
+    "description": "Printed receipt: footer (ADR-0008)."
+  },
+  "receiptCashierSignature": "توقيع الكاشير",
+  "@receiptCashierSignature": {
+    "description": "Printed receipt: signature line."
+  },
+  "receiptSupervisorSignature": "توقيع المشرف",
+  "@receiptSupervisorSignature": {
+    "description": "Printed receipt: signature line."
+  },
+  "serverBadgeOnline": "متصل بالسيرفر",
+  "@serverBadgeOnline": {
+    "description": "Header badge: the health check reaches the server (ADR-0015)."
+  },
+  "serverBadgeOffline": "مفيش اتصال بالسيرفر",
+  "@serverBadgeOffline": {
+    "description": "Header badge: the server doesn't answer; selling goes on offline (ADR-0015)."
+  },
+  "serverBadgeChecking": "بنفحص الاتصال…",
+  "@serverBadgeChecking": {
+    "description": "Header badge: before the first health check."
+  },
+  "offlineBannerTitle": "شغالين أوفلاين: البيع بس، الدفع الأول وبعدين الطباعة",
+  "@offlineBannerTitle": {
+    "description": "Sell flow banner while offline (ADR-0015)."
+  },
+  "offlineBannerBody": "الطلبات بتتحفظ على الجهاز ده وبتترفع لوحدها أول ما السيرفر يرجع.",
+  "@offlineBannerBody": {
+    "description": "Sell flow banner while offline: what happens to the orders."
+  },
+  "offlineFreeCodes": "{count, plural, =0{مفيش أكواد أوفلاين} =1{فاضل كود أوفلاين واحد} =2{فاضل كودين أوفلاين} few{فاضل {count} أكواد أوفلاين} other{فاضل {count} كود أوفلاين}}",
+  "@offlineFreeCodes": {
+    "description": "Offline banner: pool codes left to sell with.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "offlineQueuePending": "{count, plural, =1{طلب مستني يترفع} =2{طلبين مستنيين يترفعوا} few{{count} طلبات مستنية تترفع} other{{count} طلب مستنيين يترفعوا}}",
+  "@offlineQueuePending": {
+    "description": "Banner: offline orders not uploaded yet.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "offlineQueueUploading": "بنرفع طلبات الأوفلاين…",
+  "@offlineQueueUploading": {
+    "description": "Banner: an upload is running."
+  },
+  "offlineQueueRefused": "{count, plural, =1{طلب السيرفر رفضه} =2{طلبين السيرفر رفضهم} few{{count} طلبات السيرفر رفضها} other{{count} طلب السيرفر رفضهم}}",
+  "@offlineQueueRefused": {
+    "description": "Banner: offline orders the server refused; a tap lists them.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "offlinePoolUnavailable": "مفيش أكواد أوفلاين للشباك ده (ليه بوابة؟). كلّم الأدمن: من غيرها مش هتقدر تبيع لو الاتصال وقع.",
+  "@offlinePoolUnavailable": {
+    "description": "Banner: the pool top-up failed (e.g. no home gate)."
+  },
+  "offlineRefusedTitle": "طلبات السيرفر رفضها",
+  "@offlineRefusedTitle": {
+    "description": "Refused orders dialog title."
+  },
+  "offlineRefusedBody": "دي اتباعت أو اتسجلت أوفلاين والسيرفر رفض رفعها. كلّم المشرف: الوردية مش هتتقفل غير لما تتحل.",
+  "@offlineRefusedBody": {
+    "description": "Refused orders dialog: what to do."
+  },
+  "offlineRefusedRow": "#{number} أوفلاين · {time} · {reason}",
+  "@offlineRefusedRow": {
+    "description": "Refused orders dialog: one order.",
+    "placeholders": {
+      "number": { "type": "int" },
+      "time": { "type": "String" },
+      "reason": { "type": "String" }
+    }
+  },
+  "offlineRefusalCodeNotInPool": "الكود مش من أكواد الشباك",
+  "@offlineRefusalCodeNotInPool": {
+    "description": "Refusal reason code_not_in_pool."
+  },
+  "offlineRefusalSoldAt": "وقت البيع مش مظبوط مع الوردية (ساعة الجهاز مظبوطة؟)",
+  "@offlineRefusalSoldAt": {
+    "description": "Refusal reason invalid_sold_at."
+  },
+  "offlineRefusedActionRow": "{action} · {code} · {time} · {reason}",
+  "@offlineRefusedActionRow": {
+    "description": "Refused orders dialog: one logged action.",
+    "placeholders": {
+      "action": { "type": "String" },
+      "code": { "type": "String" },
+      "time": { "type": "String" },
+      "reason": { "type": "String" }
+    }
+  },
+  "offlineQueueActions": "{count, plural, =1{إجراء متسجل مستني يترفع} =2{إجراءين متسجلين مستنيين يترفعوا} few{{count} إجراءات متسجلة مستنية تترفع} other{{count} إجراء متسجل مستنيين يترفعوا}}",
+  "@offlineQueueActions": {
+    "description": "Banner: reprints and unprinted tickets logged offline, not uploaded yet (ADR-0026).",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "closeQueueActionsTitle": "{count, plural, =1{فيه إجراء متسجل لسه ما اترفعش} =2{فيه إجراءين متسجلين لسه ما اترفعوش} few{فيه {count} إجراءات متسجلة لسه ما اترفعتش} other{فيه {count} إجراء متسجل لسه ما اترفعوش}}",
+  "@closeQueueActionsTitle": {
+    "description": "Close shift: logged actions not uploaded block the close (ADR-0026).",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "offlineRefusalTypeUnavailable": "نوع تذكرة مش معروف",
+  "@offlineRefusalTypeUnavailable": {
+    "description": "Refusal reason ticket_type_unavailable."
+  },
+  "offlineRefusalOther": "خطأ: {key}",
+  "@offlineRefusalOther": {
+    "description": "Refusal reason without its own text: the server's key.",
+    "placeholders": {
+      "key": { "type": "String" }
+    }
+  },
+  "needsServer": "محتاج السيرفر",
+  "@needsServer": {
+    "description": "Tooltip on a button disabled while offline."
+  },
+  "sellConnectionLost": "الاتصال بالسيرفر وقع. اضغط طباعة التذاكر والتحصيل تاني عشان تبيع أوفلاين.",
+  "@sellConnectionLost": {
+    "description": "Sell screen: sell_tickets didn't reach the server."
+  },
+  "sellFailureOfflineDisabled": "البيع أوفلاين مقفول من الإعدادات. استنى السيرفر يرجع.",
+  "@sellFailureOfflineDisabled": {
+    "description": "Sell screen: offline_pool_size is 0."
+  },
+  "sellFailureOfflinePoolEmpty": "أكواد الأوفلاين مش كفاية للطلب ده. بيع تذاكر أقل، أو استنى السيرفر يرجع.",
+  "@sellFailureOfflinePoolEmpty": {
+    "description": "Sell screen: fewer pool codes than tickets."
+  },
+  "sellFailureOfflineZone": "توقيت الجهاز ده مش توقيت المكان، فتذاكر اليوم ما تتباعش أوفلاين. كلّم الأدمن يظبط توقيت الجهاز.",
+  "@sellFailureOfflineZone": {
+    "description": "Sell screen: the PC's time zone doesn't match the pool's closing time."
+  },
+  "orderSummaryOffline": "ملخص الطلب #{number} (أوفلاين)",
+  "@orderSummaryOffline": {
+    "description": "Payment: heading of an offline order.",
+    "placeholders": {
+      "number": { "type": "int" }
+    }
+  },
+  "offlinePrintTitle": "التذاكر هتتطبع بعد تأكيد التحصيل",
+  "@offlinePrintTitle": {
+    "description": "Payment, offline: replaces the print status (charge first, ADR-0015)."
+  },
+  "offlinePrintHint": "إحنا أوفلاين: استلم الفلوس الأول. بعد التأكيد التذاكر بتتطبع مدفوعة وشغالة.",
+  "@offlinePrintHint": {
+    "description": "Payment, offline: under the title."
+  },
+  "offlineBackHint": "لسه مفيش حاجة اتسجلت",
+  "@offlineBackHint": {
+    "description": "Payment, offline: under the Back button that replaces cancel."
+  },
+  "reviewTitleOffline": "مراجعة طلب #{number} (أوفلاين)",
+  "@reviewTitleOffline": {
+    "description": "Review header of an offline order.",
+    "placeholders": {
+      "number": { "type": "int" }
+    }
+  },
+  "reviewOfflineNote": "الطلب ده اتباع أوفلاين وهيترفع للسيرفر لوحده أول ما الاتصال يرجع. إعادة الطباعة بتتسجل وتترفع بعده، والإلغاء والاسترجاع محتاجين السيرفر.",
+  "@reviewOfflineNote": {
+    "description": "Review, offline order: under the tickets."
+  },
+  "unprintedDialogOffline": "هيتسجل على الجهاز ده بالسبب ويتعلّم للمشرف، ويترفع لما السيرفر يرجع.",
+  "@unprintedDialogOffline": {
+    "description": "Review, offline order: why Leave anyway is disabled."
+  },
+  "ticketOrderValueOffline": "#{number} أوفلاين · {index} من {count}",
+  "@ticketOrderValueOffline": {
+    "description": "Printed ticket: an offline order's local number and this ticket's place.",
+    "placeholders": {
+      "number": { "type": "String", "example": "3" },
+      "index": { "type": "String", "example": "1" },
+      "count": { "type": "String", "example": "2" }
+    }
+  },
+  "closeQueueTitle": "{count, plural, =1{فيه طلب أوفلاين لسه ما اترفعش} =2{فيه طلبين أوفلاين لسه ما اترفعوش} few{فيه {count} طلبات أوفلاين لسه ما اترفعتش} other{فيه {count} طلب أوفلاين لسه ما اترفعوش}}",
+  "@closeQueueTitle": {
+    "description": "Close shift: offline orders not uploaded block the close (ADR-0015).",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "closeQueueBody": "الوردية تتقفل بعد ما يترفعوا. بيترفعوا لوحدهم طول ما السيرفر بيرد.",
+  "@closeQueueBody": {
+    "description": "Close shift: the queue uploads by itself."
+  },
+  "closeQueueRefusedBody": "السيرفر رفض بعضهم: كلّم المشرف. الوردية مش هتتقفل غير لما يتحلوا.",
+  "@closeQueueRefusedBody": {
+    "description": "Close shift: some queued orders were refused."
+  },
+  "uploadNow": "ارفع دلوقتي",
+  "@uploadNow": {
+    "description": "Close shift: runs the upload now."
+  },
+  "adminMenuTitle": "الإدارة",
+  "@adminMenuTitle": {
+    "description": "Admin side menu: the title next to the logo."
+  },
+  "navDashboard": "لوحة المتابعة",
+  "@navDashboard": {
+    "description": "Admin menu item and dashboard title."
+  },
+  "navShifts": "الورديات",
+  "@navShifts": {
+    "description": "Admin menu item."
+  },
+  "navReports": "التقارير",
+  "@navReports": {
+    "description": "Admin menu item."
+  },
+  "navTicketTypes": "أنواع التذاكر والأسعار",
+  "@navTicketTypes": {
+    "description": "Admin menu item (admins only)."
+  },
+  "navActionsLog": "سجل الإجراءات",
+  "@navActionsLog": {
+    "description": "Admin menu item."
+  },
+  "navGates": "البوابات",
+  "@navGates": {
+    "description": "Admin menu item (admins only); also the dashboard's gates heading."
+  },
+  "navUsers": "المستخدمين",
+  "@navUsers": {
+    "description": "Admin menu item (admins only)."
+  },
+  "navSettings": "الإعدادات",
+  "@navSettings": {
+    "description": "Admin menu item (admins only)."
+  },
+  "dashboardDateLive": "{date} · بتتحدث لحظيًا",
+  "@dashboardDateLive": {
+    "description": "Dashboard subtitle while the live channel is joined.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardDatePolling": "{date} · بتتحدث كل {seconds} ثانية",
+  "@dashboardDatePolling": {
+    "description": "Dashboard subtitle while the live channel is down.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardLive": "مباشر",
+  "@dashboardLive": {
+    "description": "Dashboard chip: new scans show within seconds."
+  },
+  "dashboardNotLive": "مش لحظي",
+  "@dashboardNotLive": {
+    "description": "Dashboard chip: the live channel is down; the page still refreshes on a timer."
+  },
+  "dashboardEntriesToday": "الدخول النهارده",
+  "@dashboardEntriesToday": {
+    "description": "Dashboard KPI: accepted scans today."
+  },
+  "dashboardSince": "من {time}",
+  "@dashboardSince": {
+    "description": "Dashboard KPI note: time of the first entry today.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardNoEntriesYet": "لسه محدش دخل",
+  "@dashboardNoEntriesYet": {
+    "description": "Dashboard KPI note: no entry today."
+  },
+  "dashboardSalesToday": "مبيعات النهارده",
+  "@dashboardSalesToday": {
+    "description": "Dashboard KPI: paid today minus refunded today."
+  },
+  "dashboardOpenCounters": "{count, plural, =0{مفيش شبابيك شغالة} =1{شباك واحد شغال} =2{شباكين شغالين} few{{count} شبابيك شغالة} other{{count} شباك شغال}}",
+  "@dashboardOpenCounters": {
+    "description": "Dashboard KPI note: open shifts.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardTicketsSold": "تذاكر مباعة",
+  "@dashboardTicketsSold": {
+    "description": "Dashboard KPI: tickets of orders paid today."
+  },
+  "dashboardNotEntered": "{count} لسه ما دخلتش",
+  "@dashboardNotEntered": {
+    "description": "Dashboard KPI note: sold today, never scanned in.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardRejected": "مرفوض على البوابات",
+  "@dashboardRejected": {
+    "description": "Dashboard KPI: rejected scans today."
+  },
+  "dashboardNoRejections": "مفيش رفض النهارده",
+  "@dashboardNoRejections": {
+    "description": "Dashboard KPI note: no rejected scan today."
+  },
+  "dashboardReasonCount": "{count} {reason}",
+  "@dashboardReasonCount": {
+    "description": "Dashboard KPI note: one rejection reason with its count.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "gateOnline": "شغالة",
+  "@gateOnline": {
+    "description": "Gate card chip: heartbeat is recent."
+  },
+  "gateOffline": "مش متصلة",
+  "@gateOffline": {
+    "description": "Gate card chip: no heartbeat for gate_offline_after_seconds."
+  },
+  "gateNeverSeen": "ما اتصلتش",
+  "@gateNeverSeen": {
+    "description": "Gate card chip: the gate service never beat for this gate."
+  },
+  "gateDisabled": "متوقفة",
+  "@gateDisabled": {
+    "description": "Gate card chip: gate switched off by an admin."
+  },
+  "gateEntriesToday": "دخول اليوم",
+  "@gateEntriesToday": {
+    "description": "Gate card row."
+  },
+  "gateRejected": "مرفوض",
+  "@gateRejected": {
+    "description": "Gate card row."
+  },
+  "gateLastScanSeconds": "{count, plural, =1{آخر مسح من ثانية} =2{آخر مسح من ثانيتين} few{آخر مسح من {count} ثواني} other{آخر مسح من {count} ثانية}}",
+  "@gateLastScanSeconds": {
+    "description": "Gate card: age of the last scan, under a minute.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "gateLastScanMinutes": "{count, plural, =1{آخر مسح من دقيقة} =2{آخر مسح من دقيقتين} few{آخر مسح من {count} دقايق} other{آخر مسح من {count} دقيقة}}",
+  "@gateLastScanMinutes": {
+    "description": "Gate card: age of the last scan, under an hour.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "gateLastScanAt": "آخر مسح {time}",
+  "@gateLastScanAt": {
+    "description": "Gate card: the last scan's time, an hour ago or more.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "gateNoScans": "مفيش مسح لسه",
+  "@gateNoScans": {
+    "description": "Gate card: the gate never had a scan."
+  },
+  "gateOfflineSince": "مفيش اتصال من {time} · راجع الكهربا والشبكة",
+  "@gateOfflineSince": {
+    "description": "Gate card: an offline gate's last heartbeat.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "gateNeverSeenNote": "خدمة البوابة ما اتصلتش بالسيرفر · راجع إنها شغالة",
+  "@gateNeverSeenNote": {
+    "description": "Gate card: a gate with no heartbeat ever."
+  },
+  "gateDisabledNote": "متوقفة من صفحة البوابات",
+  "@gateDisabledNote": {
+    "description": "Gate card: a disabled gate."
+  },
+  "dashboardNoGates": "مفيش بوابات دخول متسجلة",
+  "@dashboardNoGates": {
+    "description": "Dashboard: no entry gate exists."
+  },
+  "dashboardHourlyTitle": "الدخول بالساعة",
+  "@dashboardHourlyTitle": {
+    "description": "Dashboard section heading."
+  },
+  "dashboardHourlyLabel": "عدد الداخلين في كل ساعة النهارده",
+  "@dashboardHourlyLabel": {
+    "description": "Dashboard chart: screen reader label."
+  },
+  "dashboardHourlyEmpty": "لسه مفيش دخول النهارده",
+  "@dashboardHourlyEmpty": {
+    "description": "Dashboard chart: nothing to draw."
+  },
+  "dashboardFeedTitle": "آخر عمليات المسح",
+  "@dashboardFeedTitle": {
+    "description": "Dashboard section heading."
+  },
+  "dashboardFeedEmpty": "لسه مفيش مسح",
+  "@dashboardFeedEmpty": {
+    "description": "Dashboard feed: no scan at all."
+  },
+  "feedAccepted": "اتقبلت",
+  "@feedAccepted": {
+    "description": "Dashboard feed chip: accepted scan."
+  },
+  "feedPoolCode": "كود أوفلاين",
+  "@feedPoolCode": {
+    "description": "Dashboard feed: a pool code whose sale hasn't uploaded yet."
+  },
+  "dashboardStale": "مش قادر يوصل للسيرفر. آخر تحديث {time}.",
+  "@dashboardStale": {
+    "description": "Dashboard banner: the last refresh failed; older figures stay on screen.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardUnreachable": "مش قادر يوصل للسيرفر.",
+  "@dashboardUnreachable": {
+    "description": "Dashboard: the first load failed."
+  },
+  "dashboardUnexpected": "اللوحة ما اتحمّلتش. حاول تاني، ولو المشكلة فضلت كلّم الدعم.",
+  "@dashboardUnexpected": {
+    "description": "Dashboard: an unexpected server answer."
+  },
+  "dashboardNotAllowed": "اللوحة دي للمشرفين والمديرين بس.",
+  "@dashboardNotAllowed": {
+    "description": "Dashboard: the server refused the role."
+  },
+  "shiftsTitle": "الورديات ومطابقة النقدية",
+  "@shiftsTitle": {
+    "description": "Shifts page title."
+  },
+  "shiftsSubtitle": "الكاشير بيعدّ من غير ما يعرف المتوقع. المطابقة والاعتماد هنا بس.",
+  "@shiftsSubtitle": {
+    "description": "Shifts page subtitle (blind count, ADR-0008)."
+  },
+  "shiftsPeriodToday": "النهارده",
+  "@shiftsPeriodToday": {
+    "description": "Shifts period chip."
+  },
+  "shiftsPeriodYesterday": "أمس",
+  "@shiftsPeriodYesterday": {
+    "description": "Shifts period chip."
+  },
+  "shiftsPeriodWeek": "آخر 7 أيام",
+  "@shiftsPeriodWeek": {
+    "description": "Shifts period chip."
+  },
+  "shiftsPeriodPending": "محتاجة مطابقة ({count})",
+  "@shiftsPeriodPending": {
+    "description": "Shifts chip: every closed shift not approved yet, any date.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftsRefresh": "تحديث",
+  "@shiftsRefresh": {
+    "description": "Shifts page: read everything again."
+  },
+  "shiftsColShift": "الوردية",
+  "@shiftsColShift": {
+    "description": "Shifts table column."
+  },
+  "shiftsColCashier": "الكاشير · الشباك",
+  "@shiftsColCashier": {
+    "description": "Shifts table column."
+  },
+  "shiftsColExpected": "المتوقع",
+  "@shiftsColExpected": {
+    "description": "Shifts table column."
+  },
+  "shiftsColCounted": "المعدود",
+  "@shiftsColCounted": {
+    "description": "Shifts table column."
+  },
+  "shiftsColDifference": "الفرق",
+  "@shiftsColDifference": {
+    "description": "Shifts table column."
+  },
+  "shiftsColStatus": "الحالة",
+  "@shiftsColStatus": {
+    "description": "Shifts table column."
+  },
+  "shiftsEmpty": "مفيش ورديات في الفترة دي.",
+  "@shiftsEmpty": {
+    "description": "Shifts table: none."
+  },
+  "shiftsEmptyPending": "مفيش ورديات مستنية اعتماد.",
+  "@shiftsEmptyPending": {
+    "description": "Shifts table: none to approve."
+  },
+  "shiftsPickOne": "اختار وردية من الجدول.",
+  "@shiftsPickOne": {
+    "description": "Shifts detail: nothing selected."
+  },
+  "shiftTitle": "وردية #{number}",
+  "@shiftTitle": {
+    "description": "Shifts detail heading.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftUntilOpen": "{from} → مفتوحة",
+  "@shiftUntilOpen": {
+    "description": "A shift's times while it is open.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftStatusOpen": "مفتوحة",
+  "@shiftStatusOpen": {
+    "description": "Shift status chip."
+  },
+  "shiftStatusNeedsApproval": "محتاجة مطابقة",
+  "@shiftStatusNeedsApproval": {
+    "description": "Shift status chip: closed, not approved."
+  },
+  "shiftStatusApproved": "معتمدة",
+  "@shiftStatusApproved": {
+    "description": "Shift status chip."
+  },
+  "shiftOpeningFloat": "عهدة البداية",
+  "@shiftOpeningFloat": {
+    "description": "Shifts detail line."
+  },
+  "shiftCashSales": "مبيعات نقدية",
+  "@shiftCashSales": {
+    "description": "Shifts detail line."
+  },
+  "shiftTips": "إكراميات مسجّلة · {count}",
+  "@shiftTips": {
+    "description": "Shifts detail line.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftCashRefunds": "مرتجعات نقدية",
+  "@shiftCashRefunds": {
+    "description": "Shifts detail line."
+  },
+  "shiftExpected": "المتوقع في الدرج",
+  "@shiftExpected": {
+    "description": "Shifts detail line."
+  },
+  "shiftCounted": "اللي الكاشير عدّه",
+  "@shiftCounted": {
+    "description": "Shifts detail line."
+  },
+  "shiftBalanced": "مطابق",
+  "@shiftBalanced": {
+    "description": "Shifts difference box: 0."
+  },
+  "shiftShortage": "عجز",
+  "@shiftShortage": {
+    "description": "Shifts difference box: counted less than expected."
+  },
+  "shiftSurplus": "زيادة",
+  "@shiftSurplus": {
+    "description": "Shifts difference box: counted more than expected."
+  },
+  "shiftNonCash": "غير نقدي (للمعلومية): كارت {card} · محفظة {wallet}",
+  "@shiftNonCash": {
+    "description": "Shifts detail: card and wallet totals.",
+    "placeholders": {
+      "card": {
+        "type": "String"
+      },
+      "wallet": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftPaidOrders": "الطلبات المدفوعة (كل طرق الدفع): {count}",
+  "@shiftPaidOrders": {
+    "description": "Shifts detail: paid orders of every method.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftActions": "إجراءات الوردية في السجل: {count}",
+  "@shiftActions": {
+    "description": "Shifts detail: the shift's ticket actions.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftActionsFlagged": "إجراءات الوردية في السجل: {count} ({flagged} عليها علامة مراجعة)",
+  "@shiftActionsFlagged": {
+    "description": "Shifts detail: the shift's ticket actions, some flagged.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "flagged": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftOpenNote": "الوردية لسه مفتوحة. المطابقة بتظهر بعد ما الكاشير يقفلها ويعدّ.",
+  "@shiftOpenNote": {
+    "description": "Shifts detail: an open shift."
+  },
+  "shiftApprovedBy": "اعتمدها {name} · {time}",
+  "@shiftApprovedBy": {
+    "description": "Shifts detail: who approved it.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftApprovalComment": "التعليق: {comment}",
+  "@shiftApprovalComment": {
+    "description": "Shifts detail: the approval comment.",
+    "placeholders": {
+      "comment": {
+        "type": "String"
+      }
+    }
+  },
+  "shiftNoteOptional": "ملاحظة (اختياري)",
+  "@shiftNoteOptional": {
+    "description": "Approval comment label, no difference."
+  },
+  "shiftNoteRequired": "تعليق على الفرق (إجباري)",
+  "@shiftNoteRequired": {
+    "description": "Approval comment label when there is a difference."
+  },
+  "shiftApprove": "اعتماد الوردية",
+  "@shiftApprove": {
+    "description": "Approve button."
+  },
+  "shiftOwnShift": "دي ورديتك، فمينفعش تعتمدها. لازم مشرف أو مدير تاني.",
+  "@shiftOwnShift": {
+    "description": "Shifts detail: nobody approves their own shift (ADR-0017)."
+  },
+  "shiftApprovedDone": "الوردية #{number} اتعتمدت.",
+  "@shiftApprovedDone": {
+    "description": "Snack bar after an approval.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftOfflineOrders": "طلبات أوفلاين اترفعت: {count}",
+  "@shiftOfflineOrders": {
+    "description": "Shifts detail: the shift's offline orders.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftUnsyncedEntries": "أكواد أوفلاين دخلت قبل ما بيعها يترفع: {count}",
+  "@shiftUnsyncedEntries": {
+    "description": "Shifts detail: pool entries without a sale yet (ADR-0015).",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shiftRefusedOrders": "طلبات أوفلاين السيرفر رفضها: {count}. فلوسها في الدرج بس مش في الأرقام، فبتبان في الفرق.",
+  "@shiftRefusedOrders": {
+    "description": "Shifts detail: refused offline orders (ADR-0026).",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "refusalsTitle": "اترفض وهو بيترفع",
+  "@refusalsTitle": {
+    "description": "Shifts detail: refused offline orders and actions."
+  },
+  "refusalKindOrder": "طلب أوفلاين",
+  "@refusalKindOrder": {
+    "description": "Refusal kind."
+  },
+  "refusalKindAction": "إجراء أوفلاين",
+  "@refusalKindAction": {
+    "description": "Refusal kind."
+  },
+  "refusalReportedAt": "وصل {time}",
+  "@refusalReportedAt": {
+    "description": "When the refusal reached the server.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "refusalOrderSummary": "اتباع {time} · {method} · {tickets}",
+  "@refusalOrderSummary": {
+    "description": "What a refused order sent.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "method": {
+        "type": "String"
+      },
+      "tickets": {
+        "type": "String"
+      }
+    }
+  },
+  "refusalTicketCount": "{count, plural, =1{تذكرة واحدة} =2{تذكرتين} few{{count} تذاكر} other{{count} تذكرة}}",
+  "@refusalTicketCount": {
+    "description": "A refused order's ticket count.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "refusalUnknownType": "نوع مش معروف",
+  "@refusalUnknownType": {
+    "description": "A refused order's ticket type the server doesn't know."
+  },
+  "refusalTip": "إكرامية {amount}",
+  "@refusalTip": {
+    "description": "A refused order's tip.",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "refusalLeftUnprinted": "تذكرة ما اتطبعتش",
+  "@refusalLeftUnprinted": {
+    "description": "A refused offline action: left unprinted."
+  },
+  "refusalOpen": "مفتوح: الكاشير مش هيقدر يقفل الوردية غير لما يتمسح.",
+  "@refusalOpen": {
+    "description": "An open refusal."
+  },
+  "refusalAccepted": "اترفع بعد كده.",
+  "@refusalAccepted": {
+    "description": "A refusal a later upload accepted."
+  },
+  "refusalCleared": "مسحه {name} · {time}: {comment}",
+  "@refusalCleared": {
+    "description": "A refusal a supervisor cleared.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      },
+      "comment": {
+        "type": "String"
+      }
+    }
+  },
+  "refusalClear": "مسح",
+  "@refusalClear": {
+    "description": "Clear a refusal button."
+  },
+  "refusalOwnShift": "دي ورديتك، فمينفعش تمسح الرفض.",
+  "@refusalOwnShift": {
+    "description": "Nobody clears their own shift's refusal."
+  },
+  "refusalClearTitle": "مسح الرفض",
+  "@refusalClearTitle": {
+    "description": "Clear dialog title."
+  },
+  "refusalClearBody": "اكتب اللي عملته. اللي اتبعت مش هيترفع، وفلوس الطلب المرفوض هتفضل باينة في فرق الوردية.",
+  "@refusalClearBody": {
+    "description": "Clear dialog body."
+  },
+  "refusalCommentLabel": "التعليق (إجباري)",
+  "@refusalCommentLabel": {
+    "description": "Clear dialog comment field."
+  },
+  "orphansTitle": "دخول من غير وردية",
+  "@orphansTitle": {
+    "description": "Shifts page: pool entries no shift counts."
+  },
+  "orphansHint": "أكواد أوفلاين دخلت وشباكها مكانش عليه وردية مفتوحة. مش محسوبة على أي وردية، ومفيش بيع هييجي ليها.",
+  "@orphansHint": {
+    "description": "Shifts page: what an orphan entry is."
+  },
+  "shiftsNotAllowed": "الصفحة دي للمشرفين والمديرين بس.",
+  "@shiftsNotAllowed": {
+    "description": "Shifts: the server refused the role."
+  },
+  "shiftsUnexpected": "الورديات ما اتحملتش. جرّب تاني، ولو فضلت كده كلّم الدعم.",
+  "@shiftsUnexpected": {
+    "description": "Shifts: unexpected failure."
+  },
+  "shiftDetailFailed": "تفاصيل الوردية ما اتحملتش.",
+  "@shiftDetailFailed": {
+    "description": "Shifts detail: load failed."
+  },
+  "shiftFailureCommentRequired": "التعليق إجباري.",
+  "@shiftFailureCommentRequired": {
+    "description": "Approve/clear: no comment."
+  },
+  "shiftFailureOwnShift": "مينفعش تعتمد أو تمسح حاجة في ورديتك.",
+  "@shiftFailureOwnShift": {
+    "description": "Approve/clear: own shift."
+  },
+  "shiftFailureAlreadyApproved": "الوردية دي اتعتمدت قبل كده.",
+  "@shiftFailureAlreadyApproved": {
+    "description": "Approve: already approved."
+  },
+  "shiftFailureNotClosed": "الوردية لسه مفتوحة.",
+  "@shiftFailureNotClosed": {
+    "description": "Approve: still open."
+  },
+  "shiftFailureRefusalClosed": "الرفض ده اتقفل قبل كده.",
+  "@shiftFailureRefusalClosed": {
+    "description": "Clear: already closed."
+  },
+  "shiftFailureNotFound": "مش لاقي الوردية دي.",
+  "@shiftFailureNotFound": {
+    "description": "Approve/clear: not found."
+  },
+  "actionsSubtitle": "إعادة الطباعة وإعادة التفعيل والإلغاء اللي عملها الكاشيرية من غير موافقة",
+  "@actionsSubtitle": {
+    "description": "Actions log subtitle."
+  },
+  "actionsExport": "تصدير CSV",
+  "@actionsExport": {
+    "description": "Actions log: export button."
+  },
+  "actionsRefresh": "تحديث",
+  "@actionsRefresh": {
+    "description": "Actions log: refresh button tooltip."
+  },
+  "actionsTileReview": "محتاجة مراجعة",
+  "@actionsTileReview": {
+    "description": "Actions log tile: open reviews."
+  },
+  "actionsShow": "عرض",
+  "@actionsShow": {
+    "description": "Actions log filter bar label."
+  },
+  "actionsPeriodReview": "محتاجة مراجعة ({count})",
+  "@actionsPeriodReview": {
+    "description": "Actions log chip: every flagged, unreviewed action, any date.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actionsShiftChip": "وردية #{number} · {cashier} · {counter}",
+  "@actionsShiftChip": {
+    "description": "Actions log: the shift the log is narrowed to (from the Shifts page).",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "cashier": {
+        "type": "String"
+      },
+      "counter": {
+        "type": "String"
+      }
+    }
+  },
+  "actionsShiftClear": "كل الورديات",
+  "@actionsShiftClear": {
+    "description": "Actions log: leave the one shift's log."
+  },
+  "actionsTypeAll": "الكل",
+  "@actionsTypeAll": {
+    "description": "Actions log type chip."
+  },
+  "actionsTypeOffline": "أوفلاين",
+  "@actionsTypeOffline": {
+    "description": "Actions log type chip: offline sale times adjusted."
+  },
+  "actionsAllCashiers": "كل الكاشيرية",
+  "@actionsAllCashiers": {
+    "description": "Actions log cashier filter."
+  },
+  "actionsAllCounters": "كل الشبابيك",
+  "@actionsAllCounters": {
+    "description": "Actions log counter filter."
+  },
+  "actionsColTime": "الوقت",
+  "@actionsColTime": {
+    "description": "Actions log column."
+  },
+  "actionsColWho": "الكاشير · الشباك",
+  "@actionsColWho": {
+    "description": "Actions log column."
+  },
+  "actionsColAction": "الإجراء",
+  "@actionsColAction": {
+    "description": "Actions log column."
+  },
+  "actionsColTicket": "التذكرة",
+  "@actionsColTicket": {
+    "description": "Actions log column."
+  },
+  "actionsColReason": "السبب",
+  "@actionsColReason": {
+    "description": "Actions log column."
+  },
+  "actionsColReview": "المراجعة",
+  "@actionsColReview": {
+    "description": "Actions log column."
+  },
+  "actionCancelOrder": "إلغاء طلب",
+  "@actionCancelOrder": {
+    "description": "Logged action: an unpaid order cancelled."
+  },
+  "actionLeftUnprinted": "ما اتطبعتش",
+  "@actionLeftUnprinted": {
+    "description": "Logged action: the cashier left a paid order with a ticket that never printed."
+  },
+  "actionOfflineAdjusted": "وقت أوفلاين اتعدّل",
+  "@actionOfflineAdjusted": {
+    "description": "Logged action: an offline sale's time was corrected at upload."
+  },
+  "actionTestOpen": "فتح تجريبي",
+  "@actionTestOpen": {
+    "description": "Logged action: a gate test open."
+  },
+  "actionSettingsChange": "تغيير إعدادات",
+  "@actionSettingsChange": {
+    "description": "Logged action: a settings change."
+  },
+  "actionsSystem": "النظام",
+  "@actionsSystem": {
+    "description": "Actions log: the automatic cancel has no cashier."
+  },
+  "actionsCopy": "الطبعة {number}",
+  "@actionsCopy": {
+    "description": "Actions log: a reprint's copy number.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "actionsUndoneGate": "المسح اللي اتلغى كان على {gate}",
+  "@actionsUndoneGate": {
+    "description": "Actions log: a reactivation's undone scan.",
+    "placeholders": {
+      "gate": {
+        "type": "String"
+      }
+    }
+  },
+  "actionsOtherReason": "سبب آخر: \"{text}\"",
+  "@actionsOtherReason": {
+    "description": "Actions log: an 'other' reason with its typed text.",
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "actionsReasonNote": "ملاحظة: {text}",
+  "@actionsReasonNote": {
+    "description": "Actions log: the note typed with a reason.",
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "actionsOfflineTimes": "وقت الجهاز {claimed} ← اتسجل {stored}",
+  "@actionsOfflineTimes": {
+    "description": "Actions log: an offline sale's claimed and stored times.",
+    "placeholders": {
+      "claimed": {
+        "type": "String"
+      },
+      "stored": {
+        "type": "String"
+      }
+    }
+  },
+  "adjustClockOutOfRange": "ساعة الجهاز برّه وقت الوردية",
+  "@adjustClockOutOfRange": {
+    "description": "Why an offline sale's time was adjusted."
+  },
+  "adjustAfterClosing": "بعد وقت القفل",
+  "@adjustAfterClosing": {
+    "description": "Why an offline sale's time was adjusted."
+  },
+  "adjustCodeExpired": "الكود كان انتهى",
+  "@adjustCodeExpired": {
+    "description": "Why an offline sale's time was adjusted."
+  },
+  "flagOtherReason": "سبب آخر",
+  "@flagOtherReason": {
+    "description": "Review flag."
+  },
+  "flagTooManyActions": "{count, plural, =1{إجراء واحد للكاشير في الوردية} =2{إجراءين للكاشير في الوردية} few{{count} إجراءات للكاشير في الوردية} other{{count} إجراء للكاشير في الوردية}}",
+  "@flagTooManyActions": {
+    "description": "Review flag: too many actions by one cashier in a shift.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "flagTooManyPrints": "{max, plural, =1{اتطبعت أكتر من مرة} =2{اتطبعت أكتر من مرتين} few{اتطبعت أكتر من {max} مرات} other{اتطبعت أكتر من {max} مرة}}",
+  "@flagTooManyPrints": {
+    "description": "Review flag: a ticket printed too many times.",
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "flagReactivatedOtherGate": "اتمسحت بعدها على بوابة تانية",
+  "@flagReactivatedOtherGate": {
+    "description": "Review flag: a reactivated ticket entered at a different gate."
+  },
+  "flagUnprintedTicket": "التذكرة ما اتطبعتش",
+  "@flagUnprintedTicket": {
+    "description": "Review flag: a ticket left unprinted (always flagged)."
+  },
+  "flagOfflineTimeAdjusted": "وقت البيع اتعدّل",
+  "@flagOfflineTimeAdjusted": {
+    "description": "Review flag: an offline sale's time was corrected."
+  },
+  "flagOfflineReprint": "إعادة طباعة أوفلاين",
+  "@flagOfflineReprint": {
+    "description": "Review flag: a reprint made offline (always flagged)."
+  },
+  "actionsReviewButton": "تمت المراجعة",
+  "@actionsReviewButton": {
+    "description": "Actions log: mark a flagged action reviewed."
+  },
+  "actionsReviewedBy": "اتراجعت · {name}",
+  "@actionsReviewedBy": {
+    "description": "Actions log: who reviewed it.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "actionsOwnAction": "إجراءك، حد تاني يراجعه",
+  "@actionsOwnAction": {
+    "description": "Actions log: nobody reviews their own action (ADR-0018)."
+  },
+  "actionsRulesTitle": "إمتى الإجراء بيتعلّم للمراجعة",
+  "@actionsRulesTitle": {
+    "description": "Actions log: flag rules box title."
+  },
+  "ruleOtherReason": "السبب \"سبب آخر\"",
+  "@ruleOtherReason": {
+    "description": "Flag rule."
+  },
+  "ruleTooManyActions": "{count, plural, =1{أكتر من إجراء واحد لنفس الكاشير في وردية واحدة} =2{أكتر من إجراءين لنفس الكاشير في وردية واحدة} few{أكتر من {count} إجراءات لنفس الكاشير في وردية واحدة} other{أكتر من {count} إجراء لنفس الكاشير في وردية واحدة}}",
+  "@ruleTooManyActions": {
+    "description": "Flag rule.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "ruleReactivatedOtherGate": "إعادة تفعيل والتذكرة بعدها اتمسحت على بوابة تانية",
+  "@ruleReactivatedOtherGate": {
+    "description": "Flag rule."
+  },
+  "ruleTooManyPrints": "{max, plural, =1{تذكرة اتطبعت أكتر من مرة} =2{تذكرة اتطبعت أكتر من مرتين} few{تذكرة اتطبعت أكتر من {max} مرات} other{تذكرة اتطبعت أكتر من {max} مرة}}",
+  "@ruleTooManyPrints": {
+    "description": "Flag rule.",
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "ruleUnprinted": "دايماً: تذكرة الكاشير ساب طلبها من غير ما تتطبع",
+  "@ruleUnprinted": {
+    "description": "Flag rule."
+  },
+  "ruleOffline": "دايماً: بيع أوفلاين وقته اتعدّل، أو إعادة طباعة أوفلاين",
+  "@ruleOffline": {
+    "description": "Flag rule."
+  },
+  "actionsRulesFootnote": "القواعد دي إعدادات تقدر تغيّرها من صفحة الإعدادات.",
+  "@actionsRulesFootnote": {
+    "description": "Actions log: flag rules footnote."
+  },
+  "actionsEmpty": "مفيش إجراءات في الفترة دي.",
+  "@actionsEmpty": {
+    "description": "Actions log: empty."
+  },
+  "actionsEmptyReview": "مفيش حاجة محتاجة مراجعة.",
+  "@actionsEmptyReview": {
+    "description": "Actions log: no open review."
+  },
+  "actionsTruncated": "معروض أحدث {shown} من {total}. ضيّق البحث بالكاشير أو الشباك، أو صدّر CSV للكل.",
+  "@actionsTruncated": {
+    "description": "Actions log: the list was cut at the page limit.",
+    "placeholders": {
+      "shown": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "actionsNotAllowed": "الصفحة دي للمشرفين والإدارة بس.",
+  "@actionsNotAllowed": {
+    "description": "Actions log: not allowed."
+  },
+  "actionsUnexpected": "حصل خطأ في تحميل السجل.",
+  "@actionsUnexpected": {
+    "description": "Actions log: unexpected failure."
+  },
+  "actionsFailureOwnAction": "ما تقدرش تراجع إجراء عملته بنفسك.",
+  "@actionsFailureOwnAction": {
+    "description": "Review refused: own action."
+  },
+  "actionsFailureAlreadyReviewed": "الإجراء ده اتراجع قبل كده.",
+  "@actionsFailureAlreadyReviewed": {
+    "description": "Review refused: already reviewed."
+  },
+  "actionsFailureNotFlagged": "الإجراء ده مش عليه علامة مراجعة.",
+  "@actionsFailureNotFlagged": {
+    "description": "Review refused: not flagged."
+  },
+  "actionsFailureNotFound": "مش لاقي الإجراء ده.",
+  "@actionsFailureNotFound": {
+    "description": "Review or shift not found."
+  },
+  "actionsExported": "اتحفظ الملف: {path}",
+  "@actionsExported": {
+    "description": "CSV export: the saved file.",
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "actionsOpenFolder": "افتح المجلد",
+  "@actionsOpenFolder": {
+    "description": "CSV export: show the file in Explorer."
+  },
+  "actionsExportNoFolder": "مش لاقي مجلد التنزيلات (Downloads) على الجهاز ده.",
+  "@actionsExportNoFolder": {
+    "description": "CSV export: no folder."
+  },
+  "actionsExportFailed": "الملف ما اتحفظش.",
+  "@actionsExportFailed": {
+    "description": "CSV export: write failed."
+  },
+  "csvTime": "الوقت",
+  "@csvTime": {
+    "description": "CSV column."
+  },
+  "csvCashier": "الكاشير",
+  "@csvCashier": {
+    "description": "CSV column."
+  },
+  "csvCounter": "الشباك",
+  "@csvCounter": {
+    "description": "CSV column."
+  },
+  "csvShift": "الوردية",
+  "@csvShift": {
+    "description": "CSV column."
+  },
+  "csvAction": "الإجراء",
+  "@csvAction": {
+    "description": "CSV column."
+  },
+  "csvOrder": "الطلب",
+  "@csvOrder": {
+    "description": "CSV column."
+  },
+  "csvType": "نوع التذكرة",
+  "@csvType": {
+    "description": "CSV column."
+  },
+  "csvCode": "آخر 3 أرقام من الكود",
+  "@csvCode": {
+    "description": "CSV column."
+  },
+  "csvCopy": "الطبعة",
+  "@csvCopy": {
+    "description": "CSV column."
+  },
+  "csvAmount": "المبلغ (ج.م)",
+  "@csvAmount": {
+    "description": "CSV column."
+  },
+  "csvMethod": "طريقة الدفع",
+  "@csvMethod": {
+    "description": "CSV column."
+  },
+  "csvReason": "السبب",
+  "@csvReason": {
+    "description": "CSV column."
+  },
+  "csvReasonText": "نص السبب",
+  "@csvReasonText": {
+    "description": "CSV column."
+  },
+  "csvDetails": "تفاصيل",
+  "@csvDetails": {
+    "description": "CSV column."
+  },
+  "csvFlags": "علامات المراجعة",
+  "@csvFlags": {
+    "description": "CSV column."
+  },
+  "csvReviewedBy": "راجعه",
+  "@csvReviewedBy": {
+    "description": "CSV column."
+  },
+  "csvReviewedAt": "وقت المراجعة",
+  "@csvReviewedAt": {
+    "description": "CSV column."
+  },
+  "reportsTitle": "تقرير المبيعات",
+  "@reportsTitle": {
+    "description": "The Reports page's title."
+  },
+  "reportsSubtitle": "الصافي = المبيعات − المرتجعات + الإكراميات. المرتجع والإكرامية بيتحسبوا في يومهم، والإكرامية مالهاش نوع تذكرة.",
+  "@reportsSubtitle": {
+    "description": "Under the title: what the figures are (ADR-0032)."
+  },
+  "reportsPeriod": "الفترة",
+  "@reportsPeriod": {
+    "description": "Filter bar label."
+  },
+  "reportsGroupBy": "تجميع حسب",
+  "@reportsGroupBy": {
+    "description": "Filter bar label."
+  },
+  "reportsPeriodMonth": "الشهر ده",
+  "@reportsPeriodMonth": {
+    "description": "Period chip: the 1st of this month to today."
+  },
+  "reportsPeriodLastMonth": "الشهر اللي فات",
+  "@reportsPeriodLastMonth": {
+    "description": "Period chip: the whole previous calendar month."
+  },
+  "reportsPeriodRange": "فترة تانية…",
+  "@reportsPeriodRange": {
+    "description": "Period chip that opens the date range picker."
+  },
+  "reportsRangeHelp": "اختار أول وآخر يوم",
+  "@reportsRangeHelp": {
+    "description": "Date range picker title."
+  },
+  "reportsGroupType": "نوع التذكرة",
+  "@reportsGroupType": {
+    "description": "Group-by choice and column."
+  },
+  "reportsGroupCashier": "الكاشير",
+  "@reportsGroupCashier": {
+    "description": "Group-by choice and column."
+  },
+  "reportsGroupMethod": "طريقة الدفع",
+  "@reportsGroupMethod": {
+    "description": "Group-by choice and column."
+  },
+  "reportsGroupDay": "اليوم",
+  "@reportsGroupDay": {
+    "description": "Group-by choice and column."
+  },
+  "reportsTileSales": "إجمالي المبيعات",
+  "@reportsTileSales": {
+    "description": "Tile: gross sales."
+  },
+  "reportsTileRefunds": "المرتجعات",
+  "@reportsTileRefunds": {
+    "description": "Tile."
+  },
+  "reportsTileNet": "الصافي",
+  "@reportsTileNet": {
+    "description": "Tile: sales minus refunds."
+  },
+  "reportsTileTickets": "التذاكر",
+  "@reportsTileTickets": {
+    "description": "Tile: tickets sold."
+  },
+  "reportsColTickets": "إجمالي التذاكر",
+  "@reportsColTickets": {
+    "description": "Table and CSV column."
+  },
+  "reportsColCounterGate": "الشباك والبوابة",
+  "@reportsColCounterGate": {
+    "description": "By cashier: table and CSV column, the counters sold at, each with the home gate printed on its tickets."
+  },
+  "reportsGroupGate": "البوابة",
+  "@reportsGroupGate": {
+    "description": "Reports: group by the gate printed on the tickets (4.4b); also the table's first column."
+  },
+  "reportsColCounters": "الشبابيك",
+  "@reportsColCounters": {
+    "description": "By gate: table and CSV column, the counters that sold tickets for the gate."
+  },
+  "reportsNoGate": "من غير بوابة",
+  "@reportsNoGate": {
+    "description": "By gate: the row of tickets with no gate printed (sold before counters had a home gate)."
+  },
+  "reportsColSales": "المبيعات (ج.م)",
+  "@reportsColSales": {
+    "description": "Table column."
+  },
+  "reportsColRefunds": "المرتجعات (ج.م)",
+  "@reportsColRefunds": {
+    "description": "Table column."
+  },
+  "reportsColNet": "الصافي (ج.م)",
+  "@reportsColNet": {
+    "description": "Table column."
+  },
+  "reportsColShare": "النسبة من المبيعات",
+  "@reportsColShare": {
+    "description": "Table column."
+  },
+  "reportsTotal": "الإجمالي",
+  "@reportsTotal": {
+    "description": "The table's and the CSV's totals row."
+  },
+  "reportsRefundCount": "{count} تذكرة",
+  "@reportsRefundCount": {
+    "description": "Under a refund amount: how many tickets.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reportsEmpty": "مفيش مبيعات ولا مرتجعات في الفترة دي.",
+  "@reportsEmpty": {
+    "description": "The table with no rows."
+  },
+  "reportsLoading": "بيتحسب التقرير… الفترات الطويلة بتاخد شوية وقت.",
+  "@reportsLoading": {
+    "description": "While a report loads."
+  },
+  "reportsNotAllowed": "التقارير للمشرفين والأدمن بس.",
+  "@reportsNotAllowed": {
+    "description": "The server refused the caller."
+  },
+  "reportsInvalidRange": "الفترة دي مش صحيحة. اختار أول يوم قبل آخر يوم.",
+  "@reportsInvalidRange": {
+    "description": "invalid_range."
+  },
+  "reportsBusy": "فيه تقرير تاني شغال دلوقتي. استنى لحظة وجرّب تاني.",
+  "@reportsBusy": {
+    "description": "report_busy: one report at a time, so the gates come first."
+  },
+  "reportsUnexpected": "حصل خطأ غير متوقع في التقرير.",
+  "@reportsUnexpected": {
+    "description": "Any other failure."
+  },
+  "reportsCsvSales": "المبيعات (ج.م)",
+  "@reportsCsvSales": {
+    "description": "CSV column."
+  },
+  "reportsCsvRefundCount": "تذاكر مرتجعة",
+  "@reportsCsvRefundCount": {
+    "description": "CSV column."
+  },
+  "reportsCsvRefunds": "المرتجعات (ج.م)",
+  "@reportsCsvRefunds": {
+    "description": "CSV column."
+  },
+  "reportsCsvNet": "الصافي (ج.م)",
+  "@reportsCsvNet": {
+    "description": "CSV column."
+  },
+  "reportsCsvShare": "النسبة من المبيعات (%)",
+  "@reportsCsvShare": {
+    "description": "CSV column."
+  },
+  "reportsRangeFrom": "من",
+  "@reportsRangeFrom": {
+    "description": "Range dialog: the first day's calendar."
+  },
+  "reportsRangeTo": "إلى",
+  "@reportsRangeTo": {
+    "description": "Range dialog: the last day's calendar."
+  },
+  "reportsRangeDays": "{count} يوم",
+  "@reportsRangeDays": {
+    "description": "Range dialog: how many days are picked.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reportsRangeApply": "اعرض التقرير",
+  "@reportsRangeApply": {
+    "description": "Range dialog: apply the dates."
+  },
+  "reportsTooSlow": "التقرير خد وقت أطول من اللازم ووقف. اختار فترة أقصر.",
+  "@reportsTooSlow": {
+    "description": "57014: the report reached its 120 s limit."
+  },
+  "reportsTileTips": "الإكراميات",
+  "@reportsTileTips": {
+    "description": "Tile."
+  },
+  "reportsColTips": "الإكراميات (ج.م)",
+  "@reportsColTips": {
+    "description": "Table column. A ticket type's row shows —."
+  },
+  "reportsCsvTips": "الإكراميات (ج.م)",
+  "@reportsCsvTips": {
+    "description": "CSV column. Empty on a ticket type's row."
+  },
+  "typesNew": "نوع جديد",
+  "@typesNew": {
+    "description": "Ticket types page: header button, and the panel title for a new type."
+  },
+  "typesColType": "النوع",
+  "@typesColType": {
+    "description": "Ticket types table header."
+  },
+  "typesColPrice": "السعر",
+  "@typesColPrice": {
+    "description": "Ticket types table header."
+  },
+  "typesColEntries": "مرات الدخول",
+  "@typesColEntries": {
+    "description": "Ticket types table header."
+  },
+  "typesColValidity": "الصلاحية",
+  "@typesColValidity": {
+    "description": "Ticket types table header."
+  },
+  "typesColStatus": "الحالة",
+  "@typesColStatus": {
+    "description": "Ticket types table header."
+  },
+  "typesColOrder": "الترتيب",
+  "@typesColOrder": {
+    "description": "Ticket types table header: the up/down arrows (sell screen order)."
+  },
+  "typesEntries": "{count, plural, =1{مرة واحدة} =2{مرتين} few{{count} مرات} other{{count} مرة}}",
+  "@typesEntries": {
+    "description": "Entries allowed per ticket.",
+    "placeholders": {
+      "count": { "type": "int", "example": "5" }
+    }
+  },
+  "typesValiditySameDay": "يوم البيع",
+  "@typesValiditySameDay": {
+    "description": "Validity: the day of sale until closing time."
+  },
+  "typesValidityHours": "{hours, plural, =1{ساعة من البيع} =2{ساعتين من البيع} few{{hours} ساعات من البيع} other{{hours} ساعة من البيع}}",
+  "@typesValidityHours": {
+    "description": "Validity: hours from the time of sale.",
+    "placeholders": {
+      "hours": { "type": "int", "example": "4" }
+    }
+  },
+  "typesStatusActive": "متاح",
+  "@typesStatusActive": {
+    "description": "Ticket type status chip; also a value in the actions log."
+  },
+  "typesStatusInactive": "متوقف",
+  "@typesStatusInactive": {
+    "description": "Ticket type status chip; also a value in the actions log."
+  },
+  "typesMoveUp": "لفوق",
+  "@typesMoveUp": {
+    "description": "Tooltip: move the type up on the sell screen."
+  },
+  "typesMoveDown": "لتحت",
+  "@typesMoveDown": {
+    "description": "Tooltip: move the type down on the sell screen."
+  },
+  "typesEditTitle": "تعديل: {name}",
+  "@typesEditTitle": {
+    "description": "Edit panel title.",
+    "placeholders": {
+      "name": { "type": "String", "example": "كبار" }
+    }
+  },
+  "typesNameAr": "الاسم بالعربي",
+  "@typesNameAr": {
+    "description": "Field label; also a changed field in the actions log."
+  },
+  "typesNameEn": "الاسم بالإنجليزي",
+  "@typesNameEn": {
+    "description": "Field label; also a changed field in the actions log."
+  },
+  "typesPrice": "السعر (ج.م)",
+  "@typesPrice": {
+    "description": "Field label."
+  },
+  "typesEntriesLabel": "مرات الدخول",
+  "@typesEntriesLabel": {
+    "description": "Field label; also a changed field in the actions log."
+  },
+  "typesValidityLabel": "الصلاحية",
+  "@typesValidityLabel": {
+    "description": "Field label; also a changed field in the actions log."
+  },
+  "typesValidityOptionSameDay": "يوم البيع لحد قفل المكان",
+  "@typesValidityOptionSameDay": {
+    "description": "Validity dropdown option."
+  },
+  "typesValidityOptionHours": "عدد ساعات من وقت البيع",
+  "@typesValidityOptionHours": {
+    "description": "Validity dropdown option."
+  },
+  "typesHoursLabel": "عدد الساعات",
+  "@typesHoursLabel": {
+    "description": "Field label, only for hours from sale."
+  },
+  "typesActiveLabel": "متاح للبيع",
+  "@typesActiveLabel": {
+    "description": "Switch label; also a changed field in the actions log."
+  },
+  "typesActiveNote": "لو اتقفل، بيختفي من شاشة الكاشير",
+  "@typesActiveNote": {
+    "description": "Under the on-sale switch."
+  },
+  "typesPriceNote": "تغيير السعر بيسري على المبيعات الجديدة بس. التذاكر اللي اتباعت بتفضل بسعرها.",
+  "@typesPriceNote": {
+    "description": "Warning box in the edit panel."
+  },
+  "typesLogNote": "كل تغيير بيتسجل في سجل الإجراءات.",
+  "@typesLogNote": {
+    "description": "Small note under the save button."
+  },
+  "typesSave": "حفظ التغييرات",
+  "@typesSave": {
+    "description": "Edit panel button."
+  },
+  "typesAdd": "إضافة النوع",
+  "@typesAdd": {
+    "description": "Edit panel button for a new type."
+  },
+  "typesSaved": "اتحفظ.",
+  "@typesSaved": {
+    "description": "Snack bar after a save."
+  },
+  "typesLoading": "بيحمّل أنواع التذاكر…",
+  "@typesLoading": {
+    "description": "First load."
+  },
+  "typesEmpty": "مفيش أنواع تذاكر لسه. أضف أول نوع.",
+  "@typesEmpty": {
+    "description": "Empty list."
+  },
+  "typesInvalidName": "اكتب الاسم بالعربي والإنجليزي.",
+  "@typesInvalidName": {
+    "description": "Server refused: a blank name."
+  },
+  "typesInvalidPrice": "اكتب سعر صحيح، مثلاً 100 أو 12.50.",
+  "@typesInvalidPrice": {
+    "description": "Price field error."
+  },
+  "typesInvalidEntries": "مرات الدخول لازم تكون 1 أو أكتر.",
+  "@typesInvalidEntries": {
+    "description": "Entries field error."
+  },
+  "typesInvalidHours": "عدد الساعات لازم يكون 1 أو أكتر.",
+  "@typesInvalidHours": {
+    "description": "Hours field error."
+  },
+  "typesNameTaken": "فيه نوع تاني بالاسم ده.",
+  "@typesNameTaken": {
+    "description": "Name field error (case and spaces ignored)."
+  },
+  "typesNotFound": "النوع ده مبقاش موجود. القائمة اتحدّثت.",
+  "@typesNotFound": {
+    "description": "Save of a type that is gone."
+  },
+  "typesNotAllowed": "أنواع التذاكر والأسعار للأدمن بس.",
+  "@typesNotAllowed": {
+    "description": "Not an admin."
+  },
+  "typesUnexpected": "حصل خطأ غير متوقع في أنواع التذاكر.",
+  "@typesUnexpected": {
+    "description": "Any other failure."
+  },
+  "actionsTypeSettings": "الإعدادات",
+  "@actionsTypeSettings": {
+    "description": "Actions log type chip: settings and ticket type changes."
+  },
+  "changeNewType": "نوع جديد: {name}",
+  "@changeNewType": {
+    "description": "Actions log: a ticket type was added.",
+    "placeholders": {
+      "name": { "type": "String", "example": "كبار" }
+    }
+  },
+  "changeTypeName": "نوع التذكرة {name}",
+  "@changeTypeName": {
+    "description": "Actions log: the type a change is about.",
+    "placeholders": {
+      "name": { "type": "String", "example": "كبار" }
+    }
+  },
+  "changeField": "{field}: من {from} لـ {to}",
+  "@changeField": {
+    "description": "Actions log: one changed value. Words, not an arrow, in Arabic (RTL).",
+    "placeholders": {
+      "field": { "type": "String", "example": "السعر" },
+      "from": { "type": "String", "example": "100 ج.م" },
+      "to": { "type": "String", "example": "120 ج.م" }
+    }
+  },
+  "sellFailureTypeNotNow": "الفئة دي مش متاحة دلوقتي. القائمة اتحدّثت، راجع الطلب.",
+  "@sellFailureTypeNotNow": {
+    "description": "Sell: ticket_type_not_now (peak times, ADR-0033)."
+  },
+  "sellPeakChip": "وقت الذروة",
+  "@sellPeakChip": {
+    "description": "Sell header chip while it is peak."
+  },
+  "sellNothingOnSale": "مفيش فئة متاحة للبيع دلوقتي. كلّم المشرف.",
+  "@sellNothingOnSale": {
+    "description": "Sell screen with no type on sale at this time."
+  },
+  "sellPeriodChanged": "وقت البيع اتغيّر، والفئة اللي مبقتش متاحة اتشالت من الطلب.",
+  "@sellPeriodChanged": {
+    "description": "Snack bar when peak starts or ends with that type in the order."
+  },
+  "typesSalePeriodLabel": "يتباع إمتى",
+  "@typesSalePeriodLabel": {
+    "description": "Ticket type field; also a changed field in the actions log."
+  },
+  "typesSaleAlways": "دايماً",
+  "@typesSaleAlways": {
+    "description": "Sale period."
+  },
+  "typesSaleOffPeak": "في الأوقات العادية بس",
+  "@typesSaleOffPeak": {
+    "description": "Sale period."
+  },
+  "typesSalePeak": "في الذروة بس",
+  "@typesSalePeak": {
+    "description": "Sale period."
+  },
+  "typesColSale": "يتباع",
+  "@typesColSale": {
+    "description": "Ticket types table header: the sale period."
+  },
+  "typesNoPeakType": "مفيش نوع متاح للبيع في وقت الذروة: الكاشير مش هيلاقي حاجة يبيعها.",
+  "@typesNoPeakType": {
+    "description": "Warning on the Ticket types page."
+  },
+  "typesNoOffPeakType": "مفيش نوع متاح للبيع في الأوقات العادية: الكاشير مش هيلاقي حاجة يبيعها.",
+  "@typesNoOffPeakType": {
+    "description": "Warning on the Ticket types page."
+  },
+  "typesInvalidWeekdays": "اختار أيام صحيحة.",
+  "@typesInvalidWeekdays": {
+    "description": "save_peak_times refused the days."
+  },
+  "peakTitle": "وقت الذروة",
+  "@peakTitle": {
+    "description": "Peak card title (dashboard and Ticket types page)."
+  },
+  "peakNowOn": "الذروة دلوقتي: آه · {reason}",
+  "@peakNowOn": {
+    "description": "Peak card: current state.",
+    "placeholders": {
+      "reason": { "type": "String", "example": "يوم إجازة" }
+    }
+  },
+  "peakNowOff": "الذروة دلوقتي: لأ · {reason}",
+  "@peakNowOff": {
+    "description": "Peak card: current state.",
+    "placeholders": {
+      "reason": { "type": "String", "example": "وقت عادي" }
+    }
+  },
+  "peakSourceManualOn": "اتشغّلت يدوي النهارده",
+  "@peakSourceManualOn": {
+    "description": "Why it is peak."
+  },
+  "peakSourceManualOff": "اتقفلت يدوي النهارده",
+  "@peakSourceManualOff": {
+    "description": "Why it isn't peak."
+  },
+  "peakSourceWeekend": "يوم ذروة",
+  "@peakSourceWeekend": {
+    "description": "Why it is peak: a weekend day."
+  },
+  "peakSourceHours": "ساعات الذروة",
+  "@peakSourceHours": {
+    "description": "Why it is peak: the daily range."
+  },
+  "peakSourceNone": "وقت عادي",
+  "@peakSourceNone": {
+    "description": "Why it isn't peak."
+  },
+  "peakModeAuto": "تلقائي",
+  "@peakModeAuto": {
+    "description": "Peak switch: follow the schedule."
+  },
+  "peakModeOn": "ذروة النهارده",
+  "@peakModeOn": {
+    "description": "Peak switch: peak all of today."
+  },
+  "peakModeOff": "عادي النهارده",
+  "@peakModeOff": {
+    "description": "Peak switch: no peak today."
+  },
+  "peakModeHelp": "المفتاح بيرجع تلقائي لوحده بكرة. الشبابيك المتصلة بتشوف التغيير خلال ثواني.",
+  "@peakModeHelp": {
+    "description": "Under the peak switch."
+  },
+  "peakWeekdaysLabel": "أيام ذروة طول اليوم",
+  "@peakWeekdaysLabel": {
+    "description": "Peak schedule: the weekend days."
+  },
+  "peakHoursLabel": "ساعات الذروة في باقي الأيام",
+  "@peakHoursLabel": {
+    "description": "Peak schedule: the daily range."
+  },
+  "peakFrom": "من",
+  "@peakFrom": {
+    "description": "Peak range start; also a changed field in the actions log."
+  },
+  "peakTo": "لحد",
+  "@peakTo": {
+    "description": "Peak range end; also a changed field in the actions log."
+  },
+  "peakInvalidHours": "البداية لازم تيجي قبل النهاية في نفس يوم المكان.",
+  "@peakInvalidHours": {
+    "description": "The daily range is incomplete or reversed."
+  },
+  "peakSave": "حفظ أوقات الذروة",
+  "@peakSave": {
+    "description": "Peak schedule button."
+  },
+  "peakSaved": "اتحفظت أوقات الذروة.",
+  "@peakSaved": {
+    "description": "Snack bar."
+  },
+  "peakSwitched": "اتغيّر وقت الذروة.",
+  "@peakSwitched": {
+    "description": "Snack bar after the switch."
+  },
+  "peakNoDays": "ولا يوم",
+  "@peakNoDays": {
+    "description": "Actions log: no peak weekday."
+  },
+  "changePeakTimes": "أوقات الذروة",
+  "@changePeakTimes": {
+    "description": "Actions log: the peak schedule changed."
+  },
+  "changePeakOverride": "مفتاح الذروة ليوم {day}",
+  "@changePeakOverride": {
+    "description": "Actions log: the manual switch.",
+    "placeholders": {
+      "day": { "type": "String", "example": "09/11" }
+    }
+  },
+  "changePeakMode": "الوضع",
+  "@changePeakMode": {
+    "description": "Actions log: the switch's changed field."
+  },
+  "peakNoHours": "مفيش ساعات ذروة في باقي الأيام.",
+  "@peakNoHours": {
+    "description": "Peak schedule with the daily hours switched off."
+  },
+  "peakPickHour": "الساعة",
+  "@peakPickHour": {
+    "description": "Peak time dialog: the hour buttons."
+  },
+  "peakPickMinute": "الدقايق",
+  "@peakPickMinute": {
+    "description": "Peak time dialog: the minute buttons."
+  },
+  "gatesSubtitle": "كل بوابة متوصلة بباب على وحدة تحكم",
+  "@gatesSubtitle": {
+    "description": "Gates page subtitle (4.6)."
+  },
+  "gatesNew": "بوابة جديدة",
+  "@gatesNew": {
+    "description": "Gates page: add a gate."
+  },
+  "gatesLoading": "بيحمّل البوابات…",
+  "@gatesLoading": {
+    "description": "Gates page: first read."
+  },
+  "gatesControllersTitle": "وحدات التحكم وخدمة البوابات",
+  "@gatesControllersTitle": {
+    "description": "Gates page: controllers card title."
+  },
+  "gatesServicesLine": "خدمة البوابات شغالة على {online} من {total} بوابة دخول",
+  "@gatesServicesLine": {
+    "description": "Gates page: entry gates switched on whose service beats recently.",
+    "placeholders": {
+      "online": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "gatesAddController": "إضافة وحدة",
+  "@gatesAddController": {
+    "description": "Gates page: opens the controller dialog."
+  },
+  "gatesNoControllers": "مفيش وحدات تحكم متسجلة",
+  "@gatesNoControllers": {
+    "description": "Gates page: no controller rows."
+  },
+  "controllerDoors": "{count, plural, =1{باب واحد} =2{بابين} few{{count} أبواب} other{{count} باب}}",
+  "@controllerDoors": {
+    "description": "Controller card: its number of doors.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "controllerOnline": "متصلة",
+  "@controllerOnline": {
+    "description": "Controller chip: an entry gate on it beat recently."
+  },
+  "controllerOfflineSince": "مش متصلة من {time}",
+  "@controllerOfflineSince": {
+    "description": "Controller chip: its gates' newest heartbeat is old.",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "controllerNeverSeen": "ما اتصلتش",
+  "@controllerNeverSeen": {
+    "description": "Controller chip: no gate on it ever beat."
+  },
+  "controllerNoEntryGate": "مفيش بوابة دخول",
+  "@controllerNoEntryGate": {
+    "description": "Controller chip: none of its doors is an entry gate, so nothing reports on it."
+  },
+  "controllerNoIp": "من غير IP",
+  "@controllerNoIp": {
+    "description": "Controller card: no address saved yet."
+  },
+  "gatesColGate": "البوابة",
+  "@gatesColGate": {
+    "description": "Gates table header."
+  },
+  "gatesColDirection": "الاتجاه",
+  "@gatesColDirection": {
+    "description": "Gates table header."
+  },
+  "gatesColWiring": "التوصيل",
+  "@gatesColWiring": {
+    "description": "Gates table header."
+  },
+  "gatesColToday": "النهارده",
+  "@gatesColToday": {
+    "description": "Gates table header."
+  },
+  "gatesColStatus": "الحالة",
+  "@gatesColStatus": {
+    "description": "Gates table header."
+  },
+  "gatesEmpty": "مفيش بوابات لسه",
+  "@gatesEmpty": {
+    "description": "Gates table: no rows."
+  },
+  "gateDirectionEntry": "دخول",
+  "@gateDirectionEntry": {
+    "description": "Gate direction."
+  },
+  "gateDirectionExit": "خروج",
+  "@gateDirectionExit": {
+    "description": "Gate direction."
+  },
+  "gatesWiring": "{controller} · باب {door}",
+  "@gatesWiring": {
+    "description": "Gates table: the controller and door a gate is wired to.",
+    "placeholders": {
+      "controller": {
+        "type": "String"
+      },
+      "door": {
+        "type": "int"
+      }
+    }
+  },
+  "gatesNotWired": "مش متوصلة",
+  "@gatesNotWired": {
+    "description": "Gates table / dropdown: no controller."
+  },
+  "gatesToday": "{entries} دخول · {rejected} مرفوض",
+  "@gatesToday": {
+    "description": "Gates table: today's scans.",
+    "placeholders": {
+      "entries": {
+        "type": "int"
+      },
+      "rejected": {
+        "type": "int"
+      }
+    }
+  },
+  "gateStatusExit": "خروج حر",
+  "@gateStatusExit": {
+    "description": "Gate chip: an exit gate, which has no gate service."
+  },
+  "gateExitNote": "خروج حر بدون مسح",
+  "@gateExitNote": {
+    "description": "Gates table: under an exit gate's name."
+  },
+  "gatesEditTitle": "إعدادات {name}",
+  "@gatesEditTitle": {
+    "description": "Gate panel title.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gatesName": "الاسم",
+  "@gatesName": {
+    "description": "Gate / controller field."
+  },
+  "gatesDirectionLabel": "الاتجاه",
+  "@gatesDirectionLabel": {
+    "description": "Gate panel field."
+  },
+  "gatesController": "وحدة التحكم",
+  "@gatesController": {
+    "description": "Gate panel field."
+  },
+  "gatesDoor": "رقم الباب",
+  "@gatesDoor": {
+    "description": "Gate panel field."
+  },
+  "gatesOpenSeconds": "مدة الفتح (ثانية)",
+  "@gatesOpenSeconds": {
+    "description": "Gate panel field."
+  },
+  "gatesReader": "القارئ",
+  "@gatesReader": {
+    "description": "Gate panel field (free text)."
+  },
+  "gatesEnabledLabel": "البوابة شغالة",
+  "@gatesEnabledLabel": {
+    "description": "Gate panel switch."
+  },
+  "gatesEnabledNote": "لو اتقفلت، كل المسح عليها بيترفض",
+  "@gatesEnabledNote": {
+    "description": "Gate panel switch note."
+  },
+  "gatesTestOpen": "فتح تجريبي",
+  "@gatesTestOpen": {
+    "description": "Gate panel button."
+  },
+  "gatesAdd": "إضافة البوابة",
+  "@gatesAdd": {
+    "description": "Gate panel: save a new gate."
+  },
+  "gatesSave": "حفظ",
+  "@gatesSave": {
+    "description": "Gate panel / controller dialog: save."
+  },
+  "gatesHomeGateNote": "دي بوابة {counters}: لو السيرفر وقع تذاكرهم بتفتح البوابة دي بس، فلازم تفضل بوابة دخول.",
+  "@gatesHomeGateNote": {
+    "description": "Gate panel: the counters whose home gate it is (ADR-0015).",
+    "placeholders": {
+      "counters": {
+        "type": "String"
+      }
+    }
+  },
+  "gatesExitStopsService": "خدمة البوابة بتقف لو البوابة بقت خروج.",
+  "@gatesExitStopsService": {
+    "description": "Gate panel: a running entry gate is being changed to exit."
+  },
+  "gatesTestOpenExit": "مفيش خدمة بوابات على بوابة خروج، فمفيش فتح تجريبي.",
+  "@gatesTestOpenExit": {
+    "description": "Gate panel: why test open is off."
+  },
+  "gatesTestOpenNotWired": "البوابة مش متوصلة بوحدة تحكم.",
+  "@gatesTestOpenNotWired": {
+    "description": "Gate panel: why test open is off."
+  },
+  "gatesTestSending": "بيبعت أمر الفتح…",
+  "@gatesTestSending": {
+    "description": "Test open: before the server answers."
+  },
+  "gatesTestWaiting": "اتبعت أمر فتح لمدة {seconds} ثانية · مستني خدمة البوابة…",
+  "@gatesTestWaiting": {
+    "description": "Test open: queued, the gate service hasn't answered yet.",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "gatesTestOpened": "البوابة اتفتحت لمدة {seconds} ثانية · اتسجل في سجل الإجراءات باسمك.",
+  "@gatesTestOpened": {
+    "description": "Test open: done.",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "gatesTestFailed": "خدمة البوابة ما قدرتش تفتحها: {detail}",
+  "@gatesTestFailed": {
+    "description": "Test open: the adapter refused.",
+    "placeholders": {
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "gatesTestNoAnswer": "خدمة البوابة ما ردتش · راجع إنها شغالة. الطلب اتسجل في سجل الإجراءات.",
+  "@gatesTestNoAnswer": {
+    "description": "Test open: never taken, or no answer."
+  },
+  "gatesNotAllowed": "البوابات للأدمن بس.",
+  "@gatesNotAllowed": {
+    "description": "Gates page error."
+  },
+  "gatesInvalidName": "اكتب اسم.",
+  "@gatesInvalidName": {
+    "description": "Gates page error."
+  },
+  "gatesNameTaken": "الاسم ده موجود.",
+  "@gatesNameTaken": {
+    "description": "Gates page error."
+  },
+  "gatesInvalidOpenSeconds": "من 1 لـ 10 ثواني.",
+  "@gatesInvalidOpenSeconds": {
+    "description": "Gates page error."
+  },
+  "gatesInvalidWiring": "اختار وحدة التحكم ورقم الباب مع بعض.",
+  "@gatesInvalidWiring": {
+    "description": "Gates page error."
+  },
+  "gatesControllerNotFound": "وحدة التحكم دي مبقتش موجودة.",
+  "@gatesControllerNotFound": {
+    "description": "Gates page error."
+  },
+  "gatesDoorNotOnController": "الباب ده مش موجود على وحدة التحكم.",
+  "@gatesDoorNotOnController": {
+    "description": "Gates page error."
+  },
+  "gatesDoorTaken": "الباب ده متوصل ببوابة تانية.",
+  "@gatesDoorTaken": {
+    "description": "Gates page error."
+  },
+  "gatesHomeGateMustBeEntry": "دي بوابة شباك، فلازم تفضل دخول.",
+  "@gatesHomeGateMustBeEntry": {
+    "description": "Gates page error (ADR-0015)."
+  },
+  "gatesInvalidIp": "اكتب IP جهاز واحد، زي 10.20.0.51.",
+  "@gatesInvalidIp": {
+    "description": "Controller dialog error."
+  },
+  "gatesInvalidPort": "البورت من 1 لـ 65535.",
+  "@gatesInvalidPort": {
+    "description": "Controller dialog error."
+  },
+  "gatesInvalidDoorCount": "عدد الأبواب من 1 لـ 4.",
+  "@gatesInvalidDoorCount": {
+    "description": "Controller dialog error."
+  },
+  "gatesDoorsInUse": "في بوابة متوصلة بباب أكبر من العدد ده.",
+  "@gatesDoorsInUse": {
+    "description": "Controller dialog error."
+  },
+  "gatesNotFound": "اتغيرت من شاشة تانية. القائمة اتحدّثت.",
+  "@gatesNotFound": {
+    "description": "Gates page error."
+  },
+  "gatesTestOpenPending": "في فتح تجريبي مستني على البوابة دي.",
+  "@gatesTestOpenPending": {
+    "description": "Gates page error."
+  },
+  "gatesUnexpected": "حصل خطأ غير متوقع في البوابات.",
+  "@gatesUnexpected": {
+    "description": "Gates page error."
+  },
+  "controllerNew": "وحدة تحكم جديدة",
+  "@controllerNew": {
+    "description": "Controller dialog title."
+  },
+  "controllerEditTitle": "تعديل {name}",
+  "@controllerEditTitle": {
+    "description": "Controller dialog title.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "controllerModel": "الموديل",
+  "@controllerModel": {
+    "description": "Controller field."
+  },
+  "controllerIp": "IP",
+  "@controllerIp": {
+    "description": "Controller field."
+  },
+  "controllerPort": "البورت",
+  "@controllerPort": {
+    "description": "Controller field."
+  },
+  "controllerDoorsLabel": "عدد الأبواب",
+  "@controllerDoorsLabel": {
+    "description": "Controller field."
+  },
+  "testOpenResultWaiting": "مستني رد",
+  "@testOpenResultWaiting": {
+    "description": "Actions log: a test open's result."
+  },
+  "testOpenResultOpened": "اتفتحت",
+  "@testOpenResultOpened": {
+    "description": "Actions log: a test open's result."
+  },
+  "testOpenResultFailed": "ما اتفتحتش",
+  "@testOpenResultFailed": {
+    "description": "Actions log: a test open's result."
+  },
+  "testOpenResultNoAnswer": "مفيش رد من خدمة البوابة",
+  "@testOpenResultNoAnswer": {
+    "description": "Actions log: a test open's result."
+  },
+  "changeNewGate": "بوابة جديدة: {name}",
+  "@changeNewGate": {
+    "description": "Actions log: a gate added.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "changeGateName": "البوابة {name}",
+  "@changeGateName": {
+    "description": "Actions log: a gate changed.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "changeNewController": "وحدة تحكم جديدة: {name}",
+  "@changeNewController": {
+    "description": "Actions log: a controller added.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "changeControllerName": "وحدة التحكم {name}",
+  "@changeControllerName": {
+    "description": "Actions log: a controller changed.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gatesSecondsShort": "{seconds} ث",
+  "@gatesSecondsShort": {
+    "description": "Actions log: open seconds.",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "gatesOpenFor": "فتح {seconds} ث",
+  "@gatesOpenFor": {
+    "description": "Actions log: a new gate's open seconds.",
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "gatesStateOn": "شغالة",
+  "@gatesStateOn": {
+    "description": "Actions log: a gate switched on."
+  },
+  "usersSubtitle": "مين بيدخل على السيستم وبيعمل إيه. محدش بيتمسح، بيتوقف بس.",
+  "@usersSubtitle": {
+    "description": "Users page subtitle."
+  },
+  "usersNew": "مستخدم جديد",
+  "@usersNew": {
+    "description": "Users page button and new-user panel title."
+  },
+  "usersLoading": "بيحمّل المستخدمين…",
+  "@usersLoading": {
+    "description": "First load."
+  },
+  "usersEmpty": "مفيش مستخدمين.",
+  "@usersEmpty": {
+    "description": "Empty table."
+  },
+  "usersColName": "الاسم",
+  "@usersColName": {
+    "description": "Users table column."
+  },
+  "usersColRole": "الدور",
+  "@usersColRole": {
+    "description": "Users table column."
+  },
+  "usersColLastSignIn": "آخر دخول",
+  "@usersColLastSignIn": {
+    "description": "Users table column."
+  },
+  "usersColStatus": "الحالة",
+  "@usersColStatus": {
+    "description": "Users table column."
+  },
+  "usersStatusActive": "مفعّل",
+  "@usersStatusActive": {
+    "description": "User status chip."
+  },
+  "usersStatusInactive": "موقوف",
+  "@usersStatusInactive": {
+    "description": "User status chip."
+  },
+  "usersNeverSignedIn": "لسه مدخلش",
+  "@usersNeverSignedIn": {
+    "description": "Last sign-in cell: no sign-in yet."
+  },
+  "usersEditTitle": "تعديل: {name}",
+  "@usersEditTitle": {
+    "description": "User panel title.",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "usersName": "الاسم",
+  "@usersName": {
+    "description": "User panel field."
+  },
+  "usersUsername": "اسم الدخول",
+  "@usersUsername": {
+    "description": "User panel field."
+  },
+  "usersUsernameHint": "حروف إنجليزي صغيرة وأرقام و . _ -",
+  "@usersUsernameHint": {
+    "description": "Under the username field."
+  },
+  "usersRole": "الدور",
+  "@usersRole": {
+    "description": "User panel field."
+  },
+  "usersPermissionsTitle": "يقدر يعمل",
+  "@usersPermissionsTitle": {
+    "description": "Permissions summary title."
+  },
+  "usersPermSell": "البيع والتحصيل وقفل ورديته",
+  "@usersPermSell": {
+    "description": "Permissions summary row (cashier and up)."
+  },
+  "usersPermActions": "إعادة طباعة وإعادة تفعيل وإلغاء (بتتسجل)",
+  "@usersPermActions": {
+    "description": "Permissions summary row (cashier and up)."
+  },
+  "usersPermShifts": "مطابقة الورديات واعتمادها",
+  "@usersPermShifts": {
+    "description": "Permissions summary row (supervisor and up)."
+  },
+  "usersPermLog": "مراجعة سجل الإجراءات والتقارير",
+  "@usersPermLog": {
+    "description": "Permissions summary row (supervisor and up)."
+  },
+  "usersPermCatalog": "الأسعار وأنواع التذاكر والبوابات",
+  "@usersPermCatalog": {
+    "description": "Permissions summary row (admin)."
+  },
+  "usersPermUsers": "المستخدمين والإعدادات",
+  "@usersPermUsers": {
+    "description": "Permissions summary row (admin)."
+  },
+  "usersActiveLabel": "الحساب مفعّل",
+  "@usersActiveLabel": {
+    "description": "User panel switch."
+  },
+  "usersActiveNote": "الإيقاف مش بيمسح المستخدم ولا تاريخه",
+  "@usersActiveNote": {
+    "description": "Under the active switch."
+  },
+  "usersPassword": "كلمة المرور",
+  "@usersPassword": {
+    "description": "New user / reset field."
+  },
+  "usersPasswordConfirm": "تأكيد كلمة المرور",
+  "@usersPasswordConfirm": {
+    "description": "New user / reset field."
+  },
+  "usersPasswordHint": "{min} حروف على الأقل",
+  "@usersPasswordHint": {
+    "description": "Under the password field.",
+    "placeholders": {
+      "min": { "type": "int" }
+    }
+  },
+  "usersPasswordMismatch": "كلمتين المرور مش زي بعض.",
+  "@usersPasswordMismatch": {
+    "description": "Password confirm error."
+  },
+  "usersShowPassword": "إظهار كلمة المرور",
+  "@usersShowPassword": {
+    "description": "Password field toggle tooltip."
+  },
+  "usersHidePassword": "إخفاء كلمة المرور",
+  "@usersHidePassword": {
+    "description": "Password field toggle tooltip."
+  },
+  "usersResetPassword": "إعادة تعيين كلمة المرور",
+  "@usersResetPassword": {
+    "description": "User panel button."
+  },
+  "usersResetTitle": "كلمة مرور جديدة لـ {name}",
+  "@usersResetTitle": {
+    "description": "Reset dialog title.",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "usersResetNote": "قول له على الكلمة الجديدة. هيخرج من أي جهاز داخل عليه ويدخل بيها من جديد.",
+  "@usersResetNote": {
+    "description": "Reset dialog note."
+  },
+  "usersResetConfirm": "تعيين",
+  "@usersResetConfirm": {
+    "description": "Reset dialog button."
+  },
+  "usersResetDone": "اتغيرت كلمة المرور. هيدخل بيها من جديد.",
+  "@usersResetDone": {
+    "description": "Snack bar after a reset."
+  },
+  "usersSave": "حفظ",
+  "@usersSave": {
+    "description": "User panel button."
+  },
+  "usersAdd": "إضافة المستخدم",
+  "@usersAdd": {
+    "description": "New-user panel button."
+  },
+  "usersAdded": "اتضاف. يدخل باسم الدخول وكلمة المرور.",
+  "@usersAdded": {
+    "description": "Snack bar after adding a user."
+  },
+  "usersSelfNote": "ده حسابك: دورك وتفعيله بيغيرهم مدير تاني.",
+  "@usersSelfNote": {
+    "description": "User panel note on one's own account."
+  },
+  "usersOpenShiftNote": "عنده وردية مفتوحة. لازم تتقفل قبل إيقاف الحساب.",
+  "@usersOpenShiftNote": {
+    "description": "User panel note."
+  },
+  "usersRoleSessionsNote": "تغيير الدور أو الإيقاف بيخرّجه من الأجهزة، ويدخل تاني.",
+  "@usersRoleSessionsNote": {
+    "description": "User panel note when the role or active changed."
+  },
+  "usersNotAllowed": "المستخدمين للأدمن بس.",
+  "@usersNotAllowed": {
+    "description": "Users page error."
+  },
+  "usersNameRequired": "اكتب الاسم.",
+  "@usersNameRequired": {
+    "description": "Users page error."
+  },
+  "usersInvalidUsername": "اسم الدخول من 3 لـ 32: حروف إنجليزي صغيرة وأرقام و . _ -",
+  "@usersInvalidUsername": {
+    "description": "Users page error."
+  },
+  "usersUsernameTaken": "اسم الدخول ده متاخد.",
+  "@usersUsernameTaken": {
+    "description": "Users page error."
+  },
+  "usersPasswordTooShort": "كلمة المرور {min} حروف على الأقل.",
+  "@usersPasswordTooShort": {
+    "description": "Users page error.",
+    "placeholders": {
+      "min": { "type": "int" }
+    }
+  },
+  "usersPasswordTooLong": "كلمة المرور طويلة قوي.",
+  "@usersPasswordTooLong": {
+    "description": "Users page error."
+  },
+  "usersCannotChangeOwn": "مينفعش تغيّر دورك أو توقف حسابك. مدير تاني يعملها.",
+  "@usersCannotChangeOwn": {
+    "description": "Users page error."
+  },
+  "usersHasOpenShift": "عنده وردية مفتوحة. اقفلها الأول.",
+  "@usersHasOpenShift": {
+    "description": "Users page error."
+  },
+  "usersNotFound": "اتغير من شاشة تانية. القائمة اتحدّثت.",
+  "@usersNotFound": {
+    "description": "Users page error."
+  },
+  "usersUnexpected": "حصل خطأ غير متوقع في المستخدمين.",
+  "@usersUnexpected": {
+    "description": "Users page error."
+  },
+  "changeNewUser": "مستخدم جديد: {name}",
+  "@changeNewUser": {
+    "description": "Actions log: a user added.",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "changeUserName": "المستخدم {name}",
+  "@changeUserName": {
+    "description": "Actions log: a user changed.",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "changePasswordReset": "كلمة المرور اتعيّنت من جديد",
+  "@changePasswordReset": {
+    "description": "Actions log: a user's password reset (never the password)."
+  },
+  "settingsLoading": "بيحمّل الإعدادات…",
+  "@settingsLoading": {
+    "description": "Settings page: loading."
+  },
+  "settingsLogNote": "كل تغيير بيتسجل باسمك في سجل الإجراءات",
+  "@settingsLogNote": {
+    "description": "Settings page: header line (design)."
+  },
+  "settingsNotAllowed": "الإعدادات للأدمن بس.",
+  "@settingsNotAllowed": {
+    "description": "Settings page error."
+  },
+  "settingsUnexpected": "حصل خطأ غير متوقع في الإعدادات.",
+  "@settingsUnexpected": {
+    "description": "Settings page error."
+  },
+  "settingsInvalidValue": "القيمة دي مش مقبولة.",
+  "@settingsInvalidValue": {
+    "description": "Settings page: the server refused a value."
+  },
+  "settingsRequired": "اكتب قيمة.",
+  "@settingsRequired": {
+    "description": "Settings page: an empty field."
+  },
+  "settingsOutOfRange": "رقم من {min} لـ {max}.",
+  "@settingsOutOfRange": {
+    "description": "Settings page: a number out of its range.",
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "settingsInvalidList": "اكتب مبالغ مفصولة بفاصلة، مثلاً 5, 10, 20.",
+  "@settingsInvalidList": {
+    "description": "Settings page: an amount list that can't be read."
+  },
+  "settingsTooManyAmounts": "{count} مبلغ بالكتير.",
+  "@settingsTooManyAmounts": {
+    "description": "Settings page: too many amounts.",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "settingsAmountTooBig": "كل مبلغ لحد 100,000 ج.م.",
+  "@settingsAmountTooBig": {
+    "description": "Settings page: an amount too big."
+  },
+  "settingsDuplicateAmount": "فيه فئة مكررة.",
+  "@settingsDuplicateAmount": {
+    "description": "Settings page: a repeated denomination."
+  },
+  "settingsNeedOneDenomination": "اكتب فئة واحدة على الأقل.",
+  "@settingsNeedOneDenomination": {
+    "description": "Settings page: no denominations."
+  },
+  "settingsVenueSection": "المكان",
+  "@settingsVenueSection": {
+    "description": "Settings page: section title."
+  },
+  "settingsVenueName": "اسم المكان (بيتطبع على التذكرة)",
+  "@settingsVenueName": {
+    "description": "Settings page: field."
+  },
+  "settingsClosingTime": "ميعاد قفل المكان",
+  "@settingsClosingTime": {
+    "description": "Settings page: field."
+  },
+  "settingsClosingNote": "تذاكر يوم البيع بتنتهي في الميعاد ده. التذاكر اللي اتباعت بتفضل بميعادها.",
+  "@settingsClosingNote": {
+    "description": "Settings page: under the closing time."
+  },
+  "peakHoursPastMidnight": "ممكن الساعات تعدّي نص الليل، لحد ميعاد قفل المكان الساعة {closing}.",
+  "@peakHoursPastMidnight": {
+    "description": "Ticket types page: under the peak From/To, the range may run past midnight until the closing time (ADR-0038).",
+    "placeholders": {
+      "closing": { "type": "String", "example": "02:00" }
+    }
+  },
+  "peakHoursAfterClosing": "ساعات الذروة لازم تخلص لحد ميعاد قفل المكان: بعده مفيش بيع لتذاكر اليوم.",
+  "@peakHoursAfterClosing": {
+    "description": "Ticket types page: the peak range ends after the closing time (ADR-0038)."
+  },
+  "peakModeHelpDay": "المفتاح ليوم {day}، وبيرجع تلقائي لما اليوم اللي بعده يبدأ الساعة {start}. بعد ميعاد القفل بيتطبّق على اليوم اللي جاي. الشبابيك المتصلة بتشوف التغيير خلال ثواني.",
+  "@peakModeHelpDay": {
+    "description": "Under the peak switch: the venue day it acts on (the coming one after closing) and when it lapses (ADR-0038).",
+    "placeholders": {
+      "day": { "type": "String", "example": "11/11" },
+      "start": { "type": "String", "example": "08:00" }
+    }
+  },
+  "settingsClosingCutsPeak": "ساعات الذروة هتبقى بعد ميعاد القفل ده. غيّرها الأول من صفحة أنواع التذاكر.",
+  "@settingsClosingCutsPeak": {
+    "description": "Settings page: under the closing time when the daily peak hours would end after it."
+  },
+  "settingsStartCrossesPeak": "ساعات الذروة هتعدّي بداية اليوم دي. غيّرها الأول من صفحة أنواع التذاكر.",
+  "@settingsStartCrossesPeak": {
+    "description": "Settings page: under the venue day start when the daily peak hours would cross it."
+  },
+  "settingsDayStart": "بداية يوم المكان",
+  "@settingsDayStart": {
+    "description": "Settings page: field, venue_day_starts_at (ADR-0038)."
+  },
+  "settingsDayStartNote": "\"النهارده\" في البيع والتقارير بيبدأ الساعة دي. لو المكان بيقفل بعد نص الليل خلّيها بعد ميعاد القفل.",
+  "@settingsDayStartNote": {
+    "description": "Settings page: under the venue day start."
+  },
+  "settingsClosingNextDay": "بيقفل الساعة {time} بعد نص الليل: تذاكر يوم البيع بتنتهي {time} الصبح اللي بعده.",
+  "@settingsClosingNextDay": {
+    "description": "Settings page: under the closing time when it is at or before the day start, so on the next date.",
+    "placeholders": {
+      "time": { "type": "String", "example": "02:00" }
+    }
+  },
+  "settingsClosedNowTitle": "البيع هيقف دلوقتي",
+  "@settingsClosedNowTitle": {
+    "description": "Settings page: confirm before saving times whose closing for today has already passed."
+  },
+  "settingsClosedNowBody": "بالمواعيد دي يوم النهارده قفل الساعة {closing}. الشبابيك مش هتبيع تذاكر يوم البيع لحد ما اليوم الجديد يبدأ الساعة {start}.",
+  "@settingsClosedNowBody": {
+    "description": "Settings page: the confirm's text.",
+    "placeholders": {
+      "closing": { "type": "String", "example": "02:00" },
+      "start": { "type": "String", "example": "08:00" }
+    }
+  },
+  "settingsClosedNowSave": "احفظ برضه",
+  "@settingsClosedNowSave": {
+    "description": "Settings page: save in spite of the warning."
+  },
+  "settingsDefaultLanguage": "لغة الواجهة الافتراضية",
+  "@settingsDefaultLanguage": {
+    "description": "Settings page: field."
+  },
+  "settingsLanguageAr": "عربي",
+  "@settingsLanguageAr": {
+    "description": "Settings page: a language."
+  },
+  "settingsLanguageEn": "English",
+  "@settingsLanguageEn": {
+    "description": "Settings page: a language."
+  },
+  "settingsTimezone": "المنطقة الزمنية",
+  "@settingsTimezone": {
+    "description": "Settings page: read-only row."
+  },
+  "settingsTimezoneNote": "ثابتة: تغييرها بيحرّك \"النهارده\" في كل التقارير والصلاحيات.",
+  "@settingsTimezoneNote": {
+    "description": "Settings page: why the time zone can't be changed here."
+  },
+  "settingsTicketsSection": "التذاكر",
+  "@settingsTicketsSection": {
+    "description": "Settings page: section title."
+  },
+  "settingsGateCodeLength": "طول كود البوابة (أرقام)",
+  "@settingsGateCodeLength": {
+    "description": "Settings page: field."
+  },
+  "settingsUnpaidTimeout": "إلغاء الطلب غير المحصّل بعد (دقيقة)",
+  "@settingsUnpaidTimeout": {
+    "description": "Settings page: field."
+  },
+  "settingsWiegandNote": "قارئ Wiegand 26 بيقرا لحد 16,777,215، يعني 7 أرقام كحد أقصى. لو القارئ اتغير لـ Wiegand 34 تقدر تزوّد الطول. الطول الجديد للتذاكر الجديدة بس.",
+  "@settingsWiegandNote": {
+    "description": "Settings page: under the gate code length (design)."
+  },
+  "settingsValidityNote": "صلاحية التذكرة (يوم البيع أو عدد ساعات) بتتحدد لكل نوع.",
+  "@settingsValidityNote": {
+    "description": "Settings page: replaces the design's same-day switch."
+  },
+  "settingsActionsSection": "إجراءات الكاشير والمراجعة",
+  "@settingsActionsSection": {
+    "description": "Settings page: section title."
+  },
+  "settingsReactivationWindow": "مهلة إعادة التفعيل بعد المسح (دقيقة)",
+  "@settingsReactivationWindow": {
+    "description": "Settings page: field."
+  },
+  "settingsReactivationMax": "أقصى إعادة تفعيل للتذكرة",
+  "@settingsReactivationMax": {
+    "description": "Settings page: field."
+  },
+  "settingsFlagActions": "مراجعة لو الإجراءات في الوردية أكتر من",
+  "@settingsFlagActions": {
+    "description": "Settings page: field."
+  },
+  "settingsFlagPrints": "مراجعة لو التذكرة اتطبعت أكتر من",
+  "@settingsFlagPrints": {
+    "description": "Settings page: field."
+  },
+  "settingsRefundBeforeScan": "الإلغاء قبل المسح بس",
+  "@settingsRefundBeforeScan": {
+    "description": "Settings page: switch."
+  },
+  "settingsRefundBeforeScanHelp": "التذكرة اللي دخلت مينفعش تتلغي",
+  "@settingsRefundBeforeScanHelp": {
+    "description": "Settings page: switch help."
+  },
+  "settingsRefundSameShift": "الإلغاء في نفس الوردية بس",
+  "@settingsRefundSameShift": {
+    "description": "Settings page: switch."
+  },
+  "settingsRefundSameShiftHelp": "التذكرة بتتلغي في الوردية اللي اتباعت فيها بس",
+  "@settingsRefundSameShiftHelp": {
+    "description": "Settings page: switch help."
+  },
+  "settingsFlagOther": "مراجعة أي إجراء سببه \"سبب آخر\"",
+  "@settingsFlagOther": {
+    "description": "Settings page: switch."
+  },
+  "settingsFlagOtherHelp": "بيظهر في سجل الإجراءات كـ محتاج مراجعة",
+  "@settingsFlagOtherHelp": {
+    "description": "Settings page: switch help."
+  },
+  "settingsTipsSection": "الإكراميات والمبالغ السريعة",
+  "@settingsTipsSection": {
+    "description": "Settings page: section title."
+  },
+  "settingsTipsEnabled": "تسجيل الإكراميات مع التحصيل",
+  "@settingsTipsEnabled": {
+    "description": "Settings page: switch."
+  },
+  "settingsTipsEnabledHelp": "مع الكاش بس، وبتدخل في المتوقع عند مطابقة الوردية",
+  "@settingsTipsEnabledHelp": {
+    "description": "Settings page: switch help."
+  },
+  "settingsTipQuick": "أزرار الإكرامية السريعة (ج.م)",
+  "@settingsTipQuick": {
+    "description": "Settings page: field."
+  },
+  "settingsFloatQuick": "أزرار عهدة البداية السريعة (ج.م)",
+  "@settingsFloatQuick": {
+    "description": "Settings page: field."
+  },
+  "settingsTipQuickNote": "لحد 6: بتظهر في صفين في شاشة الدفع وشاشة قفل الوردية.",
+  "@settingsTipQuickNote": {
+    "description": "Settings page: hint under the tip quick amounts."
+  },
+  "settingsFloatQuickNote": "لحد 4: بتظهر في سطر واحد في شاشة فتح الوردية.",
+  "@settingsFloatQuickNote": {
+    "description": "Settings page: hint under the opening float quick amounts."
+  },
+  "settingsReceivedQuick": "أزرار المبلغ المستلم السريعة (ج.م)",
+  "@settingsReceivedQuick": {
+    "description": "Settings page: field."
+  },
+  "settingsReceivedQuickNote": "لحد 8. شاشة الدفع بتعرض أول 3 أكبر من إجمالي الطلب.",
+  "@settingsReceivedQuickNote": {
+    "description": "Settings page: hint."
+  },
+  "settingsDenominations": "فئات العدّ عند قفل الوردية (ج.م)",
+  "@settingsDenominations": {
+    "description": "Settings page: field."
+  },
+  "settingsDenominationsNote": "لحد 12، بنفس الترتيب ده في شاشة القفل.",
+  "@settingsDenominationsNote": {
+    "description": "Settings page: hint."
+  },
+  "settingsNoAmounts": "ولا مبلغ",
+  "@settingsNoAmounts": {
+    "description": "Actions log: an empty amount list."
+  },
+  "settingsOn": "شغال",
+  "@settingsOn": {
+    "description": "Actions log: a switch on."
+  },
+  "settingsOff": "مقفول",
+  "@settingsOff": {
+    "description": "Actions log: a switch off."
+  },
+  "settingsPeakSection": "أوقات الذروة",
+  "@settingsPeakSection": {
+    "description": "Settings page: section title."
+  },
+  "settingsPeakDays": "{days}: ذروة طول اليوم",
+  "@settingsPeakDays": {
+    "description": "Settings page: the peak weekdays.",
+    "placeholders": {
+      "days": { "type": "String" }
+    }
+  },
+  "settingsPeakNoDays": "مفيش أيام ذروة طول اليوم.",
+  "@settingsPeakNoDays": {
+    "description": "Settings page: no peak weekdays."
+  },
+  "settingsPeakHours": "باقي الأيام: من {from} لحد {to}",
+  "@settingsPeakHours": {
+    "description": "Settings page: the daily peak hours.",
+    "placeholders": {
+      "from": { "type": "String" },
+      "to": { "type": "String" }
+    }
+  },
+  "settingsPeakNote": "بتتعدل من صفحة أنواع التذاكر، وزرار ذروة النهارده في لوحة المتابعة.",
+  "@settingsPeakNote": {
+    "description": "Settings page: where the peak times are edited."
+  },
+  "settingsOfflineSection": "الأوفلاين والشبكة",
+  "@settingsOfflineSection": {
+    "description": "Settings page: section title."
+  },
+  "settingsPoolSize": "أكواد الأوفلاين لكل شباك",
+  "@settingsPoolSize": {
+    "description": "Settings page: field."
+  },
+  "settingsHealthCheck": "الشباك يبقى أوفلاين بعد (ثانية)",
+  "@settingsHealthCheck": {
+    "description": "Settings page: field."
+  },
+  "settingsOfflineNote": "0 أكواد بيقفل البيع أوفلاين. الأكواد المحجوزة مش بتتلغي لو قللت العدد.",
+  "@settingsOfflineNote": {
+    "description": "Settings page: hint."
+  },
+  "settingsGateOffline": "البوابة تبان واقفة بعد (ثانية)",
+  "@settingsGateOffline": {
+    "description": "Settings page: field."
+  },
+  "settingsTestOpenTimeout": "مهلة الفتح التجريبي (ثانية)",
+  "@settingsTestOpenTimeout": {
+    "description": "Settings page: field."
+  },
+  "settingsGateTimingNote": "خدمة البوابة بتبعت نبضة كل 30 ثانية وبتسأل عن الفتح التجريبي كل 2 ثانية (الافتراضي). خلي الوقف أكبر من النبضة (90 = 3 نبضات فايتة)، والمهلة أكبر من 2.",
+  "@settingsGateTimingNote": {
+    "description": "Settings page: hint."
+  },
+  "settingsCountersSection": "الشبابيك والطابعات",
+  "@settingsCountersSection": {
+    "description": "Settings page: section title."
+  },
+  "settingsCountersEmpty": "مفيش شبابيك لسه. أضف أول شباك.",
+  "@settingsCountersEmpty": {
+    "description": "Settings page: no counters."
+  },
+  "settingsCountersNote": "الطباعة التجريبية من شاشة فتح الوردية على كل شباك.",
+  "@settingsCountersNote": {
+    "description": "Settings page: why there is no test print here."
+  },
+  "settingsBackupSection": "النسخ الاحتياطي",
+  "@settingsBackupSection": {
+    "description": "Settings page: section title."
+  },
+  "settingsBackupNotYet": "النسخ الاحتياطي لسه متجهزش. بييجي مع تركيب السيرفر في المكان.",
+  "@settingsBackupNotYet": {
+    "description": "Settings page: backup placeholder until 6.2."
+  },
+  "settingsUndo": "تراجع",
+  "@settingsUndo": {
+    "description": "Settings page: button (design)."
+  },
+  "settingsSave": "حفظ الإعدادات",
+  "@settingsSave": {
+    "description": "Settings page: button (design)."
+  },
+  "settingsUnsaved": "فيه تغييرات لسه متحفظتش.",
+  "@settingsUnsaved": {
+    "description": "Settings page: bottom bar."
+  },
+  "settingsLastChange": "آخر تغيير: {name} · {time}",
+  "@settingsLastChange": {
+    "description": "Settings page: bottom bar.",
+    "placeholders": {
+      "name": { "type": "String" },
+      "time": { "type": "String" }
+    }
+  },
+  "settingsNoChangeYet": "الإعدادات زي ما اتركّبت.",
+  "@settingsNoChangeYet": {
+    "description": "Settings page: bottom bar before any change."
+  },
+  "counterNew": "شباك جديد",
+  "@counterNew": {
+    "description": "Counter dialog: title and the add button."
+  },
+  "counterAdd": "إضافة الشباك",
+  "@counterAdd": {
+    "description": "Counter dialog: save a new counter."
+  },
+  "counterPrinterIp": "IP الطابعة",
+  "@counterPrinterIp": {
+    "description": "Counter dialog: field."
+  },
+  "counterPrinterPort": "بورت الطابعة",
+  "@counterPrinterPort": {
+    "description": "Counter dialog: field."
+  },
+  "counterPaperWidth": "عرض الورق",
+  "@counterPaperWidth": {
+    "description": "Counter dialog: field."
+  },
+  "counterPaperMm": "{mm} مم",
+  "@counterPaperMm": {
+    "description": "Counter: paper width.",
+    "placeholders": {
+      "mm": { "type": "int" }
+    }
+  },
+  "counterHomeGate": "بوابة الدخول (وقت انقطاع الشبكة)",
+  "@counterHomeGate": {
+    "description": "Counter dialog: field (ADR-0015)."
+  },
+  "counterHomeGateIs": "بوابة {gate}",
+  "@counterHomeGateIs": {
+    "description": "Counter row: its home gate.",
+    "placeholders": {
+      "gate": { "type": "String" }
+    }
+  },
+  "counterHomeGateNote": "وقت انقطاع السيرفر أو السويتش، تذاكر الشباك بتفتح البوابة دي بس، وبتتطبع عليها.",
+  "@counterHomeGateNote": {
+    "description": "Counter dialog: what the home gate is."
+  },
+  "counterNoHomeGate": "من غير بوابة",
+  "@counterNoHomeGate": {
+    "description": "Counter: no home gate."
+  },
+  "counterGateDisabled": "{name} (متوقفة)",
+  "@counterGateDisabled": {
+    "description": "Counter dialog: a disabled entry gate.",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "counterActive": "الشباك شغال",
+  "@counterActive": {
+    "description": "Counter dialog: switch."
+  },
+  "counterActiveNote": "لو اتوقف، مينفعش تتفتح عليه وردية.",
+  "@counterActiveNote": {
+    "description": "Counter dialog: switch help."
+  },
+  "counterOpenShiftNote": "عليه وردية مفتوحة دلوقتي، فمينفعش يتوقف لحد ما تتقفل.",
+  "@counterOpenShiftNote": {
+    "description": "Counter dialog: switch help with an open shift."
+  },
+  "counterGateChangeNote": "التذاكر الجديدة هتتطبع بالبوابة الجديدة. أكواد الأوفلاين المحجوزة بتفضل على القديمة لحد ما تنتهي.",
+  "@counterGateChangeNote": {
+    "description": "Counter dialog: changing the home gate."
+  },
+  "counterNewIdNote": "بعد الإضافة، انسخ رقم الشباك (زرار النسخ في القائمة). ده الرقم اللي بيتحط في إعدادات تشغيل البرنامج على جهاز الشباك (COUNTER_ID)، عشان البرنامج يعرف هو على أنهي شباك.",
+  "@counterNewIdNote": {
+    "description": "Counter dialog: a new counter's id."
+  },
+  "counterAddedCopyId": "اتضاف. انسخ رقمه لإعدادات البرنامج على جهاز الشباك.",
+  "@counterAddedCopyId": {
+    "description": "Counter dialog: after adding."
+  },
+  "counterCopyId": "نسخ رقم الشباك",
+  "@counterCopyId": {
+    "description": "Counter row: copy button tooltip."
+  },
+  "counterIdCopied": "اتنسخ. ده رقم الشباك اللي بيتحط في إعدادات البرنامج على جهازه (COUNTER_ID).",
+  "@counterIdCopied": {
+    "description": "Counter row: after copying the id."
+  },
+  "counterOn": "شغال",
+  "@counterOn": {
+    "description": "Counter row: status."
+  },
+  "counterOff": "متوقف",
+  "@counterOff": {
+    "description": "Counter row: status."
+  },
+  "counterOpenShift": "وردية مفتوحة",
+  "@counterOpenShift": {
+    "description": "Counter row: status."
+  },
+  "counterNoPrinter": "مفيش طابعة",
+  "@counterNoPrinter": {
+    "description": "Counter row: no printer IP."
+  },
+  "counterInvalidName": "اكتب اسم الشباك.",
+  "@counterInvalidName": {
+    "description": "Counter dialog error."
+  },
+  "counterNameTaken": "فيه شباك تاني بالاسم ده.",
+  "@counterNameTaken": {
+    "description": "Counter dialog error."
+  },
+  "counterInvalidPaper": "عرض الورق 58 أو 80 مم.",
+  "@counterInvalidPaper": {
+    "description": "Counter dialog error."
+  },
+  "counterHomeGateRequired": "الشباك الشغال محتاج بوابة دخول.",
+  "@counterHomeGateRequired": {
+    "description": "Counter dialog error."
+  },
+  "counterHomeGateNotEntry": "لازم تكون بوابة دخول.",
+  "@counterHomeGateNotEntry": {
+    "description": "Counter dialog error."
+  },
+  "counterGateNotFound": "البوابة دي مبقتش موجودة. افتح الصفحة تاني.",
+  "@counterGateNotFound": {
+    "description": "Counter dialog error."
+  },
+  "counterHasOpenShift": "عليه وردية مفتوحة. اقفلها الأول.",
+  "@counterHasOpenShift": {
+    "description": "Counter dialog error."
+  },
+  "counterNotFound": "الشباك اتغير من شاشة تانية. القائمة اتحدّثت.",
+  "@counterNotFound": {
+    "description": "Counter dialog error."
+  },
+  "changeSettings": "الإعدادات",
+  "@changeSettings": {
+    "description": "Actions log: settings changed."
+  },
+  "changeNewCounter": "شباك جديد: {name}",
+  "@changeNewCounter": {
+    "description": "Actions log: a counter added.",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "changeCounterName": "الشباك {name}",
+  "@changeCounterName": {
+    "description": "Actions log: a counter changed.",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  }
+}

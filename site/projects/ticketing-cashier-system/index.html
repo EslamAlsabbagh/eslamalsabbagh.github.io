@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ticketing &amp; Cashier System: Case Study | Eslam Alsabbagh</title>
+<meta name="description" content="Case study: QR turnstile ticketing and cashier system built with Flutter, self-hosted Supabase and Python: print-first selling, blind cash counts, offline selling and database-enforced controls.">
+<link rel="canonical" href="https://eslamalsabbagh.github.io/projects/ticketing-cashier-system/">
+<meta name="author" content="Eslam Alsabbagh">
+<meta name="theme-color" content="#1f6feb">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Eslam Alsabbagh">
+<meta property="og:title" content="Ticketing &amp; Cashier System: Case Study">
+<meta property="og:description" content="QR turnstile ticketing with offline selling, thermal-printed Arabic tickets and blind cash counts.">
+<meta property="og:url" content="https://eslamalsabbagh.github.io/projects/ticketing-cashier-system/">
+<meta property="og:image" content="https://eslamalsabbagh.github.io/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ticketing &amp; Cashier System: Case Study">
+<meta name="twitter:description" content="QR turnstile ticketing with offline selling, thermal-printed Arabic tickets and blind cash counts.">
+<meta name="twitter:image" content="https://eslamalsabbagh.github.io/assets/img/og.jpg">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/assets/js/site.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Ticketing and Cashier System",
+      "headline": "Ticketing and Cashier System",
+      "description": "Case study: QR turnstile ticketing and cashier system built with Flutter, self-hosted Supabase and Python: print-first selling, blind cash counts, offline selling and database-enforced controls.",
+      "url": "https://eslamalsabbagh.github.io/projects/ticketing-cashier-system/",
+      "inLanguage": "en",
+      "author": { "@type": "Person", "name": "Eslam Alsabbagh", "url": "https://eslamalsabbagh.github.io/" },
+      "keywords": "Flutter, Windows desktop, Dart, BLoC, Supabase, PostgreSQL, pgTAP, Python, ESC/POS, offline-first, ticketing, turnstile"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://eslamalsabbagh.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://eslamalsabbagh.github.io/projects/" },
+        { "@type": "ListItem", "position": 3, "name": "Ticketing and Cashier System", "item": "https://eslamalsabbagh.github.io/projects/ticketing-cashier-system/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Eslam Alsabbagh</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/projects/" aria-current="page">Work</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Case study</p>
+      <h1>Ticketing &amp; Cashier System</h1>
+      <p class="lede">
+        QR ticketing for a venue with turnstile entry gates: cashier counters that sell and print
+        tickets on thermal printers, gates that check each code against the database, and
+        managers who see occupancy, sales and cash reconciliation live. Everything runs on an
+        on-site server, so selling and entry carry on without the internet.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/demos/ticketing/?as=cashier">Open the interactive demo</a>
+        <a class="btn btn-ghost" href="/demos/ticketing/?as=supervisor">Open the supervisor view</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="notice" data-reveal>
+      <p>
+        <strong>Client identity withheld under NDA.</strong> This case study describes the
+        system in general terms only. The linked demo is the real application with its database
+        replaced by an in-memory store that answers the same functions with the same rules,
+        using a fictional venue, staff and sales. It makes no network calls and is connected to
+        no production system.
+      </p>
+    </div>
+
+    <dl class="facts" data-stagger>
+      <div><dt>Role</dt><dd>Software Engineer, sole developer: database, cashier app, gate service</dd></div>
+      <div><dt>Timeline</dt><dd>November 2026 to present; feature-complete, on-site rollout next</dd></div>
+      <div><dt>Client</dt><dd>Withheld under NDA</dd></div>
+      <div><dt>Stack</dt><dd>Flutter (Windows desktop), Dart, BLoC, go_router, self-hosted Supabase, PostgreSQL, pgTAP, Python</dd></div>
+      <div><dt>Scale</dt><dd>A multi-counter, multi-gate venue with thousands of visitors a day; 39 decision records</dd></div>
+    </dl>
+
+    <section id="problem" data-reveal>
+      <h2>The problem</h2>
+      <div class="prose">
+        <p>
+          A busy venue needed to sell entry tickets at several counters and let visitors through
+          tripod turnstiles by scanning a QR code. The queue at the counter has to move fast, an
+          unpaid ticket must never open a gate, and cash has to reconcile at the end of every
+          shift, even though no supervisor stands at each counter to approve refunds and
+          reprints.
+        </p>
+        <p>
+          The venue's internet connection can't be trusted, and a gate that stops opening on a
+          busy afternoon is not an option. So the system has to keep selling, and keep letting
+          people in, when a counter, the server or the network drops.
+        </p>
+      </div>
+    </section>
+
+    <section id="approach" data-reveal>
+      <h2>Approach</h2>
+      <div class="prose">
+        <h3>Print first, then charge</h3>
+        <p>
+          The cashier picks ticket types and presses one key: the order is created and every
+          ticket prints at once, but the tickets stay <em>inactive</em> until the payment is
+          confirmed. The visitor walks away while the cashier counts change, and a ticket printed
+          for someone who then didn't pay is cancelled automatically and rejected at the gate.
+        </p>
+
+        <h3>Rules in the database, not the counter</h3>
+        <p>
+          Selling, payment, validation and every ticket action are PostgreSQL functions, so each
+          rule is enforced atomically in one place. Cashiers read money tables only through
+          functions; the gate service is a separate database role that can only validate tickets
+          and report its heartbeat. Gate validation has a budget of 10 ms at the 95th percentile,
+          backed by pgTAP tests and volume tests at a year's worth of tickets.
+        </p>
+
+        <h3>Controls without a supervisor at every counter</h3>
+        <p>
+          Reprints, reactivations (scanned but didn't pass) and void-refunds need no approval,
+          but each one needs a reason, stays within limits the database enforces, and lands in an
+          actions log. Automatic review flags pick out the patterns worth a look: "other" as a
+          reason, too many actions in one shift, a ticket printed too many times, a reactivated
+          ticket that then entered through a different gate.
+        </p>
+
+        <h3>A blind cash count</h3>
+        <p>
+          The cashier never sees expected cash. Not on the sell screen, not at close, not on the
+          printed shift receipt. They count each denomination, and a supervisor reconciles
+          expected against counted on the admin side. Nobody approves their own shift, and a
+          difference needs a written comment.
+        </p>
+
+        <h3>Selling through an outage</h3>
+        <p>
+          While online, each counter reserves a pool of random gate codes on the server. When the
+          health check fails, the counter switches to charge-first-then-print and sells from its
+          pool, so two counters can never issue the same code. Each counter's tickets and codes
+          are also held on the controller of its home gate, so during an outage a ticket opens its
+          home gate. On reconnect the queue uploads in batches, idempotently, keeping the original
+          sale times. Anything the server refuses is flagged for a supervisor rather than lost.
+        </p>
+      </div>
+    </section>
+
+    <section id="hard-parts" data-reveal>
+      <h2>The hard parts</h2>
+      <div class="prose">
+        <p>
+          <strong>Arabic on a thermal printer.</strong> ESC/POS code pages can't shape Arabic
+          text. Tickets and shift receipts are laid out as Flutter widgets, rendered off-screen
+          and sent to the printer as raster images through hand-written ESC/POS commands. The QR
+          code is painted on whole printer dots so it stays sharp after the black-and-white cut.
+        </p>
+        <p>
+          <strong>A dead server that never says so.</strong> A server that accepts a request and
+          never answers left the payment screen spinning. Every server call now times out, and
+          once the health check agrees the server is gone, the cashier can go back to selling
+          offline while the unpaid-order job cleans up the abandoned order.
+        </p>
+        <p>
+          <strong>What "today" means after midnight.</strong> A closing time of 02:00 at first
+          refused every sale, because 02:00 meant that morning. One venue-day definition, shared
+          by the database, the offline counter and every report, fixed it everywhere at once.
+        </p>
+      </div>
+    </section>
+
+    <section id="demo" data-reveal>
+      <h2>Try it</h2>
+      <div class="prose">
+        <p>
+          The demo is the real cashier and admin app. Its database is swapped for an in-memory
+          store that answers the same functions with the same rules and error codes. The bar at
+          the bottom stands in for the hardware a browser doesn't have:
+        </p>
+        <ul>
+          <li><strong>View as</strong> the cashier, the supervisor or the admin.</li>
+          <li><strong>Printer tray</strong> shows every ticket and receipt as it would print.</li>
+          <li><strong>Gate scanner</strong> holds a code to a turnstile: try a ticket before and after it's paid.</li>
+          <li><strong>Server outage</strong> takes the server away. Keep selling, then switch it back and watch the queue upload.</li>
+          <li><strong>Jam printer</strong> makes printing fail, to see the retry and "leave unprinted" paths.</li>
+        </ul>
+        <p>
+          A good first run: open a shift as the cashier, sell two tickets, take a cash payment
+          with a tip, scan one ticket twice at the gate, then switch to the supervisor and
+          reconcile the shift that's waiting for approval.
+        </p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="/demos/ticketing/?as=cashier">Open the interactive demo</a>
+        <a class="btn btn-ghost" href="/contact/">Discuss this project</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Eslam Alsabbagh · Qalyubia, Egypt</p>
+    <p class="footer-links">
+      <a href="https://github.com/EslamAlsabbagh" rel="me noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/eslamalsabbagh" rel="me noopener">LinkedIn</a>
+      <a href="mailto:eslam.mo.alsabbagh@gmail.com">Email</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
